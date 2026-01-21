@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-white font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-slate-800/80 backdrop-blur-md border border-slate-700/50;
+}
+
+.nav-item {
+  @apply flex flex-col items-center gap-1 text-xs font-bold text-slate-400 transition-colors;
+}
+
+.nav-item.active {
+  @apply text-brand-teal;
+}
