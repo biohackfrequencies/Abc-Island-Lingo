@@ -44,7 +44,8 @@ export const useIAP = () => {
             } catch (e: any) {
                 console.error("IAP Init Error:", e);
                 // DEBUG: Show actual error to user
-                alert(`IAP Error: ${e.message || JSON.stringify(e)}`);
+                console.error("IAP Init contents:", JSON.stringify(e));
+                alert(`IAP Init Error:\n${e.message}\n\nDetails: ${JSON.stringify(e)}`);
             }
         };
 
@@ -98,10 +99,25 @@ export const useIAP = () => {
         }
     };
 
+    const redeemCode = async () => {
+        const platform = Capacitor.getPlatform();
+        if (platform !== 'ios') {
+            alert("Promo codes are for iOS only.");
+            return;
+        }
+
+        try {
+            await Purchases.presentCodeRedemptionSheet();
+        } catch (e: any) {
+            console.error("Redemption Error:", e);
+        }
+    };
+
     return {
         packages,
         purchase,
         restore,
+        redeemCode,
         loading,
         error
     };

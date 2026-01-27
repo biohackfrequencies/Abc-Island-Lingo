@@ -7,7 +7,7 @@ import { Star, Flame, Zap, Check, PlayCircle, Lock } from 'lucide-react';
 
 export const Dashboard: React.FC = () => {
     const { language, completedLessons, isPremium } = useStore();
-    const { packages, purchase, restore, loading, error } = useIAP();
+    const { packages, purchase, restore, redeemCode, loading, error } = useIAP();
 
     const nextLessonIndex = lessons.findIndex(l => !completedLessons.includes(l.id));
     const activeLesson = lessons[nextLessonIndex !== -1 ? nextLessonIndex : 0];
@@ -175,6 +175,14 @@ export const Dashboard: React.FC = () => {
                                                 className="text-gray-400 text-sm font-medium hover:text-white underline decoration-gray-600 underline-offset-4"
                                             >
                                                 Restore Purchases
+                                            </button>
+
+                                            <button
+                                                onClick={redeemCode}
+                                                disabled={loading}
+                                                className="text-gray-500 text-xs font-medium hover:text-white mt-2"
+                                            >
+                                                Redeem Code
                                             </button>
                                         </div>
                                     </div>
