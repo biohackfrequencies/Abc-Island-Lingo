@@ -26,8 +26,8 @@ export const conversations: Conversation[] = [
         tags: ['supermarket'],
         lines: [
             { speaker: 'A', text: 'Bon tardi. Bo tin apel?', translation: 'Good afternoon. Do you have apples?' },
-            { speaker: 'B', text: 'Si, nos tin apel kòrá i berde.', translation: 'Yes, we have red and green apples.' },
-            { speaker: 'A', text: 'Mi kier sinku apel kòrá per fabor.', translation: 'I want five red apples please.', isInteractive: true },
+            { speaker: 'B', text: 'Si, nos tin apel kòrá i bèrdè.', translation: 'Yes, we have red and green apples.' },
+            { speaker: 'A', text: 'Mi kier sinku apel kòrá por fabor.', translation: 'I want five red apples please.', isInteractive: true },
             { speaker: 'B', text: 'Ata nan aki.', translation: 'Here they are.' }
         ]
     },
@@ -50,7 +50,7 @@ export const conversations: Conversation[] = [
             { speaker: 'A', text: 'Pardon, unda e laman ta?', translation: 'Excuse me, where is the beach?' },
             { speaker: 'B', text: 'E laman ta serka.', translation: 'The beach is close.' },
             { speaker: 'A', text: 'Mi mester kana of kore auto?', translation: 'Do I need to walk or drive?', isInteractive: true },
-            { speaker: 'B', text: 'Bo por kana. Sigui rechtt.', translation: 'You can walk. Go straight.' }
+            { speaker: 'B', text: 'Bo por kana. Sigui padilanti.', translation: 'You can walk. Go straight.' }
         ]
     },
     {
@@ -61,7 +61,7 @@ export const conversations: Conversation[] = [
             { speaker: 'A', text: 'Bo tin ruman?', translation: 'Do you have siblings?' },
             { speaker: 'B', text: 'Si, mi tin un ruman hòmber.', translation: 'Yes, I have one brother.' },
             { speaker: 'A', text: 'Kon e yama?', translation: 'What is his name?', isInteractive: true },
-            { speaker: 'B', text: 'E yama Carlos. E ta halu.', translation: 'His name is Carlos. He is tall.' }
+            { speaker: 'B', text: 'E yama Carlos. E ta haltu.', translation: 'His name is Carlos. He is tall.' }
         ]
     },
     {
@@ -153,7 +153,7 @@ export const conversations: Conversation[] = [
         category: 'social',
         tags: ['social-meetup'],
         lines: [
-            { speaker: 'A', text: 'Hé! Kon ta bai kune?', translation: 'Hey! How is it going?' },
+            { speaker: 'A', text: 'Hé! Kon ta bai?', translation: 'Hey! How is it going?' },
             { speaker: 'B', text: 'Hé! Tur kos ta bon. I bo?', translation: 'Hey! Everything is good. And you?' },
             { speaker: 'A', text: 'Trankil. Kiko bo ta hasi aki?', translation: 'Chilled. What are you doing here?', isInteractive: true },
             { speaker: 'B', text: 'Mi ta buska un regalo pa mi mama.', translation: 'I am looking for a gift for my mom.' },

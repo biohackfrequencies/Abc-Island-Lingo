@@ -1,0 +1,75 @@
+{
+  "phraseOfTheWeek": {
+    "papiamento": "Kon ta bai?",
+    "en": "How are you?",
+    "nl": "Hoe gaat het?",
+    "es": "¿Cómo estás?"
+  },
+  "vocabulary": [
+    {
+      "id": "remote-dushi-korsou",
+      "papiamento": "Dushi Kòrsou",
+      "en": "Sweet Curaçao",
+      "nl": "Lief Curaçao",
+      "es": "Dulce Curazao",
+      "partOfSpeech": "phrase"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "remote-greeting",
+      "title": "Kon ta bai?",
+      "premium": false,
+      "level": "A1",
+      "description": {
+        "en": "A short greeting you can use this week.",
+        "nl": "Een korte groet voor deze week.",
+        "es": "Un saludo corto para esta semana."
+      },
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "prompt": {
+            "en": "How do you say “How are you?”",
+            "nl": "Hoe zeg je “Hoe gaat het?”",
+            "es": "¿Cómo se dice “¿Cómo estás?”?"
+          },
+          "options": ["Kon ta bai?", "Bon nochi", "Masha danki"],
+          "answer": "Kon ta bai?"
+        },
+        {
+          "type": "spelling",
+          "prompt": {
+            "en": "Type the Papiamento for “Good morning”.",
+            "nl": "Typ het Papiaments voor “Goedemorgen”.",
+            "es": "Escribe en papiamento “Buenos días”."
+          },
+          "answer": "Bon dia"
+        }
+      ]
+    },
+    {
+      "id": "remote-market",
+      "title": "Na merkado",
+      "premium": true,
+      "level": "A2",
+      "description": {
+        "en": "Buy fruit at the market.",
+        "nl": "Fruit kopen op de markt.",
+        "es": "Comprar fruta en el mercado."
+      },
+      "questions": [
+        {
+          "type": "order",
+          "prompt": {
+            "en": "Form the sentence: “One apple, please.”",
+            "nl": "Maak de zin: “Eén appel, alsjeblieft.”",
+            "es": "Forma la frase: “Una manzana, por favor.”"
+          },
+          "options": ["Un", "apel", "por", "fabor"],
+          "answer": "Un apel por fabor"
+        }
+      ]
+    }
+  ]
+}

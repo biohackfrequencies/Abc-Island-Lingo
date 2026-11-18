@@ -1,62 +1,74 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
+import { Search } from 'lucide-react';
+import { toDictionaryEntries } from '../content/remote';
+import { useRemoteContent } from '../content/useRemoteContent';
 import { dictionary } from '../data/dictionary';
+import { formatWordCount, messages, type MessageKey } from '../i18n/messages';
 import { useStore } from '../store/useStore';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Search } from 'lucide-react';
+import type { DictionaryEntry } from '../types';
+
+const posKey: Record<DictionaryEntry['partOfSpeech'], MessageKey> = {
+    noun: 'posNoun',
+    verb: 'posVerb',
+    adjective: 'posAdjective',
+    phrase: 'posPhrase',
+    other: 'posOther',
+};
+
+function fold(value: string): string {
+    return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
 
 export const Dictionary: React.FC = () => {
-    const { language } = useStore();
+    const language = useStore((state) => state.language) ?? 'en';
+    const remote = useRemoteContent();
+    const copy = messages[language];
     const [searchTerm, setSearchTerm] = useState('');
+    const query = fold(searchTerm.trim());
+    const entries = useMemo(() => {
+        const merged = [...dictionary, ...toDictionaryEntries(remote.vocabulary)];
+        return merged.sort((a, b) => a.papiamento.localeCompare(b.papiamento, 'en', { sensitivity: 'base' }));
+    }, [remote.vocabulary]);
 
-    const filtered = dictionary.filter(entry =>
-        entry.papiamento.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (language && entry.meanings[language].toLowerCase().includes(searchTerm.toLowerCase()))
-    );
+    const filtered = useMemo(() => {
+        if (!query) return entries;
+        return entries.filter((entry) =>
+            fold(entry.papiamento).includes(query) || fold(entry.meanings[language]).includes(query)
+        );
+    }, [entries, language, query]);
 
     return (
-        <div className="min-h-screen bg-sand">
-            {/* Header */}
-            <div className="bg-white p-4 shadow-sm sticky top-0 z-10 flex items-center gap-4">
-                <Link to="/dashboard" className="p-2 hover:bg-gray-100 rounded-full">
-                    <ArrowLeft className="text-gray-600" />
-                </Link>
-                <h1 className="text-xl font-bold">Dictionary</h1>
-            </div>
-
-            <div className="p-4 max-w-md mx-auto">
-                <div className="relative mb-6">
+        <div className="min-h-screen bg-slate-900 text-white pb-28">
+            <div className="bg-slate-900/95 p-4 sticky top-0 z-10 border-b border-slate-800">
+                <h1 className="text-xl font-bold mb-3">{copy.dictionaryTitle}</h1>
+                <div className="relative">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
                     <input
                         type="text"
-                        placeholder="Search Papiamento or native..."
+                        placeholder={copy.dictionarySearch}
                         value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                        onChange={(event) => setSearchTerm(event.target.value)}
+                        className="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-teal text-white placeholder:text-slate-500"
                     />
                 </div>
+                <p className="text-xs text-gray-400 mt-2" data-testid="dictionary-count">{formatWordCount(filtered.length, language)}</p>
+            </div>
 
-                <div className="space-y-3">
-                    {filtered.map(entry => (
-                        <div key={entry.id} className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
-                            <div>
-                                <h3 className="font-bold text-lg text-primary">{entry.papiamento}</h3>
-                                {entry.partOfSpeech && (
-                                    <span className="text-xs bg-teal-50 text-teal-700 px-2 py-0.5 rounded-full capitalize">
-                                        {entry.partOfSpeech}
-                                    </span>
-                                )}
-                            </div>
-                            <div className="text-gray-600 text-right">
-                                <p>{language ? entry.meanings[language] : entry.meanings.en}</p>
-                            </div>
+            <div className="p-4 max-w-lg mx-auto space-y-3">
+                {filtered.map((entry) => (
+                    <div key={entry.id} className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                        <div className="flex justify-between items-start gap-3">
+                            <h3 className="font-bold text-lg text-brand-teal">{entry.papiamento}</h3>
+                            <span className="text-xs bg-teal-950 text-brand-teal px-2 py-0.5 rounded-full shrink-0">
+                                {copy[posKey[entry.partOfSpeech]]}
+                            </span>
                         </div>
-                    ))}
-                    {filtered.length === 0 && (
-                        <div className="text-center text-gray-400 mt-10">
-                            No words found.
-                        </div>
-                    )}
-                </div>
+                        <p className="text-gray-200 mt-1">{entry.meanings[language]}</p>
+                    </div>
+                ))}
+                {filtered.length === 0 && (
+                    <div className="text-center text-gray-400 mt-10">{copy.dictionaryEmpty}</div>
+                )}
             </div>
         </div>
     );

@@ -57,4 +57,6 @@ export interface LessonConfig {
     topic: string;
     description: Record<Language, string>;
     content: ContentStrategy;
+    /** Dialogue tags to include even when the lesson content is chosen by id. */
+    dialogueTags?: string[];
 }

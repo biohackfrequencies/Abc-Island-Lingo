@@ -1,0 +1,174 @@
+# Build ABC Island Lingo on a GitHub macOS runner and upload it to TestFlight.
+# Started only by hand. A push does not run this.
+# The upload is for TestFlight processing only. Nothing in this file submits
+# the app for App Store review.
+#
+# Secrets, and no others:
+#   ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8_BASE64, APPLE_TEAM_ID
+# The key has to be an App Store Connect Team key with the Admin role.
+# An App Manager key can upload a build but cannot create the signing certificate.
+
+name: iOS TestFlight
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_number:
+        description: iOS build number. Leave empty to use the number in Xcode (12).
+        required: false
+        default: ""
+        type: string
+
+concurrency:
+  group: ios-testflight
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-upload:
+    name: Build, sign, and upload to TestFlight
+    # macos-26 never received a runner on this account (the job stayed queued).
+    # macos-latest currently points at that same macOS 26 image, so it is not used.
+    # macos-15 is a GitHub-hosted runner. Its default Xcode is 16.4, which App
+    # Store Connect rejects. The next step selects the newest Xcode 26 on that
+    # image (26.3, with the iOS 26 SDK). The deployment target stays 15.0.
+    runs-on: macos-15
+    timeout-minutes: 90
+    env:
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8_BASE64: ${{ secrets.ASC_KEY_P8_BASE64 }}
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check required secrets
+        run: |
+          set -euo pipefail
+          missing=""
+          [ -z "${ASC_KEY_ID:-}" ] && missing="${missing} ASC_KEY_ID"
+          [ -z "${ASC_ISSUER_ID:-}" ] && missing="${missing} ASC_ISSUER_ID"
+          [ -z "${ASC_KEY_P8_BASE64:-}" ] && missing="${missing} ASC_KEY_P8_BASE64"
+          [ -z "${APPLE_TEAM_ID:-}" ] && missing="${missing} APPLE_TEAM_ID"
+          if [ -n "${missing}" ]; then
+            echo "::error::Missing GitHub Actions secret(s):${missing}. Add them under Settings, Secrets and variables, Actions. Names must match exactly."
+            exit 1
+          fi
+
+          case "${ASC_KEY_P8_BASE64}" in
+            *"BEGIN PRIVATE KEY"*|*"BEGINPRIVATEKEY"*|*"BEGIN EC PRIVATE KEY"*)
+              echo "::error::ASC_KEY_P8_BASE64 is the raw key file. GitHub needs the base64 of that file, as one line."
+              exit 1
+              ;;
+          esac
+
+          ASC_KEY_ID=$(printf '%s' "${ASC_KEY_ID}" | tr -d '[:space:]')
+          ASC_ISSUER_ID=$(printf '%s' "${ASC_ISSUER_ID}" | tr -d '[:space:]')
+          APPLE_TEAM_ID=$(printf '%s' "${APPLE_TEAM_ID}" | tr -d '[:space:]')
+          ASC_KEY_P8_BASE64=$(printf '%s' "${ASC_KEY_P8_BASE64}" | tr -d '[:space:]')
+
+          if ! printf '%s' "${ASC_KEY_ID}" | grep -Eq '^[A-Za-z0-9]{8,32}$'; then
+            echo "::error::ASC_KEY_ID does not look like an App Store Connect Key ID. Copy the Key ID from the Team Keys row."
+            exit 1
+          fi
+          if ! printf '%s' "${ASC_ISSUER_ID}" | grep -Eq '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'; then
+            echo "::error::ASC_ISSUER_ID does not look like an Issuer ID. Copy the Issuer ID at the top of the App Store Connect API page."
+            exit 1
+          fi
+          if ! printf '%s' "${APPLE_TEAM_ID}" | grep -Eq '^[A-Z0-9]{10}$'; then
+            echo "::error::APPLE_TEAM_ID should be the 10-character Team ID from Apple Developer Membership details."
+            exit 1
+          fi
+          if [ "${#ASC_KEY_P8_BASE64}" -lt 80 ]; then
+            echo "::error::ASC_KEY_P8_BASE64 is too short to be the .p8 file. Encode the downloaded key as one line of base64."
+            exit 1
+          fi
+          case "${ASC_KEY_P8_BASE64}" in
+            *[!A-Za-z0-9+/=]*)
+              echo "::error::ASC_KEY_P8_BASE64 should be a single line of base64, with no spaces or quotes."
+              exit 1
+              ;;
+          esac
+
+          {
+            echo "ASC_KEY_ID=${ASC_KEY_ID}"
+            echo "ASC_ISSUER_ID=${ASC_ISSUER_ID}"
+            echo "APPLE_TEAM_ID=${APPLE_TEAM_ID}"
+            echo "ASC_KEY_P8_BASE64=${ASC_KEY_P8_BASE64}"
+          } >> "${GITHUB_ENV}"
+          echo "All four secrets are present."
+
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Select Xcode 26
+        run: python3 scripts/select-xcode-26.py
+
+      - name: Show Xcode
+        run: xcodebuild -version
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build the web app
+        run: npm run build
+
+      - name: Sync the iOS project
+        run: npx cap sync ios
+
+      - name: Apply an optional build number
+        env:
+          BUILD_NUMBER_INPUT: ${{ inputs.build_number }}
+        run: python3 scripts/set-ios-build-number.py
+
+      - name: Confirm version, build, bundle id, team, and In-App Purchase
+        run: bash scripts/verify-ios-release-identity.sh
+
+      - name: Show the Xcode scheme
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -list
+
+      - name: Install the App Store Connect API key
+        run: |
+          set -euo pipefail
+          umask 077
+          key_dir="${HOME}/.private_keys"
+          key_path="${key_dir}/AuthKey_${ASC_KEY_ID}.p8"
+          mkdir -p "${key_dir}"
+          printf '%s' "${ASC_KEY_P8_BASE64}" | base64 --decode > "${key_path}" 2>/dev/null || true
+          if ! grep -q "BEGIN PRIVATE KEY" "${key_path}" 2>/dev/null; then
+            printf '%s' "${ASC_KEY_P8_BASE64}" | base64 -D > "${key_path}" 2>/dev/null || true
+          fi
+          chmod 600 "${key_path}"
+          if ! grep -q "BEGIN PRIVATE KEY" "${key_path}"; then
+            echo "::error::ASC_KEY_P8_BASE64 did not decode to a private key. Encode the downloaded .p8 file as one line of base64."
+            exit 1
+          fi
+          echo "API_KEY_PATH=${key_path}" >> "${GITHUB_ENV}"
+
+      - name: Archive
+        run: bash scripts/archive-ios.sh
+
+      - name: Export the App Store IPA
+        run: bash scripts/export-ios-ipa.sh
+
+      - name: Check the IPA and upload it to TestFlight
+        run: bash scripts/upload-testflight.sh
+
+      - name: Remove the API key
+        if: always()
+        run: |
+          rm -f "${HOME}/.private_keys"/AuthKey_*.p8
+          rmdir "${HOME}/.private_keys" 2>/dev/null || true

@@ -321,7 +321,26 @@ export const lessons: LessonConfig[] = [
         title: 'Eksamen Final (Mixed Tenses)',
         topic: 'Mastering Time',
         description: { en: 'Mix Past, Present & Future.', nl: 'Mix Verleden, Heden & Toekomst.', es: 'Mezcla Pasado, Presente y Futuro.' },
-        content: { type: 'tag', tag: 'exam-mixed' }
+        content: {
+            type: 'ids',
+            ids: [
+                'gram-go-pres',
+                'gram-eat-pres',
+                'gram-sleep-pres',
+                'gram-work-pres',
+                'gram-go-past-imp',
+                'gram-eat-past-imp',
+                'gram-work-past',
+                'gram-go-past-perf',
+                'gram-eat-past-perf',
+                'gram-read-past',
+                'gram-go-fut',
+                'gram-eat-fut',
+                'gram-sleep-fut',
+                'gram-work-fut',
+            ],
+        },
+        dialogueTags: ['exam-mixed'],
     },
     {
         id: 'l-gram-plural',
