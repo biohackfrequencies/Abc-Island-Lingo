@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flame, Lock, PlayCircle, Zap } from 'lucide-react';
+import { Flame, PlayCircle, RotateCcw, Zap } from 'lucide-react';
 import { lessons } from '../data/lessons';
 import { effectiveStreak, isLessonLocked, localDateString } from '../lib/progress';
-import { formatDays, messages } from '../i18n/messages';
+import { formatDays, formatReviewCount, messages } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { LessonCatalog } from './LessonCatalog';
+import { PaywallCard } from './PaywallCard';
 import { PhraseOfTheWeek, RemoteLessonList } from './RemoteLessons';
 
 export const Dashboard: React.FC = () => {
@@ -15,6 +16,7 @@ export const Dashboard: React.FC = () => {
     const streak = useStore((state) => state.streak);
     const lastStudyDate = useStore((state) => state.lastStudyDate);
     const xp = useStore((state) => state.xp);
+    const mistakes = useStore((state) => state.mistakes);
 
     if (!language) {
         return <div className="p-6 text-white">{messages.en.notSelected}</div>;
@@ -25,16 +27,13 @@ export const Dashboard: React.FC = () => {
     const nextLesson = lessons.find((lesson) => !done.has(lesson.id)) ?? null;
     const nextLocked = !!nextLesson && isLessonLocked(nextLesson.unit, isPremium);
     const streakDays = effectiveStreak(streak, lastStudyDate, localDateString());
-
-    const openPaywall = () => {
-        document.getElementById('premium-paywall')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    };
+    const showPaywall = nextLocked;
 
     return (
         <div className="min-h-screen bg-bg-main pb-28 text-white">
             <header className="p-6 pb-2 flex justify-between items-start">
                 <div className="flex items-center gap-3">
-                    <img src="/logo.png" alt="ABC Island Lingo" className="w-12 h-12 rounded-xl shadow-lg" />
+                    <img src="/logo.png" alt="ABC Island Lingo" className="w-14 h-14 object-contain" />
                     <div>
                         <h1 className="text-xl font-bold text-gray-400 leading-none">Bon bini!</h1>
                         <h2 className="text-2xl font-extrabold text-white leading-tight">ABC Island Lingo</h2>
@@ -71,6 +70,19 @@ export const Dashboard: React.FC = () => {
             <PhraseOfTheWeek />
 
             <div className="px-6 mb-8">
+                {mistakes.length > 0 && (
+                    <Link to="/review" className="block mb-4" data-testid="practice-mistakes">
+                        <div className="rounded-3xl border border-brand-teal/40 bg-slate-800 p-5">
+                            <p className="text-brand-teal font-bold text-sm mb-1 uppercase tracking-wide">{copy.reviewTitle}</p>
+                            <h3 className="text-2xl font-extrabold text-white">{formatReviewCount(mistakes.length, language)}</h3>
+                            <p className="text-gray-300 text-sm mt-2 mb-4">{copy.reviewBody}</p>
+                            <span className="bg-brand-teal text-slate-900 font-bold py-3 px-6 rounded-xl inline-flex items-center gap-2">
+                                <RotateCcw size={18} />
+                                {copy.reviewTitle}
+                            </span>
+                        </div>
+                    </Link>
+                )}
                 {!nextLesson && (
                     <div className="bg-gradient-sunset rounded-3xl p-6 shadow-lg shadow-orange-500/20">
                         <p className="text-white/80 font-bold text-sm mb-1 uppercase tracking-wide">{copy.continueLearning}</p>
@@ -79,17 +91,11 @@ export const Dashboard: React.FC = () => {
                     </div>
                 )}
                 {nextLesson && nextLocked && (
-                    <button type="button" onClick={openPaywall} className="block w-full text-left">
-                        <div className="bg-slate-800 rounded-3xl p-6 border border-brand-teal/40">
-                            <p className="text-brand-teal font-bold text-sm mb-1 uppercase tracking-wide">{copy.continueLearning}</p>
-                            <h3 className="text-3xl font-extrabold text-white mb-2">{nextLesson.title}</h3>
-                            <p className="text-gray-300 text-sm mb-6">{copy.lessonLockedBody}</p>
-                            <span className="bg-brand-teal text-slate-900 font-bold py-3 px-6 rounded-xl inline-flex items-center gap-2">
-                                <Lock size={18} />
-                                {copy.premiumTitle}
-                            </span>
-                        </div>
-                    </button>
+                    <div className="bg-slate-800 rounded-3xl p-6 border border-brand-teal/40">
+                        <p className="text-brand-teal font-bold text-sm mb-1 uppercase tracking-wide">{copy.continueLearning}</p>
+                        <h3 className="text-3xl font-extrabold text-white mb-2">{nextLesson.title}</h3>
+                        <p className="text-gray-300 text-sm">{copy.lessonLockedBody}</p>
+                    </div>
                 )}
                 {nextLesson && !nextLocked && (
                     <Link to={`/lesson/${nextLesson.id}`} className="block">
@@ -106,9 +112,15 @@ export const Dashboard: React.FC = () => {
                 )}
             </div>
 
+            {showPaywall && (
+                <div className="px-6 mb-8">
+                    <PaywallCard />
+                </div>
+            )}
+
             <div className="px-6 pb-6">
                 <RemoteLessonList />
-                <LessonCatalog />
+                <LessonCatalog showPaywall={!nextLocked} />
             </div>
         </div>
     );

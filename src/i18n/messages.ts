@@ -12,8 +12,12 @@ const en = {
     startLesson: 'Start lesson',
     allDoneTitle: 'You finished every lesson',
     allDoneBody: 'Your progress stays on this device.',
-    premiumTitle: 'Premium',
-    premiumBody: 'Units 1 and 2 are free. A one-time purchase unlocks units 3–9 and later lessons.',
+    premiumTitle: 'Unlock the full course',
+    reviewTitle: 'Practice mistakes',
+    reviewBody: 'Questions you missed, saved on this device. Works offline.',
+    reviewBanner: 'Review the ones you missed',
+    reviewEmptyTitle: 'No mistakes to practice',
+    reviewEmptyBody: 'Missed questions are saved on this device and show up here.',
     unlock: 'Unlock lifetime access',
     processing: 'Processing…',
     restore: 'Restore purchases',
@@ -45,7 +49,7 @@ const en = {
     lessonMissing: 'Lesson not found',
     lessonEmpty: 'This lesson has no exercises yet.',
     lessonLockedTitle: 'This lesson is locked',
-    lessonLockedBody: 'Premium unlocks this lesson.',
+    lessonLockedBody: 'Units 1 and 2 are free. Premium unlocks this lesson.',
     backHome: 'Back to home',
     cultureEyebrow: 'ABC Islands',
     cultureTitle: 'Culture',
@@ -60,7 +64,7 @@ const en = {
     iapCancelled: 'Purchase cancelled. You have not been charged.',
     iapPurchaseFailed: 'The purchase did not go through. Please try again.',
     iapRestoreFailed: 'Restore did not work. Please try again in a moment.',
-    iapUnavailable: 'Purchases open in the iOS and Android app. The price there is $4.99.',
+    iapUnavailable: 'Purchases open in the iOS and Android app.',
     iapIosOnly: 'Promo codes can be redeemed on iPhone and iPad.',
     iapInitFailed: 'Purchases could not be loaded. Free lessons still work, and you can try again later.',
     posNoun: 'Noun',
@@ -100,8 +104,12 @@ const nl: typeof en = {
     startLesson: 'Start les',
     allDoneTitle: 'Je hebt elke les af',
     allDoneBody: 'Je voortgang blijft op dit apparaat.',
-    premiumTitle: 'Premium',
-    premiumBody: 'Unit 1 en 2 zijn gratis. Een eenmalige aankoop opent unit 3–9 en latere lessen.',
+    premiumTitle: 'Ontgrendel de hele cursus',
+    reviewTitle: 'Oefen je fouten',
+    reviewBody: 'Vragen die je miste, bewaard op dit apparaat. Werkt offline.',
+    reviewBanner: 'Herhaal wat je miste',
+    reviewEmptyTitle: 'Geen fouten om te oefenen',
+    reviewEmptyBody: 'Gemiste vragen worden op dit apparaat bewaard en komen hier te staan.',
     unlock: 'Ontgrendel voor altijd',
     processing: 'Bezig…',
     restore: 'Aankopen herstellen',
@@ -133,7 +141,7 @@ const nl: typeof en = {
     lessonMissing: 'Les niet gevonden',
     lessonEmpty: 'Deze les heeft nog geen oefeningen.',
     lessonLockedTitle: 'Deze les is vergrendeld',
-    lessonLockedBody: 'Premium opent deze les.',
+    lessonLockedBody: 'Unit 1 en 2 zijn gratis. Premium opent deze les.',
     backHome: 'Terug naar home',
     cultureEyebrow: 'ABC-eilanden',
     cultureTitle: 'Cultuur',
@@ -148,7 +156,7 @@ const nl: typeof en = {
     iapCancelled: 'Aankoop geannuleerd. Er is niets afgeschreven.',
     iapPurchaseFailed: 'De aankoop is niet gelukt. Probeer het opnieuw.',
     iapRestoreFailed: 'Herstellen is niet gelukt. Probeer het zo opnieuw.',
-    iapUnavailable: 'Aankopen werken in de iOS- en Android-app. De prijs daar is $4.99.',
+    iapUnavailable: 'Aankopen werken in de iOS- en Android-app.',
     iapIosOnly: 'Promotiecodes wissel je in op een iPhone of iPad.',
     iapInitFailed: 'Aankopen konden niet geladen worden. De gratis lessen werken wel. Probeer het later opnieuw.',
     posNoun: 'Naamwoord',
@@ -188,8 +196,12 @@ const es: typeof en = {
     startLesson: 'Empezar lección',
     allDoneTitle: 'Terminaste todas las lecciones',
     allDoneBody: 'Tu progreso se queda en este dispositivo.',
-    premiumTitle: 'Premium',
-    premiumBody: 'Las unidades 1 y 2 son gratis. Una compra única abre las unidades 3 a 9 y las lecciones posteriores.',
+    premiumTitle: 'Desbloquea el curso completo',
+    reviewTitle: 'Practica tus errores',
+    reviewBody: 'Preguntas que fallaste, guardadas en este dispositivo. Funciona sin conexión.',
+    reviewBanner: 'Repasa las que fallaste',
+    reviewEmptyTitle: 'No hay errores para practicar',
+    reviewEmptyBody: 'Las preguntas falladas se guardan en este dispositivo y aparecen aquí.',
     unlock: 'Desbloquea de por vida',
     processing: 'Procesando…',
     restore: 'Restaurar compras',
@@ -221,7 +233,7 @@ const es: typeof en = {
     lessonMissing: 'Lección no encontrada',
     lessonEmpty: 'Esta lección todavía no tiene ejercicios.',
     lessonLockedTitle: 'Esta lección está bloqueada',
-    lessonLockedBody: 'Premium abre esta lección.',
+    lessonLockedBody: 'Las unidades 1 y 2 son gratis. Premium abre esta lección.',
     backHome: 'Volver al inicio',
     cultureEyebrow: 'Islas ABC',
     cultureTitle: 'Cultura',
@@ -236,7 +248,7 @@ const es: typeof en = {
     iapCancelled: 'Compra cancelada. No se te ha cobrado.',
     iapPurchaseFailed: 'La compra no se completó. Inténtalo de nuevo.',
     iapRestoreFailed: 'No se pudo restaurar. Inténtalo de nuevo en un momento.',
-    iapUnavailable: 'Las compras se abren en la app de iOS y Android. El precio allí es $4.99.',
+    iapUnavailable: 'Las compras se abren en la app de iOS y Android.',
     iapIosOnly: 'Los códigos promocionales se canjean en iPhone o iPad.',
     iapInitFailed: 'No se pudieron cargar las compras. Las lecciones gratis siguen disponibles.',
     posNoun: 'Sustantivo',
@@ -278,6 +290,26 @@ export function formatCompleted(done: number, total: number, language: Language)
     if (language === 'nl') return `${done} / ${total} afgerond`;
     if (language === 'es') return `${done} / ${total} completadas`;
     return `${done} / ${total} completed`;
+}
+
+export function formatReviewCount(count: number, language: Language): string {
+    if (language === 'nl') return count === 1 ? '1 fout om te oefenen' : `${count} fouten om te oefenen`;
+    if (language === 'es') return count === 1 ? '1 error para practicar' : `${count} errores para practicar`;
+    return count === 1 ? '1 mistake to practice' : `${count} mistakes to practice`;
+}
+
+/** Price comes from RevenueCat. When the store has not loaded, the sentence stays a one-time purchase with no invented amount. */
+export function formatPremiumOffer(language: Language, units: number, words: number, price: string | null): string {
+    if (language === 'nl') {
+        const payment = price ? `Eenmalig ${price}` : 'Eenmalige aankoop';
+        return `Ontgrendel alle ${units} units, ${words} woorden en het volledige woordenboek. ${payment}, geen abonnement, geen advertenties, werkt offline. Unit 1 en 2 zijn gratis.`;
+    }
+    if (language === 'es') {
+        const payment = price ? `Pago único ${price}` : 'Compra única';
+        return `Desbloquea las ${units} unidades, ${words} palabras y el diccionario completo. ${payment}, sin suscripción, sin anuncios, funciona sin conexión. Las unidades 1 y 2 son gratis.`;
+    }
+    const payment = price ? `One-time ${price}` : 'One-time purchase';
+    return `Unlock all ${units} units, ${words} words and the full dictionary. ${payment}, no subscription, no ads, works offline. Units 1 and 2 are free.`;
 }
 
 export function formatWordCount(count: number, language: Language): string {

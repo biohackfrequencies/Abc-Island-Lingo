@@ -15,7 +15,7 @@ const levelBadge: Record<string, string> = {
     C1: 'bg-yellow-500',
 };
 
-export const LessonCatalog: React.FC = () => {
+export const LessonCatalog: React.FC<{ showPaywall?: boolean }> = ({ showPaywall = true }) => {
     const language = useStore((state) => state.language) ?? 'en';
     const completedLessons = useStore((state) => state.completedLessons);
     const isPremium = useStore((state) => state.isPremium);
@@ -37,8 +37,8 @@ export const LessonCatalog: React.FC = () => {
                 const previousLevel = lessons.find((lesson) => lesson.unit === unit - 1)?.level;
                 const isSectionStart = currentLevel !== previousLevel;
                 const unitLocked = isLessonLocked(unit, isPremium);
-                const showPaywall = unitLocked && !paywallShown;
-                if (showPaywall) paywallShown = true;
+                const showPaywallCard = showPaywall && unitLocked && !paywallShown;
+                if (showPaywallCard) paywallShown = true;
                 const finished = unitLessons.filter((lesson) => done.has(lesson.id)).length;
 
                 return (
@@ -66,7 +66,7 @@ export const LessonCatalog: React.FC = () => {
                             </div>
                         </div>
 
-                        {showPaywall && (
+                        {showPaywallCard && (
                             <div className="mb-6">
                                 <PaywallCard />
                             </div>
