@@ -83,6 +83,9 @@ const en = {
     unit8: 'Advanced fluency',
     unit9: 'Business & academia',
     lockedRow: 'Locked',
+    phraseOfTheWeek: 'Phrase of the week',
+    updatedLessons: 'New lessons',
+    updatedLessonsBody: 'Extra practice saved on this device.',
 };
 
 const nl: typeof en = {
@@ -168,6 +171,9 @@ const nl: typeof en = {
     unit8: 'Gevorderde taal',
     unit9: 'Zakelijk en studie',
     lockedRow: 'Op slot',
+    phraseOfTheWeek: 'Zin van de week',
+    updatedLessons: 'Nieuwe lessen',
+    updatedLessonsBody: 'Extra oefening, bewaard op dit apparaat.',
 };
 
 const es: typeof en = {
@@ -253,6 +259,9 @@ const es: typeof en = {
     unit8: 'Fluidez avanzada',
     unit9: 'Negocios y estudio',
     lockedRow: 'Bloqueada',
+    phraseOfTheWeek: 'Frase de la semana',
+    updatedLessons: 'Lecciones nuevas',
+    updatedLessonsBody: 'Práctica extra guardada en este dispositivo.',
 };
 
 export const messages = { en, nl, es };

@@ -6,6 +6,7 @@ import { effectiveStreak, isLessonLocked, localDateString } from '../lib/progres
 import { formatDays, messages } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { LessonCatalog } from './LessonCatalog';
+import { PhraseOfTheWeek, RemoteLessonList } from './RemoteLessons';
 
 export const Dashboard: React.FC = () => {
     const language = useStore((state) => state.language);
@@ -67,6 +68,8 @@ export const Dashboard: React.FC = () => {
                 </div>
             </div>
 
+            <PhraseOfTheWeek />
+
             <div className="px-6 mb-8">
                 {!nextLesson && (
                     <div className="bg-gradient-sunset rounded-3xl p-6 shadow-lg shadow-orange-500/20">
@@ -104,6 +107,7 @@ export const Dashboard: React.FC = () => {
             </div>
 
             <div className="px-6 pb-6">
+                <RemoteLessonList />
                 <LessonCatalog />
             </div>
         </div>

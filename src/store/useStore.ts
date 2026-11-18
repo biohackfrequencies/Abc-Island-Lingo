@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { getRemoteLesson } from '../content/remote';
 import { lessons } from '../data/lessons';
 import type { Language } from '../types';
 import {
@@ -48,8 +49,12 @@ export const useStore = create<AppState>()(
             },
             completeLesson: (id) => set((state) => {
                 const config = lessons.find((lesson) => lesson.id === id);
-                const locked = !config || isLessonLocked(config.unit, state.isPremium);
-                return applyLessonCompletion(state, id, locked, localDateString());
+                if (config) {
+                    return applyLessonCompletion(state, id, isLessonLocked(config.unit, state.isPremium), localDateString());
+                }
+                const remote = getRemoteLesson(id);
+                if (!remote) return state;
+                return applyLessonCompletion(state, id, remote.premium && !state.isPremium, localDateString());
             }),
             resetProgress: () => set((state) => ({
                 language: null,

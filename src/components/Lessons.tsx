@@ -2,6 +2,7 @@ import React from 'react';
 import { messages } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { LessonCatalog } from './LessonCatalog';
+import { RemoteLessonList } from './RemoteLessons';
 
 export const Lessons: React.FC = () => {
     const language = useStore((state) => state.language);
@@ -16,6 +17,7 @@ export const Lessons: React.FC = () => {
                 <p className="text-gray-400 mt-1">{copy.lessonsSubtitle}</p>
             </header>
             <div className="px-6 pb-6">
+                <RemoteLessonList />
                 <LessonCatalog />
             </div>
         </div>

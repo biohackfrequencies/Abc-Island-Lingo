@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
+import { toDictionaryEntries } from '../content/remote';
+import { useRemoteContent } from '../content/useRemoteContent';
 import { dictionary } from '../data/dictionary';
 import { formatWordCount, messages, type MessageKey } from '../i18n/messages';
 import { useStore } from '../store/useStore';
@@ -19,16 +21,21 @@ function fold(value: string): string {
 
 export const Dictionary: React.FC = () => {
     const language = useStore((state) => state.language) ?? 'en';
+    const remote = useRemoteContent();
     const copy = messages[language];
     const [searchTerm, setSearchTerm] = useState('');
     const query = fold(searchTerm.trim());
+    const entries = useMemo(() => {
+        const merged = [...dictionary, ...toDictionaryEntries(remote.vocabulary)];
+        return merged.sort((a, b) => a.papiamento.localeCompare(b.papiamento, 'en', { sensitivity: 'base' }));
+    }, [remote.vocabulary]);
 
     const filtered = useMemo(() => {
-        if (!query) return dictionary;
-        return dictionary.filter((entry) =>
+        if (!query) return entries;
+        return entries.filter((entry) =>
             fold(entry.papiamento).includes(query) || fold(entry.meanings[language]).includes(query)
         );
-    }, [language, query]);
+    }, [entries, language, query]);
 
     return (
         <div className="min-h-screen bg-slate-900 text-white pb-28">

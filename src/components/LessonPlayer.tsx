@@ -1,11 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
+import { toPlayableLesson } from '../content/remote';
+import { useRemoteContent } from '../content/useRemoteContent';
 import { lessons } from '../data/lessons';
 import { messages } from '../i18n/messages';
 import { isLessonLocked } from '../lib/progress';
 import { useStore } from '../store/useStore';
-import type { Language, LessonConfig } from '../types';
+import type { Language } from '../types';
 import { generateLesson } from '../utils/lessonGenerator';
 import { PaywallCard } from './PaywallCard';
 
@@ -28,7 +30,7 @@ const LessonMessage: React.FC<{ title: string; body?: string }> = ({ title, body
     );
 };
 
-const LockedLesson: React.FC<{ config: LessonConfig }> = ({ config }) => {
+const LockedLesson: React.FC<{ title: string }> = ({ title }) => {
     const navigate = useNavigate();
     const language = (useStore((state) => state.language) ?? 'en') as Language;
     const copy = messages[language];
@@ -38,7 +40,7 @@ const LockedLesson: React.FC<{ config: LessonConfig }> = ({ config }) => {
                 <X size={24} />
             </button>
             <p className="text-brand-teal font-bold uppercase tracking-wide text-sm">{copy.lessonLockedTitle}</p>
-            <h1 className="text-3xl font-extrabold mt-2 mb-2">{config.title}</h1>
+            <h1 className="text-3xl font-extrabold mt-2 mb-2">{title}</h1>
             <p className="text-gray-300 mb-6">{copy.lessonLockedBody}</p>
             <PaywallCard />
         </div>
@@ -53,25 +55,32 @@ export const LessonPlayer: React.FC = () => {
     const isPremium = useStore((state) => state.isPremium);
     const currentLang = (language || 'en') as Language;
     const copy = messages[currentLang];
+    const remote = useRemoteContent();
+    const remoteLesson = remote.lessons.find((lesson) => lesson.id === lessonId) ?? null;
 
     const lessonConfig = lessons.find(l => l.id === lessonId);
-    const locked = !!lessonConfig && isLessonLocked(lessonConfig.unit, isPremium);
+    const locked = remoteLesson
+        ? remoteLesson.premium && !isPremium
+        : !!lessonConfig && isLessonLocked(lessonConfig.unit, isPremium);
 
     const lesson = useMemo(() => {
-        if (!lessonConfig || locked) return null;
+        if (locked) return null;
+        if (remoteLesson) return toPlayableLesson(remoteLesson);
+        if (!lessonConfig) return null;
         return generateLesson(lessonConfig, currentLang);
-    }, [lessonConfig, locked, currentLang]);
+    }, [currentLang, lessonConfig, locked, remoteLesson]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-    if (!lessonConfig) return <LessonMessage title={copy.lessonMissing} />;
-    if (locked) return <LockedLesson config={lessonConfig} />;
-    if (!lesson || lesson.questions.length === 0) return <LessonMessage title={lessonConfig.title} body={copy.lessonEmpty} />;
+    const lessonTitle = remoteLesson?.title ?? lessonConfig?.title ?? copy.lessonMissing;
+    if (!remoteLesson && !lessonConfig) return <LessonMessage title={copy.lessonMissing} />;
+    if (locked) return <LockedLesson title={lessonTitle} />;
+    if (!lesson || lesson.questions.length === 0) return <LessonMessage title={lessonTitle} body={copy.lessonEmpty} />;
 
     const currentQuestion = lesson.questions[currentIndex];
-    if (!currentQuestion) return <LessonMessage title={lessonConfig.title} body={copy.lessonEmpty} />;
+    if (!currentQuestion) return <LessonMessage title={lessonTitle} body={copy.lessonEmpty} />;
     const progress = ((currentIndex) / lesson.questions.length) * 100;
 
     // Helper to get content based on language
