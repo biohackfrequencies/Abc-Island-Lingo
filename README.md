@@ -34,7 +34,7 @@ The workflow builds the web app, syncs the iOS project, archives it, signs it, a
 
 It uses the GitHub-hosted `macos-15` runner. The `macos-26` label never started a machine on this account, and `macos-latest` points at that same image, so neither is used. `macos-15` opens Xcode 16.4 by default, and App Store Connect rejects that older SDK. The workflow switches to the newest Xcode 26 installed on the image before it archives. The iOS deployment target stays **15.0**, which is the oldest target Xcode 26 accepts.
 
-Signing uses the App Store Connect API key already stored as these four repository secrets, and no others: `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8_BASE64` (the `.p8` file as one line of base64), and `APPLE_TEAM_ID`. The key needs the Admin role so Apple can create the certificate. The bundle id is `com.papiamentolearn.app`. The marketing version stays **1.0.1**. The In-App Purchase entitlement stays on the signed app.
+Signing uses the App Store Connect API key already stored as these four repository secrets, and no others: `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8_BASE64` (the `.p8` file as one line of base64), and `APPLE_TEAM_ID`. The key needs the Admin role so Apple can create the certificate. The bundle id is `com.papiamentolearn.app`. The marketing version stays **1.0.1**. Purchases use StoreKit and RevenueCat. The old `com.apple.developer.in-app-purchase` entitlements key is not used, because automatic signing cannot put that key in a profile.
 
 This app uses Swift packages, so the workflow does not install CocoaPods.
 

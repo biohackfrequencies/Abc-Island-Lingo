@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Archive ABC Island Lingo with App Store Connect automatic signing.
 # This does not upload the app and does not submit it for review.
+# Do not pass CODE_SIGN_ENTITLEMENTS. This app has no profile entitlements.
+# com.apple.developer.in-app-purchase is not one, and Xcode rejects the archive
+# when that key is requested. StoreKit purchases do not need it.
 set -euo pipefail
 
 : "${API_KEY_PATH:?}"
@@ -29,7 +32,6 @@ xcodebuild \
   archive \
   DEVELOPMENT_TEAM="${APPLE_TEAM_ID}" \
   CODE_SIGN_STYLE=Automatic \
-  CODE_SIGN_ENTITLEMENTS="App/App.entitlements" \
   2>&1 | tee "${log}"
 status=${PIPESTATUS[0]}
 set -e

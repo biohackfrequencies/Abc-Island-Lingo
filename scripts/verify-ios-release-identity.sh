@@ -10,9 +10,9 @@ import re
 import sys
 
 EXPECTED_BUNDLE_ID = "com.papiamentolearn.app"
-EXPECTED_ENTITLEMENTS = "App/App.entitlements"
 PROJECT = "ios/App/App.xcodeproj/project.pbxproj"
-ENTITLEMENTS = "ios/App/App/App.entitlements"
+PACKAGE = "ios/App/CapApp-SPM/Package.swift"
+INVALID_ENTITLEMENT = "com.apple.developer.in-app-purchase"
 
 def fail(message: str) -> None:
     print(f"::error::{message}", file=sys.stderr)
@@ -50,7 +50,6 @@ versions = values("MARKETING_VERSION")
 builds = values("CURRENT_PROJECT_VERSION")
 teams = values("DEVELOPMENT_TEAM")
 styles = values("CODE_SIGN_STYLE")
-entitlements = values("CODE_SIGN_ENTITLEMENTS")
 deployment = values("IPHONEOS_DEPLOYMENT_TARGET")
 
 if bundle_ids != {EXPECTED_BUNDLE_ID}:
@@ -71,20 +70,26 @@ if styles != {"Automatic"}:
     )
 if len(teams) != 1:
     fail(f"Debug and Release use different Apple teams: {sorted(teams)}.")
-if entitlements != {EXPECTED_ENTITLEMENTS}:
+if "CODE_SIGN_ENTITLEMENTS" in text:
     fail(
-        "The In-App Purchase entitlement is not wired to both Debug and Release. "
-        f"Expected {EXPECTED_ENTITLEMENTS}. Found: {', '.join(sorted(entitlements)) or 'none'}."
+        "The Xcode project still sets CODE_SIGN_ENTITLEMENTS. "
+        "This app has no profile entitlements. Leave that setting unset."
     )
+if INVALID_ENTITLEMENT in text:
+    fail(
+        f"{INVALID_ENTITLEMENT} is not a provisioning-profile entitlement. "
+        "Automatic signing cannot include it. Remove it. StoreKit purchases do not need it."
+    )
+if "StoreKit.framework" not in text:
+    fail("StoreKit.framework is not linked. Purchases need that system framework.")
+package = open(PACKAGE, encoding="utf-8").read()
+if "RevenuecatPurchasesCapacitor" not in package:
+    fail("The iOS project no longer links the RevenueCat package, so purchases would not work.")
 if deployment != {"15.0"}:
     fail(
         "The iOS deployment target must be 15.0. Xcode 26 cannot ship a lower target. "
         f"The project currently has: {', '.join(sorted(deployment))}."
     )
-
-entitlement_text = open(ENTITLEMENTS, encoding="utf-8").read()
-if "com.apple.developer.in-app-purchase" not in entitlement_text:
-    fail(f"{ENTITLEMENTS} is missing the In-App Purchase entitlement.")
 
 version = next(iter(versions))
 build = next(iter(builds))
@@ -112,7 +117,7 @@ print(f"Build: {build}")
 print(f"Team: {team}")
 print("Signing: Automatic")
 print(f"iOS deployment target: {', '.join(sorted(deployment))}")
-print(f"Entitlements: {EXPECTED_ENTITLEMENTS} (In-App Purchase stays on)")
+print("Entitlements: none. In-App Purchase stays available through StoreKit.")
 print("The marketing version was not changed.")
 
 github_env = os.environ.get("GITHUB_ENV")
