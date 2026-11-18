@@ -1,32 +1,77 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { lessons } from '../data/lessons';
-import { generateLesson } from '../utils/lessonGenerator';
-import { useStore } from '../store/useStore';
 import { Check, X } from 'lucide-react';
-import { type Language } from '../types';
+import { lessons } from '../data/lessons';
+import { messages } from '../i18n/messages';
+import { isLessonLocked } from '../lib/progress';
+import { useStore } from '../store/useStore';
+import type { Language, LessonConfig } from '../types';
+import { generateLesson } from '../utils/lessonGenerator';
+import { PaywallCard } from './PaywallCard';
+
+const LessonMessage: React.FC<{ title: string; body?: string }> = ({ title, body }) => {
+    const navigate = useNavigate();
+    const language = useStore((state) => state.language) ?? 'en';
+    return (
+        <div className="min-h-screen bg-slate-900 text-white p-6 flex flex-col">
+            <button type="button" onClick={() => navigate('/dashboard')} className="self-start p-3 rounded-full bg-slate-800 border border-white/10">
+                <X size={24} />
+            </button>
+            <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 max-w-md mx-auto">
+                <h1 className="text-2xl font-extrabold">{title}</h1>
+                {body && <p className="text-gray-300">{body}</p>}
+                <button type="button" onClick={() => navigate('/dashboard')} className="mt-4 bg-brand-teal text-slate-900 font-bold px-6 py-3 rounded-xl">
+                    {messages[language].backHome}
+                </button>
+            </div>
+        </div>
+    );
+};
+
+const LockedLesson: React.FC<{ config: LessonConfig }> = ({ config }) => {
+    const navigate = useNavigate();
+    const language = (useStore((state) => state.language) ?? 'en') as Language;
+    const copy = messages[language];
+    return (
+        <div className="min-h-screen bg-slate-900 text-white p-6" data-testid="locked-lesson">
+            <button type="button" onClick={() => navigate('/dashboard')} className="p-3 rounded-full bg-slate-800 border border-white/10 mb-6">
+                <X size={24} />
+            </button>
+            <p className="text-brand-teal font-bold uppercase tracking-wide text-sm">{copy.lessonLockedTitle}</p>
+            <h1 className="text-3xl font-extrabold mt-2 mb-2">{config.title}</h1>
+            <p className="text-gray-300 mb-6">{copy.lessonLockedBody}</p>
+            <PaywallCard />
+        </div>
+    );
+};
 
 export const LessonPlayer: React.FC = () => {
     const { lessonId } = useParams();
     const navigate = useNavigate();
-    const { completeLesson, language } = useStore();
+    const completeLesson = useStore((state) => state.completeLesson);
+    const language = useStore((state) => state.language);
+    const isPremium = useStore((state) => state.isPremium);
     const currentLang = (language || 'en') as Language;
+    const copy = messages[currentLang];
 
     const lessonConfig = lessons.find(l => l.id === lessonId);
+    const locked = !!lessonConfig && isLessonLocked(lessonConfig.unit, isPremium);
 
     const lesson = useMemo(() => {
-        if (!lessonConfig) return null;
+        if (!lessonConfig || locked) return null;
         return generateLesson(lessonConfig, currentLang);
-    }, [lessonConfig, currentLang]);
+    }, [lessonConfig, locked, currentLang]);
 
-    // State
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-    if (!lesson) return <div className="p-8 text-white">Lesson not found</div>;
+    if (!lessonConfig) return <LessonMessage title={copy.lessonMissing} />;
+    if (locked) return <LockedLesson config={lessonConfig} />;
+    if (!lesson || lesson.questions.length === 0) return <LessonMessage title={lessonConfig.title} body={copy.lessonEmpty} />;
 
     const currentQuestion = lesson.questions[currentIndex];
+    if (!currentQuestion) return <LessonMessage title={lessonConfig.title} body={copy.lessonEmpty} />;
     const progress = ((currentIndex) / lesson.questions.length) * 100;
 
     // Helper to get content based on language
@@ -136,7 +181,7 @@ export const LessonPlayer: React.FC = () => {
                             <input
                                 type="text"
                                 autoFocus
-                                placeholder="Type here..."
+                                placeholder={copy.typeHere}
                                 className={`
                                     w-full bg-slate-800 border-b-4 border-slate-700 text-2xl md:text-4xl font-bold text-center tracking-wider p-4 md:p-8 rounded-xl focus:outline-none focus:border-brand-teal text-white placeholder-slate-600 mb-8 transition-colors
                                     ${isCorrect === true ? 'border-green-500 text-green-400' : isCorrect === false ? 'border-red-500 text-red-400' : ''}
@@ -276,7 +321,7 @@ export const LessonPlayer: React.FC = () => {
                                     >
                                         {word}
                                     </button>
-                                )) : <span className="text-gray-600 italic text-lg md:text-2xl">Tap words below...</span>}
+                                )) : <span className="text-gray-600 italic text-lg md:text-2xl">{copy.tapWords}</span>}
                             </div>
 
                             {/* Word Bank */}
@@ -311,7 +356,7 @@ export const LessonPlayer: React.FC = () => {
                     <span className="text-2xl">💡</span>
                     <div>
                         <p className="text-xs font-bold text-indigo-300 uppercase mb-1">
-                            {currentLang === 'nl' ? 'Wist je dat?' : currentLang === 'es' ? '¿Sabías que?' : 'Did you know?'}
+                            {copy.didYouKnow}
                         </p>
                         <p className="text-sm md:text-lg text-indigo-100">
                             {getLocalizedText(currentQuestion.culturalTip)}
@@ -327,7 +372,7 @@ export const LessonPlayer: React.FC = () => {
                         <div className="flex flex-col gap-2 mb-2 animate-bounce-short">
                             <div className="flex items-center gap-2 text-green-400 font-bold md:text-2xl">
                                 <div className="bg-green-500 text-black p-1 rounded-full"><Check size={20} className="md:w-8 md:h-8" /></div>
-                                <span>Correct!</span>
+                                <span>{copy.correct}</span>
                             </div>
                             {explanationText && (
                                 <p className="text-sm md:text-xl text-green-200 ml-9 bg-green-900/40 p-2 rounded-lg border border-green-800/50">
@@ -340,7 +385,7 @@ export const LessonPlayer: React.FC = () => {
                         <div className="flex flex-col gap-2 mb-2">
                             <div className="flex items-center gap-2 text-red-400 font-bold md:text-2xl">
                                 <div className="bg-red-500 text-white p-1 rounded-full"><X size={20} className="md:w-8 md:h-8" /></div>
-                                <span>Correct answer: {displayedCorrectAnswer}</span>
+                                <span>{copy.wrongAnswer}: {displayedCorrectAnswer}</span>
                             </div>
                             {explanationText && (
                                 <p className="text-sm md:text-xl text-red-200 ml-9 bg-red-900/40 p-2 rounded-lg border border-red-800/50">
@@ -363,7 +408,7 @@ export const LessonPlayer: React.FC = () => {
                             }
                         `}
                     >
-                        {isCorrect !== null ? (currentIndex === lesson.questions.length - 1 ? 'Finish' : 'Next') : 'Check Answer'}
+                        {isCorrect !== null ? (currentIndex === lesson.questions.length - 1 ? copy.finish : copy.next) : copy.check}
                     </button>
                 </div>
             </div>

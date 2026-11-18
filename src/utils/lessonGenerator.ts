@@ -105,6 +105,7 @@ export const generateLesson = (config: LessonConfig, userLang: Language = 'en'):
     // 3. Generate Dialogue Questions (if applicable)
     // Find conversations matching this lesson's category or tags
     const relevantConversations = conversations.filter(c => {
+        if (config.dialogueTags?.length) return c.tags.some(tag => config.dialogueTags?.includes(tag));
         if (config.content.type === 'category') return c.category === config.content.category;
         if (config.content.type === 'tag') return c.tags.includes(config.content.tag);
         return false;

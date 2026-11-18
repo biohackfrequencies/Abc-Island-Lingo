@@ -1,34 +1,19 @@
-import { type DictionaryEntry } from '../types';
+import type { DictionaryEntry } from '../types';
+import { vocabulary, type VocabEntry } from './vocabulary';
 
-export const dictionary: DictionaryEntry[] = [
-    {
-        id: 'd1',
-        papiamento: 'Bon dia',
-        meanings: {
-            en: 'Good morning',
-            nl: 'Goedemorgen',
-            es: 'Buenos días',
-        },
-        partOfSpeech: 'phrase',
-    },
-    {
-        id: 'd2',
-        papiamento: 'Danki',
-        meanings: {
-            en: 'Thanks',
-            nl: 'Bedankt',
-            es: 'Gracias',
-        },
-        partOfSpeech: 'phrase',
-    },
-    {
-        id: 'd3',
-        papiamento: 'Awa',
-        meanings: {
-            en: 'Water',
-            nl: 'Water',
-            es: 'Agua',
-        },
-        partOfSpeech: 'noun',
-    }
-];
+function partOfSpeech(entry: VocabEntry): DictionaryEntry['partOfSpeech'] {
+    if (entry.type === 'phrase' || entry.type === 'sentence') return 'phrase';
+    if (entry.category === 'verbs') return 'verb';
+    if (entry.category === 'colors' || entry.category === 'emotions') return 'adjective';
+    if (entry.category === 'pronouns' || entry.category === 'prepositions') return 'other';
+    return 'noun';
+}
+
+export const dictionary: DictionaryEntry[] = vocabulary
+    .map((entry) => ({
+        id: entry.id,
+        papiamento: entry.papiamento.replace(/[{}]/g, ''),
+        meanings: entry.meanings,
+        partOfSpeech: partOfSpeech(entry),
+    }))
+    .sort((a, b) => a.papiamento.localeCompare(b.papiamento, 'en', { sensitivity: 'base' }));

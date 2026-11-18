@@ -1,43 +1,47 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Onboarding } from './components/Onboarding';
-import { Dashboard } from './components/Dashboard';
-import { LessonPlayer } from './components/LessonPlayer';
-import { Dictionary } from './components/Dictionary';
+import { BrowserRouter as Router, Navigate, Route, Routes, useParams } from 'react-router-dom';
 import { BottomNav } from './components/BottomNav';
 import { Culture } from './components/Culture';
+import { Dashboard } from './components/Dashboard';
+import { Dictionary } from './components/Dictionary';
+import { IapProvider } from './components/IapProvider';
+import { LessonPlayer } from './components/LessonPlayer';
+import { Lessons } from './components/Lessons';
+import { Onboarding } from './components/Onboarding';
 import { Profile } from './components/Profile';
 import { useStore } from './store/useStore';
 
-// Wrapper for pages that show bottom nav
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  return (
+const Layout = ({ children }: { children: React.ReactNode }) => (
     <>
-      {children}
-      <BottomNav />
+        {children}
+        <BottomNav />
     </>
-  );
-};
+);
+
+function LessonRoute() {
+    const { lessonId } = useParams();
+    return <LessonPlayer key={lessonId} />;
+}
 
 function App() {
-  const language = useStore((state) => state.language);
+    const language = useStore((state) => state.language);
 
-  return (
-    <Router>
-      <div className="min-h-screen bg-slate-900 text-white font-sans">
-        <Routes>
-          <Route path="/" element={!language ? <Onboarding /> : <Navigate to="/dashboard" replace />} />
-
-          <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
-          <Route path="/lessons" element={<Navigate to="/dashboard" replace />} /> {/* Alias for now */}
-          <Route path="/culture" element={<Layout><Culture /></Layout>} />
-          <Route path="/profile" element={<Layout><Profile /></Layout>} />
-
-          <Route path="/lesson/:lessonId" element={<LessonPlayer />} />
-          <Route path="/dictionary" element={<Layout><Dictionary /></Layout>} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <IapProvider>
+            <Router>
+                <div className="min-h-screen bg-slate-900 text-white font-sans">
+                    <Routes>
+                        <Route path="/" element={!language ? <Onboarding /> : <Navigate to="/dashboard" replace />} />
+                        <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
+                        <Route path="/lessons" element={<Layout><Lessons /></Layout>} />
+                        <Route path="/culture" element={<Layout><Culture /></Layout>} />
+                        <Route path="/profile" element={<Layout><Profile /></Layout>} />
+                        <Route path="/lesson/:lessonId" element={<LessonRoute />} />
+                        <Route path="/dictionary" element={<Layout><Dictionary /></Layout>} />
+                    </Routes>
+                </div>
+            </Router>
+        </IapProvider>
+    );
 }
 
 export default App;
