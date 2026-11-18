@@ -20,6 +20,24 @@ npx cap sync
 
 `npm run build` typechecks and writes the web app to `dist`. `npx cap sync` copies that build into the iOS and Android projects.
 
+## Send a build to TestFlight
+
+There is no Mac in this setup. GitHub builds the iOS app when you ask it to.
+
+1. Open the repository on GitHub and choose Actions.
+2. Choose **iOS TestFlight** in the left column.
+3. Choose **Run workflow**. Leave the branch as the one you want to ship.
+4. The build number box can stay empty. Empty uses the number already in Xcode, which is **12** for this release. Type a higher whole number only when Apple says that build was already uploaded.
+5. Run it.
+
+The workflow builds the web app, syncs the iOS project, archives it, signs it, and uploads that build to TestFlight. It does not submit the app for App Store review.
+
+It uses the GitHub-hosted `macos-15` runner. The `macos-26` label never started a machine on this account, and `macos-latest` points at that same image, so neither is used. `macos-15` opens Xcode 16.4 by default, and App Store Connect rejects that older SDK. The workflow switches to the newest Xcode 26 installed on the image before it archives. The iOS deployment target stays **15.0**, which is the oldest target Xcode 26 accepts.
+
+Signing uses the App Store Connect API key already stored as these four repository secrets, and no others: `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8_BASE64` (the `.p8` file as one line of base64), and `APPLE_TEAM_ID`. The key needs the Admin role so Apple can create the certificate. The bundle id is `com.papiamentolearn.app`. The marketing version stays **1.0.1**. The In-App Purchase entitlement stays on the signed app.
+
+This app uses Swift packages, so the workflow does not install CocoaPods.
+
 ## Versions for this release
 
 - iOS marketing version **1.0.1**, build **12**
