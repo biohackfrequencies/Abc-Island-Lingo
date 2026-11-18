@@ -56,8 +56,8 @@ if [ "${ver}" != "${IOS_MARKETING_VERSION}" ] || [ "${build}" != "${IOS_BUILD_NU
   echo "::error::Refusing to upload. The IPA is version ${ver} (${build}), but this run expected ${IOS_MARKETING_VERSION} (${IOS_BUILD_NUMBER})."
   exit 1
 fi
-if ! printf '%s' "${entitlements}" | grep -q "com.apple.developer.in-app-purchase"; then
-  echo "::error::Refusing to upload. The signed app is missing the In-App Purchase entitlement."
+if printf '%s' "${entitlements}" | grep -q "com.apple.developer.in-app-purchase"; then
+  echo "::error::Refusing to upload. The signed app still contains com.apple.developer.in-app-purchase. That key is not a profile entitlement and automatic signing rejects it. StoreKit purchases do not need it."
   exit 1
 fi
 

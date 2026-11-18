@@ -134,7 +134,7 @@ jobs:
           BUILD_NUMBER_INPUT: ${{ inputs.build_number }}
         run: python3 scripts/set-ios-build-number.py
 
-      - name: Confirm version, build, bundle id, team, and In-App Purchase
+      - name: Confirm version, build, bundle id, team, and StoreKit
         run: bash scripts/verify-ios-release-identity.sh
 
       - name: Show the Xcode scheme
