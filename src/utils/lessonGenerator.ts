@@ -71,32 +71,33 @@ export const generateLesson = (config: LessonConfig, userLang: Language = 'en'):
     // DOUBLE EXPOSURE STRATEGY:
     // For Words: Q1 Learn (MCQ) -> Q2 Master (Spelling)
     // For Others: Active Construction (Cloze/Order)
+    const withSource = (question: Question, sourceId: string): Question => ({ ...question, sourceId });
     const questions: Question[] = lessonVocab.flatMap((vocab, index) => {
         const qId = `q-${vocab.id}-${index}`;
 
         if (vocab.type === 'sentence') {
             // Sentences: Single active challenge
             if (vocab.papiamento.includes('{')) {
-                return [generateClozeQuestion(qId, vocab, userLang, lessonVocab)];
+                return [withSource(generateClozeQuestion(qId, vocab, userLang, lessonVocab), vocab.id)];
             }
-            return [generateOrderQuestion(qId, vocab, userLang)];
+            return [withSource(generateOrderQuestion(qId, vocab, userLang), vocab.id)];
 
         } else if (vocab.type === 'phrase') {
             // Phrases: Single active challenge
             if (vocab.papiamento.includes(' ')) {
-                return [generateOrderQuestion(qId, vocab, userLang)];
+                return [withSource(generateOrderQuestion(qId, vocab, userLang), vocab.id)];
             }
             const rand = Math.random();
-            if (rand < 0.5) return [generateSpellingQuestion(qId, vocab, userLang)];
-            return [generateTranslateQuestion(qId, vocab, userLang, lessonVocab)];
+            if (rand < 0.5) return [withSource(generateSpellingQuestion(qId, vocab, userLang), vocab.id)];
+            return [withSource(generateTranslateQuestion(qId, vocab, userLang, lessonVocab), vocab.id)];
 
         } else {
             // WORD MASTERY LOOP (For all subject words)
             // Q1: Learning (Multiple Choice) - See and Select
-            const learnQ = generateMultipleChoiceQuestion(`${qId}-learn`, vocab, userLang, lessonVocab);
+            const learnQ = withSource(generateMultipleChoiceQuestion(`${qId}-learn`, vocab, userLang, lessonVocab), vocab.id);
 
             // Q2: Mastery (Spelling) - Recall and Type
-            const masterQ = generateSpellingQuestion(`${qId}-master`, vocab, userLang);
+            const masterQ = withSource(generateSpellingQuestion(`${qId}-master`, vocab, userLang), vocab.id);
 
             return [learnQ, masterQ];
         }
@@ -112,7 +113,7 @@ export const generateLesson = (config: LessonConfig, userLang: Language = 'en'):
     });
 
     relevantConversations.forEach((conv, index) => {
-        questions.push(generateDialogueQuestion(`q-dial-${conv.id}-${index}`, conv, userLang, lessonVocab));
+        questions.push({ ...generateDialogueQuestion(`q-dial-${conv.id}-${index}`, conv, userLang, lessonVocab), sourceId: conv.id });
     });
 
     return {
@@ -306,3 +307,42 @@ const generateMultipleChoiceQuestion = (id: string, vocab: VocabEntry, lang: Lan
         culturalTip: vocab.culturalTip
     };
 };
+
+/** Rebuild a missed exercise in the learner's current language. Falls back to the saved snapshot. */
+export function questionForPractice(
+    mistake: { question: Question; sourceId?: string },
+    lang: Language,
+): Question {
+    const sourceId = mistake.sourceId ?? mistake.question.sourceId;
+    const type = mistake.question.type;
+    const id = mistake.question.id;
+    if (!sourceId) return mistake.question;
+
+    const vocab = vocabulary.find((entry) => entry.id === sourceId);
+    if (vocab) {
+        const pool = vocabulary.filter((entry) => entry.category === vocab.category);
+        const built = (() => {
+            switch (type) {
+                case 'order':
+                    return generateOrderQuestion(id, vocab, lang);
+                case 'cloze':
+                    return generateClozeQuestion(id, vocab, lang, pool);
+                case 'spelling':
+                    return generateSpellingQuestion(id, vocab, lang);
+                case 'translate':
+                    return generateTranslateQuestion(id, vocab, lang, pool);
+                case 'multiple-choice':
+                    return generateMultipleChoiceQuestion(id, vocab, lang, pool);
+                default:
+                    return null;
+            }
+        })();
+        if (built) return { ...built, id, sourceId };
+    }
+
+    const conversation = conversations.find((entry) => entry.id === sourceId);
+    if (conversation && type === 'dialogue') {
+        return { ...generateDialogueQuestion(id, conversation, lang, vocabulary), id, sourceId };
+    }
+    return mistake.question;
+}

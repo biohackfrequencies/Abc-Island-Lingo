@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import { useLocation, useParams, useNavigate } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
 import { toPlayableLesson } from '../content/remote';
 import { useRemoteContent } from '../content/useRemoteContent';
@@ -7,9 +7,37 @@ import { lessons } from '../data/lessons';
 import { messages } from '../i18n/messages';
 import { isLessonLocked } from '../lib/progress';
 import { useStore } from '../store/useStore';
-import type { Language } from '../types';
-import { generateLesson } from '../utils/lessonGenerator';
+import type { Language, Question } from '../types';
+import { generateLesson, questionForPractice } from '../utils/lessonGenerator';
 import { PaywallCard } from './PaywallCard';
+
+interface PlacedWord {
+    word: string;
+    bankIndex: number;
+}
+
+interface PracticeItem {
+    key: string;
+    lessonId: string;
+    question: Question;
+}
+
+function subscribeHydration(onStoreChange: () => void) {
+    const unsubStore = useStore.subscribe(onStoreChange);
+    const unsubHydration = useStore.persist.onFinishHydration(onStoreChange);
+    // Hydration can finish before this subscription is registered. Check again after the current turn.
+    queueMicrotask(() => {
+        if (useStore.persist.hasHydrated()) onStoreChange();
+    });
+    return () => {
+        unsubStore();
+        unsubHydration();
+    };
+}
+
+function useHydrated() {
+    return useSyncExternalStore(subscribeHydration, () => useStore.persist.hasHydrated(), () => false);
+}
 
 const LessonMessage: React.FC<{ title: string; body?: string }> = ({ title, body }) => {
     const navigate = useNavigate();
@@ -49,8 +77,13 @@ const LockedLesson: React.FC<{ title: string }> = ({ title }) => {
 
 export const LessonPlayer: React.FC = () => {
     const { lessonId } = useParams();
+    const location = useLocation();
+    const isReview = location.pathname === '/review';
     const navigate = useNavigate();
     const completeLesson = useStore((state) => state.completeLesson);
+    const recordMistake = useStore((state) => state.recordMistake);
+    const clearMistake = useStore((state) => state.clearMistake);
+    const mistakes = useStore((state) => state.mistakes);
     const language = useStore((state) => state.language);
     const isPremium = useStore((state) => state.isPremium);
     const currentLang = (language || 'en') as Language;
@@ -59,29 +92,51 @@ export const LessonPlayer: React.FC = () => {
     const remoteLesson = remote.lessons.find((lesson) => lesson.id === lessonId) ?? null;
 
     const lessonConfig = lessons.find(l => l.id === lessonId);
-    const locked = remoteLesson
+    const locked = !isReview && (remoteLesson
         ? remoteLesson.premium && !isPremium
-        : !!lessonConfig && isLessonLocked(lessonConfig.unit, isPremium);
+        : !!lessonConfig && isLessonLocked(lessonConfig.unit, isPremium));
 
     const lesson = useMemo(() => {
-        if (locked) return null;
+        if (isReview || locked) return null;
         if (remoteLesson) return toPlayableLesson(remoteLesson);
         if (!lessonConfig) return null;
         return generateLesson(lessonConfig, currentLang);
-    }, [currentLang, lessonConfig, locked, remoteLesson]);
+    }, [currentLang, isReview, lessonConfig, locked, remoteLesson]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+    const [placed, setPlaced] = useState<PlacedWord[]>([]);
+    const [round, setRound] = useState<'lesson' | 'review'>('lesson');
+    const [reviewQueue, setReviewQueue] = useState<Question[]>([]);
+    const sessionMisses = useRef<Map<string, Question>>(new Map());
+    const hydrated = useHydrated();
+    const [reviewItems, setReviewItems] = useState<PracticeItem[] | null>(null);
+    if (isReview && hydrated && reviewItems === null) {
+        setReviewItems(mistakes.map((item) => ({
+            key: item.key,
+            lessonId: item.lessonId,
+            question: questionForPractice(item, currentLang),
+        })));
+    }
 
-    const lessonTitle = remoteLesson?.title ?? lessonConfig?.title ?? copy.lessonMissing;
-    if (!remoteLesson && !lessonConfig) return <LessonMessage title={copy.lessonMissing} />;
+    const questions = isReview
+        ? (reviewItems ?? []).map((item) => item.question)
+        : round === 'review'
+            ? reviewQueue
+            : (lesson?.questions ?? []);
+
+    const lessonTitle = isReview ? copy.reviewTitle : (remoteLesson?.title ?? lessonConfig?.title ?? copy.lessonMissing);
+    if (isReview && !reviewItems) return <div className="min-h-screen bg-slate-900" />;
+    if (isReview && questions.length === 0) return <LessonMessage title={copy.reviewEmptyTitle} body={copy.reviewEmptyBody} />;
+    if (!isReview && !remoteLesson && !lessonConfig) return <LessonMessage title={copy.lessonMissing} />;
     if (locked) return <LockedLesson title={lessonTitle} />;
-    if (!lesson || lesson.questions.length === 0) return <LessonMessage title={lessonTitle} body={copy.lessonEmpty} />;
+    if (!isReview && questions.length === 0) return <LessonMessage title={lessonTitle} body={copy.lessonEmpty} />;
 
-    const currentQuestion = lesson.questions[currentIndex];
+    const currentQuestion = questions[currentIndex];
     if (!currentQuestion) return <LessonMessage title={lessonTitle} body={copy.lessonEmpty} />;
-    const progress = ((currentIndex) / lesson.questions.length) * 100;
+    const progress = (currentIndex / questions.length) * 100;
+    const reviewing = isReview || round === 'review';
 
     // Helper to get content based on language
     const getLocalizedText = (content?: string | Record<string, string>): string => {
@@ -117,6 +172,21 @@ export const LessonPlayer: React.FC = () => {
         return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
     };
 
+    const practiceItem = isReview ? reviewItems?.[currentIndex] : null;
+    const mistakeKey = practiceItem?.key ?? `${lesson?.id ?? lessonId ?? 'lesson'}:${currentQuestion.id}`;
+    const mistakeLessonId = practiceItem?.lessonId ?? lesson?.id ?? lessonId ?? 'lesson';
+
+    const resetAnswer = () => {
+        setSelectedOption(null);
+        setIsCorrect(null);
+        setPlaced([]);
+    };
+
+    const commitPlaced = (next: PlacedWord[]) => {
+        setPlaced(next);
+        setSelectedOption(next.length ? next.map((item) => item.word).join(' ') : null);
+    };
+
     const handleCheck = () => {
         if (!selectedOption) return;
 
@@ -130,18 +200,42 @@ export const LessonPlayer: React.FC = () => {
             correct = normalizeText(selectedOption) === normalizeText(correctAns as string);
         }
 
+        if (correct) {
+            clearMistake(mistakeKey);
+            sessionMisses.current.delete(currentQuestion.id);
+        } else {
+            recordMistake({
+                key: mistakeKey,
+                lessonId: mistakeLessonId,
+                questionId: currentQuestion.id,
+                sourceId: currentQuestion.sourceId,
+                question: currentQuestion,
+                language: currentLang,
+            });
+            if (!isReview && round === 'lesson') {
+                sessionMisses.current.set(currentQuestion.id, currentQuestion);
+            }
+        }
+
         setIsCorrect(correct);
     };
 
     const handleNext = () => {
-        if (currentIndex < lesson.questions.length - 1) {
+        if (currentIndex < questions.length - 1) {
             setCurrentIndex(prev => prev + 1);
-            setSelectedOption(null);
-            setIsCorrect(null);
-        } else {
-            completeLesson(lesson.id);
-            navigate('/dashboard');
+            resetAnswer();
+            return;
         }
+        if (!isReview && round === 'lesson' && sessionMisses.current.size > 0) {
+            setReviewQueue([...sessionMisses.current.values()]);
+            sessionMisses.current.clear();
+            setRound('review');
+            setCurrentIndex(0);
+            resetAnswer();
+            return;
+        }
+        if (!isReview && lesson) completeLesson(lesson.id);
+        navigate('/dashboard');
     };
 
     const promptText = getLocalizedText(currentQuestion.prompt);
@@ -172,6 +266,9 @@ export const LessonPlayer: React.FC = () => {
             {/* Content */}
             <div className="flex-1 p-6 md:p-12 flex flex-col justify-center max-w-3xl w-full mx-auto">
                 <div className="mb-8 md:mb-16 text-center">
+                    {reviewing && (
+                        <p className="text-brand-teal font-bold uppercase tracking-wide text-sm mb-3">{copy.reviewBanner}</p>
+                    )}
                     <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 leading-relaxed">
                         {currentQuestion.type === 'cloze'
                             ? promptText.split('\n\n')[0]
@@ -317,37 +414,40 @@ export const LessonPlayer: React.FC = () => {
                     {currentQuestion.type === 'order' && (
                         <div className="space-y-8 md:space-y-12">
                             {/* Answer Area */}
-                            <div className="min-h-[60px] md:min-h-[100px] border-b-2 border-slate-700 flex flex-wrap gap-2 md:gap-4 pb-2 md:pb-6 items-end">
-                                {selectedOption ? selectedOption.split(' ').map((word, idx) => (
+                            <div className="min-h-[60px] md:min-h-[100px] border-b-2 border-slate-700 flex flex-wrap gap-2 md:gap-4 pb-2 md:pb-6 items-end" data-testid="answer-area">
+                                {placed.length > 0 ? placed.map((token, idx) => (
                                     <button
-                                        key={idx}
+                                        key={`${token.bankIndex}-${idx}`}
+                                        type="button"
                                         onClick={() => {
                                             if (isCorrect !== null) return;
-                                            const newAns = selectedOption?.split(' ').filter((_, i) => i !== idx).join(' ');
-                                            setSelectedOption(newAns || null);
+                                            commitPlaced(placed.filter((_, i) => i !== idx));
                                         }}
-                                        className="bg-brand-teal text-bg-main font-bold px-3 py-2 md:px-6 md:py-4 rounded-lg text-sm md:text-2xl"
+                                        className="bg-brand-teal text-slate-900 font-bold px-3 py-2 md:px-6 md:py-4 rounded-lg text-sm md:text-2xl"
                                     >
-                                        {word}
+                                        {token.word}
                                     </button>
                                 )) : <span className="text-gray-600 italic text-lg md:text-2xl">{copy.tapWords}</span>}
                             </div>
 
                             {/* Word Bank */}
-                            <div className="flex flex-wrap gap-3 md:gap-6 justify-center">
+                            <div className="flex flex-wrap gap-3 md:gap-6 justify-center" data-testid="word-bank">
                                 {getLocalizedOptions().map((word, idx) => {
-                                    // Simple logic: if word is used X times in answer, hide X times in bank.
-                                    // For now, simpler: just hide if included (assuming unique words for simplicity or counting).
-                                    // Better: word object with ID. For now string matching:
-
+                                    const used = placed.some((token) => token.bankIndex === idx);
                                     return (
                                         <button
                                             key={`${word}-${idx}`}
+                                            type="button"
+                                            disabled={used || isCorrect !== null}
+                                            aria-disabled={used}
                                             onClick={() => {
-                                                if (isCorrect !== null) return;
-                                                setSelectedOption(prev => prev ? `${prev} ${word}` : word);
+                                                if (isCorrect !== null || used) return;
+                                                commitPlaced([...placed, { word, bankIndex: idx }]);
                                             }}
-                                            className="bg-slate-700 border-b-4 border-slate-900 text-white font-bold px-4 py-3 md:px-8 md:py-6 rounded-xl active:border-b-0 active:translate-y-1 transition-all text-base md:text-2xl"
+                                            className={`font-bold px-4 py-3 md:px-8 md:py-6 rounded-xl text-base md:text-2xl transition-all ${used
+                                                ? 'bg-slate-800 text-slate-500 border-b-4 border-slate-900 opacity-40 cursor-default'
+                                                : 'bg-slate-700 border-b-4 border-slate-900 text-white active:border-b-0 active:translate-y-1'
+                                                }`}
                                         >
                                             {word}
                                         </button>
@@ -417,7 +517,7 @@ export const LessonPlayer: React.FC = () => {
                             }
                         `}
                     >
-                        {isCorrect !== null ? (currentIndex === lesson.questions.length - 1 ? copy.finish : copy.next) : copy.check}
+                        {isCorrect !== null ? (currentIndex === questions.length - 1 ? copy.finish : copy.next) : copy.check}
                     </button>
                 </div>
             </div>

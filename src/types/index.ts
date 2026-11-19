@@ -33,6 +33,8 @@ export interface Question {
     image?: string; // URL to image
     dialogueLines?: DialogueLine[]; // For dialogue questions
     culturalTip?: LocalizedContent; // Cultural or language tip
+    /** Vocabulary or conversation id, so a missed item can be rebuilt in another language. */
+    sourceId?: string;
 }
 
 export interface DictionaryEntry {

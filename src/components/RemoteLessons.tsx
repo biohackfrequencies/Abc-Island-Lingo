@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Check, Lock } from 'lucide-react';
 import { useRemoteContent } from '../content/useRemoteContent';
 import { messages } from '../i18n/messages';
@@ -20,7 +20,8 @@ export const PhraseOfTheWeek: React.FC = () => {
     );
 };
 
-export const RemoteLessonList: React.FC = () => {
+export const RemoteLessonList: React.FC<{ onLocked?: () => void }> = ({ onLocked }) => {
+    const navigate = useNavigate();
     const language = useStore((state) => state.language) ?? 'en';
     const isPremium = useStore((state) => state.isPremium);
     const completedLessons = useStore((state) => state.completedLessons);
@@ -31,7 +32,15 @@ export const RemoteLessonList: React.FC = () => {
     if (content.lessons.length === 0) return null;
 
     const openPaywall = () => {
-        document.getElementById('premium-paywall')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        onLocked?.();
+        window.setTimeout(() => {
+            const node = document.getElementById('premium-paywall');
+            if (node) {
+                node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+            if (!onLocked) navigate('/lessons');
+        }, 0);
     };
 
     return (
