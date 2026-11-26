@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ABC Island Lingo - Learn Papiamento</title>
+  <meta name="description" content="Learn Papiamento on the island, from English, Dutch or Spanish. First two units free.">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://biohackfrequencies.github.io/abc-island-lingo/">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://biohackfrequencies.github.io/abc-island-lingo/">
+  <meta property="og:title" content="ABC Island Lingo - Learn Papiamento">
+  <meta property="og:description" content="Learn Papiamento on the island, from English, Dutch or Spanish. First two units free.">
+  <meta property="og:image" content="https://biohackfrequencies.github.io/abc-island-lingo/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ABC Island Lingo — learn Papiamento from English, Dutch or Spanish">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ABC Island Lingo - Learn Papiamento">
+  <meta name="twitter:description" content="Learn Papiamento on the island, from English, Dutch or Spanish. First two units free.">
+  <meta name="twitter:image" content="https://biohackfrequencies.github.io/abc-island-lingo/og-image.png">
+
+  <style>
+    @font-face {
+      font-family: "Nunito";
+      src: url("nunito.woff") format("woff");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --navy: #0F172A;
+      --navy-800: #1E293B;
+      --navy-700: #334155;
+      --teal: #2DD4BF;
+      --orange: #F97316;
+      --pink: #EC4899;
+      --white: #FFFFFF;
+      --muted: #94A3B8;
+      --bg-top: #111827;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      background: var(--navy);
+      color: var(--white);
+      font-family: "Nunito", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to bottom, var(--bg-top) 0%, var(--navy) 100%);
+      padding: 32px 20px calc(28px + env(safe-area-inset-bottom));
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+    }
+
+    main {
+      width: 100%;
+      max-width: 420px;
+      margin: auto;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      width: 148px;
+      height: 148px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    h1 .a { color: var(--teal); }
+    h1 .b { color: var(--orange); }
+    h1 .c { color: var(--pink); }
+
+    .lead {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .offer {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin: 8px 0 22px;
+    }
+
+    .langs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--navy-800);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      padding: 6px 12px 6px 8px;
+      font-weight: 800;
+      font-size: 0.8rem;
+      color: var(--white);
+    }
+
+    .flag {
+      width: 22px;
+      height: 15px;
+      border-radius: 3px;
+      overflow: hidden;
+      display: block;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+    }
+
+    .stores {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .store {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      min-height: 72px;
+      padding: 12px 18px;
+      background: var(--white);
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .store:hover,
+    .store:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+      outline: 2px solid var(--teal);
+      outline-offset: 3px;
+    }
+
+    .store:active { transform: translateY(0); }
+
+    .store svg {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    .store .label {
+      text-align: left;
+      line-height: 1.15;
+    }
+
+    .store .kicker {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--navy-700);
+      letter-spacing: 0.02em;
+    }
+
+    .store .name {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    footer {
+      width: 100%;
+      max-width: 420px;
+      margin: 36px auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    @media (min-width: 720px) {
+      main, footer { max-width: 480px; }
+      h1 { font-size: 2.1rem; }
+      .stores { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .store { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="icon.png" width="148" height="148" alt="ABC Island Lingo">
+    <h1><span class="a">A</span><span class="b">B</span><span class="c">C</span> Island Lingo</h1>
+    <p class="lead">Learn Papiamento on the island, from English, Dutch or Spanish.</p>
+    <p class="offer">First two units free</p>
+    <div class="langs" aria-label="Available in English, Dutch and Spanish">
+      <span class="chip">
+        <svg class="flag" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="15" fill="#BF0A30"/><rect y="1.15" width="22" height="1.15" fill="#fff"/><rect y="3.46" width="22" height="1.15" fill="#fff"/><rect y="5.77" width="22" height="1.15" fill="#fff"/><rect y="8.08" width="22" height="1.15" fill="#fff"/><rect y="10.38" width="22" height="1.15" fill="#fff"/><rect y="12.69" width="22" height="1.15" fill="#fff"/><rect width="9" height="8.08" fill="#002868"/></svg>
+        EN
+      </span>
+      <span class="chip">
+        <svg class="flag" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="5" fill="#AE1C28"/><rect y="5" width="22" height="5" fill="#fff"/><rect y="10" width="22" height="5" fill="#21468B"/></svg>
+        NL
+      </span>
+      <span class="chip">
+        <svg class="flag" viewBox="0 0 22 15" aria-hidden="true"><rect width="22" height="7.5" fill="#FCD116"/><rect y="7.5" width="22" height="3.75" fill="#003893"/><rect y="11.25" width="22" height="3.75" fill="#CE1126"/></svg>
+        ES
+      </span>
+    </div>
+    <div class="stores">
+      <a class="store" id="app-store" href="https://apps.apple.com/app/id6757818698">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0F172A" d="M16.37 1.43c0 1.14-.43 2.16-1.26 3.03-.91.93-2.02 1.5-3.22 1.41-.12-1.08.43-2.22 1.26-3.06.9-.9 2.1-1.56 3.22-1.38zM20.94 17.47c-.48 1.08-.72 1.56-1.35 2.52-.87 1.29-2.1 2.91-3.63 2.91-1.35 0-1.71-.87-3.57-.87-1.89 0-2.28.84-3.63.87-1.53.03-2.7-1.47-3.57-2.76-2.43-3.54-2.7-7.71-1.2-9.93 1.08-1.62 2.79-2.58 4.41-2.58 1.65 0 2.7.87 4.08.87 1.35 0 2.16-.87 4.08-.87 1.44 0 2.97.78 4.05 2.13-3.57 1.95-3 7.02.33 8.71z"/></svg>
+        <span class="label">
+          <span class="kicker">Download on the</span>
+          <span class="name">App Store</span>
+        </span>
+      </a>
+      <a class="store" id="play-store" href="https://play.google.com/store/apps/details?id=com.papiamentolearn.app">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#34A853" d="M3.5 21.3 14.1 10.7 17.8 14.4 5.9 22.2c-.5.3-1.1.4-1.6.1l-.8-1z"/>
+          <path fill="#FBBC04" d="m17.8 9.6-3.7 3.7-3.7-3.7 3.2-2.1 4.2 2.1z"/>
+          <path fill="#4285F4" d="M3.5 2.7v18.6L14.1 10.7 3.5 2.7z"/>
+          <path fill="#EA4335" d="M14.1 10.7 3.5 2.7c.5-.3 1.1-.2 1.6.1l12.7 7.8-3.7 2.4-3.7-2.3z"/>
+        </svg>
+        <span class="label">
+          <span class="kicker">Get it on</span>
+          <span class="name">Google Play</span>
+        </span>
+      </a>
+    </div>
+  </main>
+  <footer>
+    <p>© Heartbeat Frequencies LLC</p>
+    <p><a href="mailto:info@heartbeat-productions.com">info@heartbeat-productions.com</a></p>
+  </footer>
+  <script>
+    (function () {
+      var APP_STORE = "https://apps.apple.com/app/id6757818698";
+      var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.papiamentolearn.app";
+
+      function storeDestination(ua, platform, maxTouchPoints) {
+        ua = ua || "";
+        var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+          (platform === "MacIntel" && (maxTouchPoints || 0) > 1);
+        if (isIOS) return APP_STORE;
+        if (/Android/i.test(ua)) return PLAY_STORE;
+        return null;
+      }
+
+      window.storeDestination = storeDestination;
+
+      var dest = storeDestination(
+        navigator.userAgent,
+        navigator.platform,
+        navigator.maxTouchPoints
+      );
+      if (dest) {
+        window.location.replace(dest);
+      }
+    })();
+  </script>
+</body>
+</html>
