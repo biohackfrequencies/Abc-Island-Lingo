@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "tsx --test src/utils/course.test.ts src/lib/progress.test.ts",
+    "test": "tsx --test src/utils/course.test.ts src/lib/progress.test.ts src/lib/flashcards.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {

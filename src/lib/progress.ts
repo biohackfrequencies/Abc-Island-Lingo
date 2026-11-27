@@ -1,3 +1,4 @@
+import { readFlashcards, type CardProgress } from './flashcardBoxes';
 import { isStoredMistake, type StoredMistake } from './mistakes';
 import type { Language } from '../types';
 
@@ -68,6 +69,7 @@ export function migratePersistedState(persisted: unknown, version: number): Prog
     isPremium: boolean;
     displayName: string;
     mistakes: StoredMistake[];
+    flashcards: Record<string, CardProgress>;
 } {
     const raw = (persisted ?? {}) as Partial<ProgressSnapshot> & {
         language?: Language | null;
@@ -75,7 +77,9 @@ export function migratePersistedState(persisted: unknown, version: number): Prog
         displayName?: string;
         mistakes?: unknown;
         completedLessons?: unknown;
+        flashcards?: unknown;
     };
+    const flashcards = readFlashcards(raw.flashcards);
     const completed = Array.from(new Set(
         (Array.isArray(raw.completedLessons) ? raw.completedLessons : []).filter((id): id is string => typeof id === 'string'),
     ));
@@ -90,6 +94,7 @@ export function migratePersistedState(persisted: unknown, version: number): Prog
             streak: typeof raw.streak === 'number' ? raw.streak : 0,
             lastStudyDate: raw.lastStudyDate ?? null,
             displayName: raw.displayName,
+            flashcards,
         };
     }
     return {
@@ -101,6 +106,7 @@ export function migratePersistedState(persisted: unknown, version: number): Prog
         streak: typeof raw.streak === 'number' ? raw.streak : 0,
         lastStudyDate: raw.lastStudyDate ?? null,
         displayName: raw.displayName?.trim() || 'Learner',
+        flashcards,
     };
 }
 

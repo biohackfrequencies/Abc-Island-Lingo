@@ -4,6 +4,7 @@ import { getRemoteLesson } from '../content/remote';
 import { lessons } from '../data/lessons';
 import type { Language } from '../types';
 import { removeMistake, upsertMistake, type NewMistake, type StoredMistake } from '../lib/mistakes';
+import { gradeCard, type CardProgress } from '../lib/flashcardBoxes';
 import {
     applyLessonCompletion,
     defaultDisplayName,
@@ -19,12 +20,14 @@ interface AppState extends ProgressSnapshot {
     isPremium: boolean;
     displayName: string;
     mistakes: StoredMistake[];
+    flashcards: Record<string, CardProgress>;
     setLanguage: (lang: Language) => void;
     setPremium: (status: boolean) => void;
     setDisplayName: (name: string) => void;
     completeLesson: (lessonId: string) => void;
     recordMistake: (item: NewMistake) => void;
     clearMistake: (key: string) => void;
+    gradeFlashcard: (id: string, knew: boolean, now?: number) => void;
     resetProgress: () => void;
 }
 
@@ -42,6 +45,7 @@ export const useStore = create<AppState>()(
             language: null,
             isPremium: false,
             mistakes: [],
+            flashcards: {},
             ...emptyProgress,
             setLanguage: (lang) => set((state) => ({
                 language: lang,
@@ -56,6 +60,12 @@ export const useStore = create<AppState>()(
                 mistakes: upsertMistake(state.mistakes ?? [], { ...item, missedAt: Date.now() }),
             })),
             clearMistake: (key) => set((state) => ({ mistakes: removeMistake(state.mistakes ?? [], key) })),
+            gradeFlashcard: (id, knew, now = Date.now()) => set((state) => ({
+                flashcards: {
+                    ...(state.flashcards ?? {}),
+                    [id]: gradeCard(state.flashcards?.[id], knew, now),
+                },
+            })),
             completeLesson: (id) => set((state) => {
                 const config = lessons.find((lesson) => lesson.id === id);
                 if (config) {
@@ -69,12 +79,13 @@ export const useStore = create<AppState>()(
                 language: null,
                 isPremium: state.isPremium,
                 mistakes: [],
+                flashcards: {},
                 ...emptyProgress,
             })),
         }),
         {
             name: 'papiamento-storage',
-            version: 3,
+            version: 4,
             migrate: (persisted, version) => migratePersistedState(persisted, version) as AppState,
         }
     )

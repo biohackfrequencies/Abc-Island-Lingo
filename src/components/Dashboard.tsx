@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flame, PlayCircle, RotateCcw, Zap } from 'lucide-react';
+import { Flame, Layers, PlayCircle, RotateCcw, Zap } from 'lucide-react';
 import { lessons } from '../data/lessons';
 import { effectiveStreak, isLessonLocked, localDateString } from '../lib/progress';
 import { formatDays, formatReviewCount, messages } from '../i18n/messages';
@@ -70,6 +70,16 @@ export const Dashboard: React.FC = () => {
             <PhraseOfTheWeek />
 
             <div className="px-6 mb-8">
+                <Link to="/flashcards" className="mb-4 block" data-testid="open-flashcards">
+                    <div className="rounded-3xl border border-white/10 bg-slate-800 p-5">
+                        <p className="mb-1 text-sm font-bold uppercase tracking-wide text-brand-teal">{copy.flashcardsTitle}</p>
+                        <h3 className="text-2xl font-extrabold text-white">{copy.flashcardsSubtitle}</h3>
+                        <span className="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 font-bold text-slate-900">
+                            <Layers size={18} />
+                            {copy.flashcardsTitle}
+                        </span>
+                    </div>
+                </Link>
                 {mistakes.length > 0 && (
                     <Link to="/review" className="block mb-4" data-testid="practice-mistakes">
                         <div className="rounded-3xl border border-brand-teal/40 bg-slate-800 p-5">

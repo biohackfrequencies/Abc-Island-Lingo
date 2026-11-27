@@ -1,218 +1,209 @@
 # Picture credits
 
-Each file is named with the vocabulary id. Photographs are CC0. Drawings were made for this app.
+Every picture in this folder is original AI-generated artwork created for ABC Island Lingo by Heartbeat Frequencies LLC. Heartbeat Frequencies LLC owns these images. There is no third-party licence.
 
-- `food-6.webp` — Galiña (Chicken). photo. Free roasted chickens image. Unknown. CC0 1.0. https://www.rawpixel.com/image/5917411/image-public-domain-food-free
-- `food-5.webp` — Aros (Rice). photo. Cooking Rice Risotto. Unknown. CC0 1.0. https://www.rawpixel.com/image/5970620/cooking-rice-risotto
-- `food-4.webp` — Té (Tea). illustration. Original cup drawing. ABC Island Lingo. Original work, all rights reserved by the app.
-- `food-2.webp` — Pan (Bread). photo. Loaf raisin bread. Unknown. CC0 1.0. https://www.rawpixel.com/image/6031326/photo-image-public-domain-food-free
-- `rest-6.webp` — Serbes (Beer). photo. Daniel trapped in glass of beer in Sapporo Beer museum. dlovins99. CC0 1.0. https://www.flickr.com/photos/74001418@N00/54727347971
-- `rest-2.webp` — Mesa (Table). photo. Pat in sun on dining table. sarahstierch. CC0 1.0. https://www.flickr.com/photos/7633518@N08/54749663018
-- `wea-2.webp` — Bientu (Wind). photo. Calm beach sunset. Unknown. CC0 1.0. https://www.rawpixel.com/image/6041422/photo-image-public-domain-palm-trees-sky
-- `wea-3.webp` — Nubia (Cloud). photo. Lockport - New York - Niagara County Courthouse, 1914 & 1957 Additions. Onasill - Bill Badzo - 149 Million Views - Thank Y. CC0 1.0. https://www.flickr.com/photos/7156765@N05/51614141688
-- `wea-1.webp` — Solo (Sun). photo. A smokey orange sky and orange dahlias, Willamette Valley, Oregon. Bonnie Moreland (free images). CC0 1.0. https://www.flickr.com/photos/66741228@N05/52446724381
-- `wea-4.webp` — Laman (Sea). photo. sea. www.wbayer.com - www.facebook.com/wbayercom. CC0 1.0. https://www.flickr.com/photos/76319087@N08/48018978091
-- `hse-1.webp` — Kas (House). photo. caribbean house. Unknown. CC0 1.0. https://www.rawpixel.com/image/6072740/free-public-domain-cc0-photo
-- `hse-2.webp` — Kushina (Kitchen). photo. Cat doorway Berlin home kitchen. Unknown. CC0 1.0. https://www.rawpixel.com/image/3297382/free-photo-image-cat-bathroom-kitchen-floor
-- `hse-4.webp` — Baño (Bathroom). photo. Bathroom Sink. Dan Watson. CC0 1.0. https://stocksnap.io/photo/bathroom-sink-D3901L7G93
-- `hse-6.webp` — Bentana (Window). photo. House Window. Multa Media. CC0 1.0. https://stocksnap.io/photo/house-window-V5XHHGHGCZ
-- `hse-7.webp` — Porta (Door). photo. Carved wooden doors with Bohemian Saints St_Vitus_Cathedral_2024-07-04 15.59.10. dlovins99. CC0 1.0. https://www.flickr.com/photos/74001418@N00/53872045595
-- `plc-1.webp` — Skol (School). photo. Disused school buildings Hockley Birmingham. ancientwma. CC0 1.0. https://www.flickr.com/photos/193327022@N08/52073736062
-- `plc-4.webp` — Supermerkado (Supermarket). photo. Marmite? Aisle 9B. JFGryphon. CC0 1.0. https://www.flickr.com/photos/30484128@N03/51078532316
-- `nat-3.webp` — Flor (Flower). photo. Flower Blossom. Macro Mama. CC0 1.0. https://stocksnap.io/photo/flower-blossom-YRHRKRPJMS
-- `nat-2.webp` — Palu (Tree). photo. Green Trees. Dimitri Tyan. CC0 1.0. https://stocksnap.io/photo/green-trees-HAOETHJSSF
-- `plc-6.webp` — Kaya (Street). photo. City Street. Zachary Staines. CC0 1.0. https://stocksnap.io/photo/city-street-YHT5EIS8XR
-- `nat-4.webp` — Seru (Hill/Mountain). photo. Green Hills. Matt Bango. CC0 1.0. https://stocksnap.io/photo/green-hills-ZHEWN9GFT7
-- `drk-2.webp` — Djus (Juice). photo. Apple Orange. JESHOOTS.com. CC0 1.0. https://stocksnap.io/photo/apple-orange-UR1JSQIAUN
-- `ani-2.webp` — Pushi (Cat). photo. House Cat. Ian Livesey. CC0 1.0. https://stocksnap.io/photo/house-cat-7C71QVWOH7
-- `ani-4.webp` — Yuana (Iguana). photo. Iguana seen near San Juan del Sur, Nicaragua, in 2013. It is likely a Green Iguana.. burch19958. CC0 1.0. https://www.flickr.com/photos/192021451@N07/52738767102
-- `ani-1.webp` — Kachó (Dog). photo. Friendly Dog. alfy777. CC0 1.0. https://www.flickr.com/photos/198507664@N02/52966842450
-- `ani-5.webp` — Turtuga (Turtle). photo. Sea Turtle. Jeremy Bishop. CC0 1.0. https://stocksnap.io/photo/sea-turtle-18PXAI1ZTV
-- `drk-3.webp` — Lechi (Milk). photo. Two Glasses of Milk. Alabama Extension. CC0 1.0. https://www.flickr.com/photos/184594136@N08/52633675811
-- `ani-3.webp` — Kabai (Horse). photo. Brown Horse. Brooke Cagle. CC0 1.0. https://stocksnap.io/photo/brown-horse-VMYS969OUD
-- `ani-9.webp` — Blenchi (Hummingbird). illustration. Original bird drawing. ABC Island Lingo. Original work, all rights reserved by the app.
-- `ani-7.webp` — Galiña (Chicken). photo. Chicken Bird. Freestocks.org. CC0 1.0. https://stocksnap.io/photo/chicken-bird-H9ZUJQQBS7
-- `trav-3.webp` — Avion (Airplane). photo. Airplane Sky. %u8D1D%u8389%u513F%20NG. CC0 1.0. https://stocksnap.io/photo/airplane-sky-DYPWDEEILG
-- `ani-8.webp` — Baka (Cow). photo. Dairy Cow. Amanda Kerr. CC0 1.0. https://stocksnap.io/photo/dairy-cow-U2LI0UIPFI
-- `trav-4.webp` — Boto (Boat). photo. hour blue small boat on the Loire french. amenjohann. CC0 1.0. https://www.flickr.com/photos/196464964@N03/52570357787
-- `trav-6.webp` — Taksi (Taxi). photo. Yellow Taxis. Ryan McGuire. CC0 1.0. https://stocksnap.io/photo/yellow-taxis-56C8729BC0
-- `food-ing-5.webp` — Keshi (Cheese). photo. Cheese Board. Foodie Girl. CC0 1.0. https://stocksnap.io/photo/cheese-board-IDWG2ABOTY
-- `food-ing-2.webp` — Salu (Salt). photo. 2022-11-15_10-09-55_JO_day3_Dead_Sea_JH. Juhele_CZ. CC0 1.0. https://www.flickr.com/photos/96541566@N06/52596011174
-- `food-ing-1.webp` — Suku (Sugar). photo. White sugar background. Unknown. CC0 1.0. https://www.rawpixel.com/image/3338775/free-photo-image-sugar-cc0-creative-commons
-- `food-ing-7.webp` — Webu (Egg). photo. 056 The 70+ Gram Dinosaur Egg Versus A 60+ Gram Extra Large Chicken Egg. The Fun Chronicles. CC0 1.0. https://www.flickr.com/photos/196406308@N04/52324000150
-- `food-ing-8.webp` — Carne (Meat). photo. Raw meat. Unknown. CC0 1.0. https://www.rawpixel.com/image/6033140/raw-meat-free-public-domain-cc0-photo
-- `food-ing-9.webp` — Fruta (Fruit). photo. Fresh Fruit. Foodie Girl. CC0 1.0. https://stocksnap.io/photo/fresh-fruit-UW8AKAGQI3
-- `food-fv-1.webp` — Apel (Apple). photo. Red Apple. Micha%u0142%20Grosicki. CC0 1.0. https://stocksnap.io/photo/red-apple-ZHNG376V5P
-- `food-fv-2.webp` — Bakoba (Banana). photo. Bananas Fruits. Ryan McGuire. CC0 1.0. https://stocksnap.io/photo/bananas-fruits-D0C5D92CD9
-- `food-fv-4.webp` — Tomati (Tomato). photo. Red Tomatoes. Krzysztof%20Puszczy%u0144ski. CC0 1.0. https://stocksnap.io/photo/red-tomatoes-GB9LU1L8RG
-- `food-fv-3.webp` — Lamunchi (Lemon/Lime). photo. Lemons Fruits. Lauren Mancke. CC0 1.0. https://stocksnap.io/photo/lemons-fruits-W28QPZPAK6
-- `food-fv-5.webp` — Siboyo (Onion). photo. Onions Vegetables. Travel Coffee Book. CC0 1.0. https://stocksnap.io/photo/onions-vegetables-EF15873BBA
-- `food-fv-6.webp` — Batata (Potato). photo. Potato Vegetable. Torsten Dettlaff. CC0 1.0. https://stocksnap.io/photo/potato-vegetable-8MIEFV0KHV
-- `cloth-1.webp` — Kamisa (Shirt). illustration. Original drawing. ABC Island Lingo. Original work, all rights reserved by the app.
-- `hous-rm-4.webp` — Stul (Chair). photo. Wooden Chair. Ryan Riggins. CC0 1.0. https://stocksnap.io/photo/wooden-chair-0DH6S6OU6Q
-- `hous-rm-3.webp` — Mesa (Table). photo. Wooden Table. Kari Shea. CC0 1.0. https://stocksnap.io/photo/wooden-table-NABSTMJFQH
-- `cloth-3.webp` — Sapatu (Shoes). photo. pair white shoes splashing puddle. Unknown. CC0 1.0. https://www.rawpixel.com/image/3305185/free-photo-image-running-apparel-cc0
-- `hous-rm-6.webp` — Kama (Bed). photo. 2021_09_hajenka_074. Juhele_CZ. CC0 1.0. https://www.flickr.com/photos/96541566@N06/51527891684
-- `nat-env-1.webp` — Laman (Beach/Sea). photo. Tropical Beach. Joe deSousa. CC0 1.0. https://stocksnap.io/photo/tropical-beach-9FM2TZZYP4
-- `nat-env-2.webp` — Santu (Sand). photo. Beach Sand. Alexandre Perotto. CC0 1.0. https://stocksnap.io/photo/beach-sand-ES9MSURD76
-- `nat-env-6.webp` — Luna (Moon). photo. 0010-01-17 (2022-02-17-solar 2022-01-17-lunar 목요일 木曜日 Thursday) moon 4:16AM *the first full moon of 2022(lunar). Katsujiro Maekawa. CC0 1.0. https://www.flickr.com/photos/140296773@N07/51885331342
-- `nat-env-4.webp` — Hòfi (Garden). photo. Garden Flowers. JOHN K THORNE. CC0 1.0. https://www.flickr.com/photos/89918055@N05/52102009337
-- `trans-1.webp` — Outo (Car). photo. Red Car. Burst. CC0 1.0. https://stocksnap.io/photo/red-car-K6RPHZWPLA
-- `nat-env-7.webp` — Strea (Star). photo. Night Stars. Juskteez Vu. CC0 1.0. https://stocksnap.io/photo/night-stars-E77EB36FC4
-- `trans-2.webp` — Autobus (Bus). photo. Stratford City Bus Station Sept 2025. tsiusing107. CC0 1.0. https://www.flickr.com/photos/202996452@N08/54765481998
-- `trans-5.webp` — Baiskel (Bicycle). photo. 'twas a fine night to bicycle with mobi from 14th and main to granville island! 20160919_181310. roland. CC0 1.0. https://www.flickr.com/photos/35034347371@N01/29181382683
-- `bas-5.webp` — Danki (Thank you). illustration. Thank you. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-7.webp` — Ayó (Goodbye). illustration. Goodbye. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-11.webp` — Si (Yes). illustration. Yes. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-12.webp` — Nò (No). illustration. No. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-13.webp` — Kiko (What). illustration. What. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-14.webp` — Unda (Where). illustration. Where. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-15.webp` — Ken (Who). illustration. Who. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-q1.webp` — Dikon (Why). illustration. Why. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-q2.webp` — Ki ora (What time/When). illustration. What time/When. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-1.webp` — Unu (One). illustration. One. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-2.webp` — Dos (Two). illustration. Two. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-3.webp` — Tres (Three). illustration. Three. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-4.webp` — Kuater (Four). illustration. Four. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-5.webp` — Sinku (Five). illustration. Five. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-6.webp` — Seis (Six). illustration. Six. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-7.webp` — Shete (Seven). illustration. Seven. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-8.webp` — Ocho (Eight). illustration. Eight. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-9.webp` — Nuebe (Nine). illustration. Nine. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-10.webp` — Dies (Ten). illustration. Ten. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-11.webp` — Diesun (Eleven). illustration. Eleven. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-12.webp` — Diesdos (Twelve). illustration. Twelve. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-15.webp` — Diessinku (Fifteen). illustration. Fifteen. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-20.webp` — Binti (Twenty). illustration. Twenty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-21.webp` — Bintiun (Twenty-one). illustration. Twenty-one. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-30.webp` — Trinta (Thirty). illustration. Thirty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-40.webp` — Kuarenta (Forty). illustration. Forty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-50.webp` — Sinkuenta (Fifty). illustration. Fifty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-60.webp` — Sesenta (Sixty). illustration. Sixty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-70.webp` — Setenta (Seventy). illustration. Seventy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-80.webp` — Ochenta (Eighty). illustration. Eighty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-90.webp` — Nobenta (Ninety). illustration. Ninety. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-100.webp` — Shen (One Hundred). illustration. One Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-200.webp` — Dosshen (Two Hundred). illustration. Two Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-500.webp` — Sinkushen (Five Hundred). illustration. Five Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-1000.webp` — Mil (One Thousand). illustration. One Thousand. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-1.webp` — Kòrá (Red). illustration. Red. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-2.webp` — Blou (Blue). illustration. Blue. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-3.webp` — Bèrdè (Green). illustration. Green. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-4.webp` — Hel (Yellow). illustration. Yellow. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-5.webp` — Pretu (Black). illustration. Black. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-6.webp` — Blanku (White). illustration. White. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-7.webp` — Oraño (Orange). illustration. Orange. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-8.webp` — Gris (Grey). illustration. Grey. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-9.webp` — Rosa (Pink). illustration. Pink. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-10.webp` — Biña (Purple). illustration. Purple. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-11.webp` — Maron (Brown). illustration. Brown. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-1.webp` — Tata (Father). illustration. Father. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-2.webp` — Mama (Mother). illustration. Mother. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-3.webp` — Ruman (Sibling). illustration. Sibling. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-4.webp` — Ruman hòmber (Brother). illustration. Brother. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-5.webp` — Ruman muhé (Sister). illustration. Sister. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-6.webp` — Wela (Grandmother). illustration. Grandmother. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-7.webp` — Welo (Grandfather). illustration. Grandfather. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `emo-1.webp` — Kontentu (Happy). illustration. Happy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `emo-2.webp` — Tristu (Sad). illustration. Sad. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `emo-3.webp` — Rabia (Angry). illustration. Angry. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `emo-4.webp` — Kansá (Tired). illustration. Tired. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `food-1.webp` — Awa (Water). illustration. Water. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `food-3.webp` — Kòfi (Coffee). illustration. Coffee. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `food-7.webp` — Piska (Fish). illustration. Fish. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-meet-1.webp` — Liber (Free/Available). illustration. Free/Available. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-meet-2.webp` — Okupá (Busy). illustration. Busy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-meet-3.webp` — Ban (Let's go). illustration. Let's go. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-meet-5.webp` — Idea (Idea). illustration. Idea. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `dir-1.webp` — Robes (Left). illustration. Left. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `dir-2.webp` — Drechi (Right). illustration. Right. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `dir-3.webp` — Padilanti (Straight). illustration. Straight. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `dir-6.webp` — Unda (Where). illustration. Where. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `dir-7.webp` — Aki (Here). illustration. Here. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `dir-8.webp` — Aya (There). illustration. There. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `pro-1.webp` — Mi (I). illustration. I. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `pro-2.webp` — Bo (You). illustration. You. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `pro-3.webp` — E (He/She/It). illustration. He/She/It. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `pro-4.webp` — Nos (We). illustration. We. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `pro-5.webp` — Boso (You (All)). illustration. You (All). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `pro-6.webp` — Nan (They). illustration. They. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-1.webp` — Ta (To be). illustration. To be. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-2.webp` — Tin (To have). illustration. To have. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-3.webp` — Bai (To go). illustration. To go. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-4.webp` — Bin (To come). illustration. To come. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-5.webp` — Kome (To eat). illustration. To eat. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-6.webp` — Bebe (To drink). illustration. To drink. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-7.webp` — Drumi (To sleep). illustration. To sleep. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-12.webp` — Traha (To work). illustration. To work. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-13.webp` — Baila (To dance). illustration. To dance. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-14.webp` — Lesa (To read). illustration. To read. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-15.webp` — Skirbi (To write). illustration. To write. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-16.webp` — Kore (To run/drive). illustration. To run/drive. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-17.webp` — Hunga (To play). illustration. To play. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-18.webp` — Siña (To learn). illustration. To learn. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-19.webp` — Wak (To watch/look). illustration. To watch/look. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `v-20.webp` — Kumpra (To buy). illustration. To buy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `prep-1.webp` — Riba (On). illustration. On. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `prep-2.webp` — Bou di (Under). illustration. Under. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `prep-3.webp` — Promé (Before). illustration. Before. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `prep-4.webp` — Después (After). illustration. After. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `wrk-1.webp` — Trabou (Work/Job). illustration. Work/Job. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `wrk-2.webp` — Oficina (Office). illustration. Office. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `wrk-3.webp` — Reunion (Meeting). illustration. Meeting. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `wrk-4.webp` — Hefe (Boss). illustration. Boss. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `wrk-5.webp` — Kolega (Colleague). illustration. Colleague. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `wrk-6.webp` — Solisitá (To apply (job)). illustration. To apply (job). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `hlt-1.webp` — Salú (Health). illustration. Health. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `hlt-2.webp` — Dòkter (Doctor). illustration. Doctor. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `hlt-3.webp` — Doló (Pain). illustration. Pain. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `hlt-4.webp` — Remedi (Medicine). illustration. Medicine. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `hlt-5.webp` — Kurpa (Body). illustration. Body. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `abs-1.webp` — Opinion (Opinion). illustration. Opinion. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `abs-2.webp` — Pensamentu (Thought). illustration. Thought. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `abs-3.webp` — Libertat (Freedom). illustration. Freedom. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `abs-4.webp` — Futuro (Future). illustration. Future. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `abs-5.webp` — Kere (To believe). illustration. To believe. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-1.webp` — Nòmber (Name). illustration. Name. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-2.webp` — Biba (To live). illustration. To live. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-3.webp` — Papia (To speak). illustration. To speak. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-4.webp` — Komprendé (To understand). illustration. To understand. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-gen-1.webp` — Nòmber (Name). illustration. Name. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-gen-2.webp` — Si (Yes). illustration. Yes. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-gen-3.webp` — Nò (No). illustration. No. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-gen-7.webp` — Pordon (Excuse me). illustration. Excuse me. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-gen-8.webp` — Ata (Here is/There is). illustration. Here is/There is. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-1.webp` — Tio (Uncle). illustration. Uncle. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-2.webp` — Tanta (Aunt). illustration. Aunt. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-3.webp` — Prima (Cousin (female)). illustration. Cousin (female). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-4.webp` — Primu (Cousin (male)). illustration. Cousin (male). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-5.webp` — Subrina (Niece). illustration. Niece. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-6.webp` — Subrino (Nephew). illustration. Nephew. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-7.webp` — Nieto (Grandchild). illustration. Grandchild. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-1.webp` — Lanta (To get up/Wake up). illustration. To get up/Wake up. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-2.webp` — Baña (To bathe/Shower). illustration. To bathe/Shower. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-3.webp` — Bistí (To dress/Get dressed). illustration. To dress/Get dressed. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-4.webp` — Kome (To eat). illustration. To eat. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-5.webp` — Traha (To work). illustration. To work. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-6.webp` — Drumi (To sleep). illustration. To sleep. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `rout-7.webp` — Limpia (To clean). illustration. To clean. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-1.webp` — Flornan (Flowers). illustration. Flowers. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-2.webp` — Kasnan (Houses). illustration. Houses. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-3.webp` — Bukinan (Books). illustration. Books. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-4.webp` — Autonan (Cars). illustration. Cars. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-5.webp` — Muchanan (Children). illustration. Children. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-6.webp` — Dianan (Days). illustration. Days. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `plur-7.webp` — Hendenan (People). illustration. People. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-1.webp` — Invershon (Investment). illustration. Investment. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-2.webp` — Presupuesto (Budget). illustration. Budget. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-3.webp` — Negosiashon (Negotiation). illustration. Negotiation. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-4.webp` — Ganashi (Profit). illustration. Profit. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-5.webp` — Pèrdida (Loss). illustration. Loss. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-6.webp` — Maneho (Management/Policy). illustration. Management/Policy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bus-7.webp` — Kontrato (Contract). illustration. Contract. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `acad-1.webp` — Teoria (Theory). illustration. Theory. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `acad-2.webp` — Hipótesis (Hypothesis). illustration. Hypothesis. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `acad-3.webp` — Análisis (Analysis). illustration. Analysis. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `acad-4.webp` — Konklushon (Conclusion). illustration. Conclusion. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `acad-5.webp` — Investigashon (Research). illustration. Research. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `acad-6.webp` — Argumento (Argument). illustration. Argument. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `food-6.webp` — Galiña (Chicken). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-5.webp` — Aros (Rice). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-4.webp` — Té (Tea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-2.webp` — Pan (Bread). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rest-6.webp` — Serbes (Beer). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rest-2.webp` — Mesa (Table). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-2.webp` — Bientu (Wind). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-3.webp` — Nubia (Cloud). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-1.webp` — Solo (Sun). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-4.webp` — Laman (Sea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-1.webp` — Kas (House). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-2.webp` — Kushina (Kitchen). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-4.webp` — Baño (Bathroom). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-6.webp` — Bentana (Window). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-7.webp` — Porta (Door). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plc-1.webp` — Skol (School). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plc-4.webp` — Supermerkado (Supermarket). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-3.webp` — Flor (Flower). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-2.webp` — Palu (Tree). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plc-6.webp` — Kaya (Street). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-4.webp` — Seru (Hill/Mountain). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `drk-2.webp` — Djus (Juice). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-2.webp` — Pushi (Cat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-4.webp` — Yuana (Iguana). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-1.webp` — Kachó (Dog). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-5.webp` — Turtuga (Turtle). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `drk-3.webp` — Lechi (Milk). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-3.webp` — Kabai (Horse). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-9.webp` — Blenchi (Hummingbird). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trav-3.webp` — Avion (Airplane). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-8.webp` — Baka (Cow). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trav-4.webp` — Boto (Boat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trav-6.webp` — Taksi (Taxi). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-5.webp` — Keshi (Cheese). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-2.webp` — Salu (Salt). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-1.webp` — Suku (Sugar). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-7.webp` — Webu (Egg). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-8.webp` — Karni (Meat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-9.webp` — Fruta (Fruit). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-1.webp` — Apel (Apple). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-2.webp` — Bakoba (Banana). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-4.webp` — Tomati (Tomato). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-3.webp` — Lamunchi (Lemon/Lime). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-5.webp` — Siboyo (Onion). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-6.webp` — Batata (Potato). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `cloth-1.webp` — Kamisa (Shirt). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hous-rm-4.webp` — Stul (Chair). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `cloth-3.webp` — Sapatu (Shoes). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hous-rm-6.webp` — Kama (Bed). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-1.webp` — Laman (Beach/Sea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-2.webp` — Santu (Sand). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-6.webp` — Luna (Moon). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-4.webp` — Hòfi (Garden). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trans-1.webp` — Outo (Car). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-7.webp` — Strea (Star). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trans-2.webp` — Autobus (Bus). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trans-5.webp` — Baiskel (Bicycle). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-5.webp` — Danki (Thank you). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-7.webp` — Ayó (Goodbye). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-11.webp` — Si (Yes). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-12.webp` — Nò (No). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-13.webp` — Kiko (What). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-14.webp` — Unda (Where). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-15.webp` — Ken (Who). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-q1.webp` — Dikon (Why). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-q2.webp` — Ki ora (What time/When). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-1.webp` — Unu (One). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-2.webp` — Dos (Two). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-3.webp` — Tres (Three). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-4.webp` — Kuater (Four). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-5.webp` — Sinku (Five). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-6.webp` — Seis (Six). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-7.webp` — Shete (Seven). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-8.webp` — Ocho (Eight). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-9.webp` — Nuebe (Nine). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-10.webp` — Dies (Ten). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-11.webp` — Diesun (Eleven). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-12.webp` — Diesdos (Twelve). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-15.webp` — Diessinku (Fifteen). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-20.webp` — Binti (Twenty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-21.webp` — Bintiun (Twenty-one). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-30.webp` — Trinta (Thirty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-40.webp` — Kuarenta (Forty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-50.webp` — Sinkuenta (Fifty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-60.webp` — Sesenta (Sixty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-70.webp` — Setenta (Seventy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-80.webp` — Ochenta (Eighty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-90.webp` — Nobenta (Ninety). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-100.webp` — Shen (One Hundred). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-200.webp` — Dosshen (Two Hundred). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-500.webp` — Sinkushen (Five Hundred). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-1000.webp` — Mil (One Thousand). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-1.webp` — Kòrá (Red). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-2.webp` — Blou (Blue). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-3.webp` — Bèrdè (Green). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-4.webp` — Hel (Yellow). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-5.webp` — Pretu (Black). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-6.webp` — Blanku (White). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-7.webp` — Oraño (Orange). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-8.webp` — Gris (Grey). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-9.webp` — Rosa (Pink). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-10.webp` — Biña (Purple). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-11.webp` — Maron (Brown). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-1.webp` — Tata (Father). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-2.webp` — Mama (Mother). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-3.webp` — Ruman (Sibling). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-4.webp` — Ruman hòmber (Brother). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-5.webp` — Ruman muhé (Sister). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-6.webp` — Wela (Grandmother). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-7.webp` — Welo (Grandfather). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-1.webp` — Kontentu (Happy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-2.webp` — Tristu (Sad). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-3.webp` — Rabia (Angry). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-4.webp` — Kansá (Tired). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-1.webp` — Awa (Water). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-3.webp` — Kòfi (Coffee). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-7.webp` — Piska (Fish). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-1.webp` — Liber (Free/Available). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-2.webp` — Okupá (Busy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-3.webp` — Ban (Let\). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-5.webp` — Idea (Idea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-1.webp` — Robes (Left). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-2.webp` — Drechi (Right). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-3.webp` — Padilanti (Straight). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-7.webp` — Aki (Here). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-8.webp` — Aya (There). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-1.webp` — Mi (I). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-2.webp` — Bo (You). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-3.webp` — E (He/She/It). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-4.webp` — Nos (We). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-5.webp` — Boso (You (All)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-6.webp` — Nan (They). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-1.webp` — Ta (To be). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-2.webp` — Tin (To have). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-3.webp` — Bai (To go). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-4.webp` — Bin (To come). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-5.webp` — Kome (To eat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-6.webp` — Bebe (To drink). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-7.webp` — Drumi (To sleep). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-12.webp` — Traha (To work). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-13.webp` — Baila (To dance). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-14.webp` — Lesa (To read). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-15.webp` — Skirbi (To write). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-16.webp` — Kore (To run/drive). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-17.webp` — Hunga (To play). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-18.webp` — Siña (To learn). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-19.webp` — Wak (To watch/look). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-20.webp` — Kumpra (To buy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-1.webp` — Riba (On). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-2.webp` — Bou di (Under). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-3.webp` — Promé (Before). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-4.webp` — Después (After). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-1.webp` — Trabou (Work/Job). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-2.webp` — Ofisina (Office). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-3.webp` — Reunion (Meeting). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-4.webp` — Hefe (Boss). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-5.webp` — Kolega (Colleague). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-6.webp` — Solisitá (To apply (job)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-1.webp` — Salú (Health). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-2.webp` — Dòkter (Doctor). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-3.webp` — Doló (Pain). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-4.webp` — Remedi (Medicine). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-5.webp` — Kurpa (Body). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-1.webp` — Opinion (Opinion). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-2.webp` — Pensamentu (Thought). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-3.webp` — Libertat (Freedom). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-4.webp` — Futuro (Future). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-5.webp` — Kere (To believe). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-1.webp` — Nòmber (Name). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-2.webp` — Biba (To live). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-3.webp` — Papia (To speak). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-4.webp` — Komprendé (To understand). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-gen-7.webp` — Pordon (Excuse me). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-gen-8.webp` — Ata (Here is/There is). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-1.webp` — Tio (Uncle). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-2.webp` — Tanta (Aunt). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-3.webp` — Prima (Cousin (female)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-4.webp` — Primu (Cousin (male)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-5.webp` — Subrina (Niece). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-6.webp` — Subrino (Nephew). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-7.webp` — Nieto (Grandchild). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-1.webp` — Lanta (To get up/Wake up). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-2.webp` — Baña (To bathe/Shower). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-3.webp` — Bistí (To dress/Get dressed). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-7.webp` — Limpia (To clean). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-1.webp` — Flornan (Flowers). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-2.webp` — Kasnan (Houses). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-3.webp` — Bukinan (Books). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-4.webp` — Autonan (Cars). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-5.webp` — Muchanan (Children). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-6.webp` — Dianan (Days). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-7.webp` — Hendenan (People). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-1.webp` — Invershon (Investment). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-2.webp` — Presupuesto (Budget). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-3.webp` — Negosiashon (Negotiation). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-4.webp` — Ganashi (Profit). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-5.webp` — Pèrdida (Loss). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-6.webp` — Maneho (Management/Policy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-7.webp` — Kontrato (Contract). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-1.webp` — Teoria (Theory). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-2.webp` — Hipótesis (Hypothesis). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-3.webp` — Análisis (Analysis). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-4.webp` — Konklushon (Conclusion). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-5.webp` — Investigashon (Research). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-6.webp` — Argumento (Argument). Original AI-generated artwork. Heartbeat Frequencies LLC.
