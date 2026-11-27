@@ -5,8 +5,11 @@
 #
 # Secrets, and no others:
 #   ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8_BASE64, APPLE_TEAM_ID
-# The key has to be an App Store Connect Team key with the Admin role.
-# An App Manager key can upload a build but cannot create the signing certificate.
+# The archive is unsigned, so a new runner does not create an Apple
+# Development certificate. Export signs with Apple's cloud-managed App
+# Store distribution. The key has to be an App Store Connect Team key
+# with the Admin role. An App Manager key can upload a build but cannot
+# cloud-sign it.
 
 name: iOS TestFlight
 
@@ -140,6 +143,9 @@ jobs:
       - name: Show the Xcode scheme
         run: xcodebuild -project ios/App/App.xcodeproj -scheme App -list
 
+      - name: Archive without signing
+        run: bash scripts/archive-ios.sh
+
       - name: Install the App Store Connect API key
         run: |
           set -euo pipefail
@@ -157,9 +163,6 @@ jobs:
             exit 1
           fi
           echo "API_KEY_PATH=${key_path}" >> "${GITHUB_ENV}"
-
-      - name: Archive
-        run: bash scripts/archive-ios.sh
 
       - name: Export the App Store IPA
         run: bash scripts/export-ios-ipa.sh

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Write an App Store IPA on disk. destination is export, so this does not upload.
+# Sign the unsigned archive and write an App Store IPA on disk.
+# This is the only step that talks to Apple about signing. method
+# app-store-connect with automatic signing uses Apple's cloud-managed
+# distribution certificate. It does not create an Apple Development
+# certificate on this runner. destination is export, so this does not upload.
 set -euo pipefail
 
 : "${ARCHIVE_PATH:?}"
@@ -51,6 +55,12 @@ set -e
 if [ "${status}" -ne 0 ]; then
   if grep -E -i -q "cloud signing permission|not authorized to perform|does not have permission" "${log}"; then
     echo "::error::Apple rejected the API key while signing the IPA. Cloud signing needs an App Store Connect Team key with the Admin role."
+  fi
+  if grep -E -q "iOS App Development" "${log}"; then
+    echo "::error::Export asked for an iOS App Development profile. It should use App Store distribution signing only."
+  fi
+  if grep -E -q "maximum number of certificates" "${log}"; then
+    echo "::error::Apple refused to sign the IPA because a distribution certificate could not be created. Revoke an Apple Distribution certificate. Do not revoke Apple Development certificates for this step."
   fi
   exit "${status}"
 fi
