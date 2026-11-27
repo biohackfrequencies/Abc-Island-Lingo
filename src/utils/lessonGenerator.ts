@@ -99,6 +99,54 @@ function tagQuestion(question: Question, sourceId: string, sourceIds?: string[])
     return { ...question, sourceId, sourceIds: sourceIds ?? [sourceId] };
 }
 
+function plainAnswer(question: Question, lang: Language): string {
+    const answer = question.correctAnswer;
+    if (typeof answer === 'string') return answer;
+    if (Array.isArray(answer)) return answer[0] ?? '';
+    const localized = answer[lang] ?? answer.en;
+    if (typeof localized === 'string') return localized;
+    if (Array.isArray(localized)) return localized[0] ?? '';
+    return '';
+}
+
+/** What to show after a miss. Picture taps grade the file path, so the learner sees the word. */
+export function answerFeedback(question: Question, lang: Language): string {
+    const raw = plainAnswer(question, lang);
+    const looksLikeFile = raw.includes('/assets/') || /\.(webp|png|jpe?g|gif)$/i.test(raw);
+    if (question.type !== 'tap-picture' && question.type !== 'picture-word' && !looksLikeFile) return raw;
+    const entry = question.sourceId
+        ? vocabulary.find((item) => item.id === question.sourceId)
+        : undefined;
+    if (!entry) {
+        const label = question.pictures?.find((tile) => tile.src === raw)?.label;
+        return label && !label.includes('/') ? label : raw;
+    }
+    const word = displayPap(entry);
+    const meaning = entry.meanings[lang];
+    return meaning ? `${word} (${meaning})` : word;
+}
+
+/** Danki and Ayó already have photos. The greeting phrases in the first lesson do not. */
+function greetingPhotoQuestions(config: LessonConfig, lang: Language): Question[] {
+    if (config.id !== 'l1-basics') return [];
+    const specs: { id: string; kind: 'tap-picture' | 'picture-word' }[] = [
+        { id: 'bas-7', kind: 'tap-picture' },
+        { id: 'bas-5', kind: 'picture-word' },
+    ];
+    const extras: Question[] = [];
+    for (const spec of specs) {
+        const vocab = vocabulary.find((entry) => entry.id === spec.id);
+        if (!vocab || !pictureFor(vocab.id)) continue;
+        const id = `q-${vocab.id}-${spec.kind}-greeting`;
+        const rng = rngFor(`${config.id}:${lang}:${vocab.id}:${spec.kind}`);
+        const built = spec.kind === 'tap-picture'
+            ? generateTapPicture(id, vocab, lang, rng, config.level === 'A1')
+            : generatePictureWord(id, vocab, lang, rng);
+        if (built) extras.push(tagQuestion(built, vocab.id));
+    }
+    return extras;
+}
+
 function generateMultipleChoice(id: string, vocab: VocabEntry, lang: Language, pool: VocabEntry[], rng: () => number): Question {
     const correct = displayPap(vocab);
     const distractors = getDistractors(vocab, 6, pool, rng).map(displayPap);
@@ -544,6 +592,11 @@ export const generateLesson = (config: LessonConfig, userLang: Language = 'en'):
     dialogueQuestions.forEach((dialogue, index) => {
         const at = index === 0 ? questions.length : Math.floor(questions.length * ((index + 1) / (dialogueQuestions.length + 1)));
         questions = placeExtra(questions, dialogue, at);
+    });
+
+    greetingPhotoQuestions(config, userLang).forEach((extra, index) => {
+        if (questions.length >= LESSON_MAX) return;
+        questions = placeExtra(questions, extra, 1 + index * 2);
     });
 
     const withTips = applyTips(repairOrder(questions), lessonVocab);

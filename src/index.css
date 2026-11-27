@@ -17,6 +17,18 @@
   }
 }
 
+/* Android 15 draws edge to edge. WebView builds before 140 leave
+   env(safe-area-inset-*) at 0 (Chromium bug 40699457). Capacitor
+   SystemBars writes the status bar and cutout into --safe-area-inset-*.
+   iOS does not set those variables, so env() remains the fallback. */
+.safe-top {
+  padding-top: calc(var(--safe-area-inset-top, env(safe-area-inset-top, 0px)) + 1rem);
+}
+
+.safe-bottom {
+  padding-bottom: calc(var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)) + 1rem);
+}
+
 .glass-card {
   @apply bg-slate-800/80 backdrop-blur-md border border-slate-700/50;
 }

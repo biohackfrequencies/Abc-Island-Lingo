@@ -29,7 +29,7 @@ export const IapProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         <IapContext.Provider value={api}>
             {children}
             {api.notice && (
-                <div className="fixed inset-x-0 top-0 z-[80] px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pointer-events-none">
+                <div className="safe-top pointer-events-none fixed inset-x-0 top-0 z-[80] px-4">
                     <div className={`pointer-events-auto mx-auto max-w-md rounded-2xl border p-4 shadow-2xl ${tone}`} role="status">
                         <p className="text-sm font-semibold leading-relaxed">{copy[noticeKey[api.notice]]}</p>
                         <button

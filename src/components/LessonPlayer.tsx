@@ -8,7 +8,7 @@ import { messages } from '../i18n/messages';
 import { isLessonLocked } from '../lib/progress';
 import { useStore } from '../store/useStore';
 import type { Language, Question } from '../types';
-import { generateLesson, matchKey, questionForPractice } from '../utils/lessonGenerator';
+import { answerFeedback, generateLesson, matchKey, questionForPractice } from '../utils/lessonGenerator';
 import { PaywallCard } from './PaywallCard';
 
 interface PlacedWord {
@@ -39,18 +39,34 @@ function useHydrated() {
     return useSyncExternalStore(subscribeHydration, () => useStore.persist.hasHydrated(), () => false);
 }
 
+const CloseLessonButton: React.FC = () => {
+    const navigate = useNavigate();
+    const language = useStore((state) => state.language) ?? 'en';
+    return (
+        <button
+            type="button"
+            onClick={() => navigate('/dashboard')}
+            data-testid="lesson-close"
+            aria-label={messages[language].dismiss}
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-slate-900/80 text-white"
+        >
+            <X size={24} />
+        </button>
+    );
+};
+
 const LessonMessage: React.FC<{ title: string; body?: string }> = ({ title, body }) => {
     const navigate = useNavigate();
     const language = useStore((state) => state.language) ?? 'en';
     return (
-        <div className="min-h-screen bg-slate-900 text-white p-6 flex flex-col">
-            <button type="button" onClick={() => navigate('/dashboard')} className="self-start p-3 rounded-full bg-slate-800 border border-white/10">
-                <X size={24} />
-            </button>
-            <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 max-w-md mx-auto">
+        <div className="flex h-[100dvh] flex-col overflow-hidden bg-slate-900 text-white">
+            <header className="safe-top sticky top-0 z-50 bg-slate-900 px-4 pb-3">
+                <CloseLessonButton />
+            </header>
+            <div className="safe-bottom flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center">
                 <h1 className="text-2xl font-extrabold">{title}</h1>
-                {body && <p className="text-gray-300">{body}</p>}
-                <button type="button" onClick={() => navigate('/dashboard')} className="mt-4 bg-brand-teal text-slate-900 font-bold px-6 py-3 rounded-xl">
+                {body && <p className="max-w-md text-gray-300">{body}</p>}
+                <button type="button" onClick={() => navigate('/dashboard')} className="mt-4 rounded-xl bg-brand-teal px-6 py-3 font-bold text-slate-900">
                     {messages[language].backHome}
                 </button>
             </div>
@@ -59,18 +75,19 @@ const LessonMessage: React.FC<{ title: string; body?: string }> = ({ title, body
 };
 
 const LockedLesson: React.FC<{ title: string }> = ({ title }) => {
-    const navigate = useNavigate();
     const language = (useStore((state) => state.language) ?? 'en') as Language;
     const copy = messages[language];
     return (
-        <div className="min-h-screen bg-slate-900 text-white p-6" data-testid="locked-lesson">
-            <button type="button" onClick={() => navigate('/dashboard')} className="p-3 rounded-full bg-slate-800 border border-white/10 mb-6">
-                <X size={24} />
-            </button>
-            <p className="text-brand-teal font-bold uppercase tracking-wide text-sm">{copy.lessonLockedTitle}</p>
-            <h1 className="text-3xl font-extrabold mt-2 mb-2">{title}</h1>
-            <p className="text-gray-300 mb-6">{copy.lessonLockedBody}</p>
-            <PaywallCard />
+        <div className="flex h-[100dvh] flex-col overflow-hidden bg-slate-900 text-white" data-testid="locked-lesson">
+            <header className="safe-top sticky top-0 z-50 bg-slate-900 px-4 pb-3">
+                <CloseLessonButton />
+            </header>
+            <div className="safe-bottom min-h-0 flex-1 overflow-y-auto px-6">
+                <p className="text-sm font-bold uppercase tracking-wide text-brand-teal">{copy.lessonLockedTitle}</p>
+                <h1 className="mb-2 mt-2 text-3xl font-extrabold">{title}</h1>
+                <p className="mb-6 text-gray-300">{copy.lessonLockedBody}</p>
+                <PaywallCard />
+            </div>
         </div>
     );
 };
@@ -129,7 +146,7 @@ export const LessonPlayer: React.FC = () => {
             : (lesson?.questions ?? []);
 
     const lessonTitle = isReview ? copy.reviewTitle : (remoteLesson?.title ?? lessonConfig?.title ?? copy.lessonMissing);
-    if (isReview && !reviewItems) return <div className="min-h-screen bg-slate-900" />;
+    if (isReview && !reviewItems) return <div className="h-[100dvh] bg-slate-900" />;
     if (isReview && questions.length === 0) return <LessonMessage title={copy.reviewEmptyTitle} body={copy.reviewEmptyBody} />;
     if (!isReview && !remoteLesson && !lessonConfig) return <LessonMessage title={copy.lessonMissing} />;
     if (locked) return <LockedLesson title={lessonTitle} />;
@@ -258,30 +275,21 @@ export const LessonPlayer: React.FC = () => {
 
     const promptText = getLocalizedText(currentQuestion.prompt);
     const explanationText = getLocalizedText(currentQuestion.explanation);
-    const displayedCorrectAnswer = Array.isArray(getCorrectAnswer())
-        ? (getCorrectAnswer() as string[])[0]
-        : (getCorrectAnswer() as string);
+    const displayedCorrectAnswer = answerFeedback(currentQuestion, currentLang);
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 flex flex-col w-full max-w-3xl mx-auto overflow-x-hidden text-white shadow-2xl">
-            {/* Header */}
-            <div className="p-4 pt-[calc(env(safe-area-inset-top)+1rem)] flex items-center gap-4">
-                <button
-                    onClick={() => navigate('/dashboard')}
-                    className="absolute top-4 left-4 z-50 p-3 rounded-full bg-slate-900/50 backdrop-blur-sm border border-white/10 text-white hover:bg-slate-800 transition-all mt-[env(safe-area-inset-top)]"
-                >
-                    <X size={28} />
-                </button>
-                <div className="flex-1 h-3 md:h-4 bg-slate-800 rounded-full overflow-hidden">
+        <div className="mx-auto flex h-[100dvh] w-full max-w-3xl flex-col overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800 text-white shadow-2xl">
+            <header className="safe-top sticky top-0 z-50 flex items-center gap-4 bg-slate-900/95 px-4 pb-3 backdrop-blur-sm">
+                <CloseLessonButton />
+                <div className="h-3 flex-1 overflow-hidden rounded-full bg-slate-800 md:h-4">
                     <div
                         className="h-full bg-brand-green transition-all duration-300 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
                         style={{ width: `${progress}%` }}
                     />
                 </div>
-            </div>
+            </header>
 
-            {/* Content */}
-            <div className="flex-1 min-w-0 w-full px-4 py-6 sm:px-6 md:px-10 flex flex-col justify-center">
+            <div data-testid="lesson-scroll" className="flex min-h-0 w-full min-w-0 flex-1 flex-col overflow-y-auto px-4 py-6 sm:px-6 md:px-10">
                 <div className="mb-6 md:mb-10 w-full min-w-0 text-center">
                     {reviewing && (
                         <p className="text-brand-teal font-bold uppercase tracking-wide text-sm mb-3">{copy.reviewBanner}</p>
@@ -610,25 +618,22 @@ export const LessonPlayer: React.FC = () => {
                         </div>
                     )}
                 </div>
+                {currentQuestion.culturalTip && (
+                    <div className="mt-6 flex items-start gap-3 rounded-xl border border-indigo-500/30 bg-indigo-900/50 p-4">
+                        <span className="text-2xl">💡</span>
+                        <div>
+                            <p className="mb-1 text-xs font-bold uppercase text-indigo-300">
+                                {copy.didYouKnow}
+                            </p>
+                            <p className="text-sm text-indigo-100 md:text-lg">
+                                {getLocalizedText(currentQuestion.culturalTip)}
+                            </p>
+                        </div>
+                    </div>
+                )}
             </div>
 
-            {/* Cultural Tip */}
-            {currentQuestion.culturalTip && (
-                <div className="mx-4 mt-auto mb-4 bg-indigo-900/50 border border-indigo-500/30 p-4 rounded-xl flex items-start gap-3 animate-fade-in-up md:mx-12 md:mb-8">
-                    <span className="text-2xl">💡</span>
-                    <div>
-                        <p className="text-xs font-bold text-indigo-300 uppercase mb-1">
-                            {copy.didYouKnow}
-                        </p>
-                        <p className="text-sm md:text-lg text-indigo-100">
-                            {getLocalizedText(currentQuestion.culturalTip)}
-                        </p>
-                    </div>
-                </div>
-            )}
-
-            {/* Footer */}
-            <div className={`p-4 pb-8 border-t border-slate-800 transition-colors duration-300 ${isCorrect === true ? 'bg-green-900/30 border-green-900' : isCorrect === false ? 'bg-red-900/30 border-red-900' : 'bg-slate-900'}`}>
+            <div className={`safe-bottom sticky bottom-0 z-40 border-t border-slate-800 p-4 transition-colors duration-300 ${isCorrect === true ? 'bg-green-900/30 border-green-900' : isCorrect === false ? 'bg-red-900/30 border-red-900' : 'bg-slate-900'}`}>
                 <div className="flex flex-col gap-4 max-w-3xl mx-auto">
                     {isCorrect === true && (
                         <div className="flex flex-col gap-2 mb-2 animate-bounce-short">
