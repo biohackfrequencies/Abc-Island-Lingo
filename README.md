@@ -27,7 +27,7 @@ There is no Mac in this setup. GitHub builds the iOS app when you ask it to.
 1. Open the repository on GitHub and choose Actions.
 2. Choose **iOS TestFlight** in the left column.
 3. Choose **Run workflow**. Leave the branch as the one you want to ship.
-4. The build number box can stay empty. Empty uses the number already in Xcode, which is **14** for this release. Type a higher whole number only when Apple says that build was already uploaded.
+4. The build number box can stay empty. Empty uses the number already in Xcode, which is **15** for this release. Type a higher whole number only when Apple says that build was already uploaded.
 5. Run it.
 
 The workflow builds the web app, syncs the iOS project, archives it, signs it, and uploads that build to TestFlight. It does not submit the app for App Store review.
@@ -40,11 +40,11 @@ This app uses Swift packages, so the workflow does not install CocoaPods.
 
 ## Versions for this release
 
-- iOS marketing version **1.0.3**, build **14**
-- Android `versionName` **1.0.3**, `versionCode` **6**
+- iOS marketing version **1.0.3**, build **15**
+- Android `versionName` **1.0.3**, `versionCode` **7**
 - npm package version **1.0.3**
 
-Android `versionCode` **6** is the next Play upload after **5**. The public `versionName` is **1.0.3**, matching iOS. The Play listing icon is `store/google-play-icon-512.png`, the same ABC mark as the launcher. Nothing here was submitted to the stores.
+Android `versionCode` **7** is the next Play upload after **6**. The public `versionName` is **1.0.3**, matching iOS. The Play listing icon is `store/google-play-icon-512.png`, the same ABC mark as the launcher. Nothing here was submitted to the stores.
 
 ## Update lessons and the phrase of the week
 

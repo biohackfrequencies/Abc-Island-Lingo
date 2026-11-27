@@ -180,7 +180,7 @@ const es: CultureCopy = {
         },
         {
             icon: 'language',
-            title: 'Papiamento',
+            title: 'El papiamento',
             body: 'El papiamento es una lengua criolla de las islas ABC. Mezcla portugués, español, neerlandés, inglés, francés y lenguas africanas.',
         },
     ],

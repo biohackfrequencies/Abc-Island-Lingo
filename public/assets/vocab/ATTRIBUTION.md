@@ -118,7 +118,7 @@ Every picture in this folder is original AI-generated artwork created for ABC Is
 - `emo-4.webp` — Kansá (Tired). Original AI-generated artwork. Heartbeat Frequencies LLC.
 - `food-1.webp` — Awa (Water). Original AI-generated artwork. Heartbeat Frequencies LLC.
 - `food-3.webp` — Kòfi (Coffee). Original AI-generated artwork. Heartbeat Frequencies LLC.
-- `food-7.webp` — Piska (Fish). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-7.webp` — Piská (Fish). Original AI-generated artwork. Heartbeat Frequencies LLC.
 - `soc-meet-1.webp` — Liber (Free/Available). Original AI-generated artwork. Heartbeat Frequencies LLC.
 - `soc-meet-2.webp` — Okupá (Busy). Original AI-generated artwork. Heartbeat Frequencies LLC.
 - `soc-meet-3.webp` — Ban (Let\). Original AI-generated artwork. Heartbeat Frequencies LLC.

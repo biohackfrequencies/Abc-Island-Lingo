@@ -159,8 +159,26 @@ Every vocabulary gloss, lesson description, exercise prompt, button, flashcard l
 | Pensamientos e Ideas | Pensamientos e ideas | abstract lesson | Ordinary Spanish does not capitalize “ideas” |
 | Unit 1 en 2 | Units 1 en 2 | Dutch lessons and flashcards subtitles | The verb “zijn” needs the plural |
 
+## Clear fixes after the Banko di Palabra check
+
+| Old | New | Where | Why |
+|---|---|---|---|
+| Piska | Piská | food-7, “sòpi di piská”, the picture credit | Banko di Palabra / Buki di Oro: piská is the fish. piska is the verb, to fish. The course has no verb use. |
+| tortuga | turtuga | “E {turtuga} ta landa den laman” | The headword is turtuga. Spanish glosses still say tortuga. |
+| Papiamento | papiamento | Spanish glosses and the Spanish “Escribe en papiamento” prompt | Spanish writes language names in lowercase. English UI still says Papiamento. |
+| aproba | aprobá | “E {presupuesto} ta aprobá” | The headword for the approved form is aprobá. |
+
 ## Still doubtful
 
+These course words differ from a Buki di Oro headword by accent only. They were left as written.
+
+- **ántes** is the headword. Dialogues still say “antes”.
+- **awó** and **awor** are both headwords. Dialogues say “awo”.
+- **akadémiko** is the headword. The lesson title is “Akademiko”.
+- **eksámen** and **èksamen** are both headwords. The lesson title is “Eksamen”.
+- **públiko** is the headword. The lesson title is “Servisio Publiko”.
+- **tèmpo** is the headword. The weather lesson title is “Tempo”.
+- **después** stays, because the owner asked for that accent. The book’s headword is the unaccented “despues”.
 - English buttons still say “Papiamento” (“Learning Papiamento”, “Type the Papiamento word”). That is the English name of the language. Papiamentu sentences already use Papiamentu.
 - **W.C.** and **TV** are abbreviations. televishon is the headword for the set. The book does not spell the toilet or the abbreviation.
 - **Carlos** is a person’s name.

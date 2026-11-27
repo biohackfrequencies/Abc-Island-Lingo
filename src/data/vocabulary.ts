@@ -151,7 +151,7 @@ export const vocabulary: VocabEntry[] = [
         culturalTip: {
             en: "Papiamento numbers are very similar to Spanish and Portuguese due to historical roots.",
             nl: "Papiaments getallen lijken erg op Spaans en Portugees vanwege historische wortels.",
-            es: "Los números en Papiamento son muy similares al español y portugués debido a raíces históricas."
+            es: "Los números en papiamento son muy similares al español y portugués debido a raíces históricas."
         }
     },
     { id: 'num-21', papiamento: 'Bintiun', meanings: { en: 'Twenty-one', nl: 'Eenentwintig', es: 'Veintiuno' }, category: 'numbers', type: 'word', tags: ['20-100'] },
@@ -228,7 +228,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'food-4', papiamento: 'Té', meanings: { en: 'Tea', nl: 'Thee', es: 'Té' }, category: 'food', type: 'word' },
     { id: 'food-5', papiamento: 'Aros', meanings: { en: 'Rice', nl: 'Rijst', es: 'Arroz' }, category: 'food', type: 'word' },
     { id: 'food-6', papiamento: 'Galiña', meanings: { en: 'Chicken', nl: 'Kip', es: 'Pollo' }, category: 'food', type: 'word', pronunciation: 'Ga-lee-nya' },
-    { id: 'food-7', papiamento: 'Piska', meanings: { en: 'Fish', nl: 'Vis', es: 'Pescado' }, category: 'food', type: 'word' },
+    { id: 'food-7', papiamento: 'Piská', meanings: { en: 'Fish', nl: 'Vis', es: 'Pescado' }, category: 'food', type: 'word' },
     { id: 'food-8', papiamento: 'Mi kièr awa', meanings: { en: 'I want water', nl: 'Ik wil water', es: 'Yo quiero agua' }, category: 'food', type: 'sentence' },
     { id: 'food-9', papiamento: 'Mi ta bebe kòfi', meanings: { en: 'I drink coffee', nl: 'Ik drink koffie', es: 'Yo bebo café' }, category: 'food', type: 'sentence' },
     { id: 'food-10', papiamento: 'E kuminda ta bon', meanings: { en: 'The food is good', nl: 'Het eten is goed', es: 'La comida es buena' }, category: 'food', type: 'sentence' },
@@ -356,7 +356,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'v-sent-4', papiamento: 'Bo ta {skirbi} bon', meanings: { en: 'You write well', nl: 'Jij schrijft goed', es: 'Escribes bien' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-5', papiamento: 'Mi ta {kore} mainta', meanings: { en: 'I run in the morning', nl: 'Ik ren \'s ochtends', es: 'Corro por la mañana' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-6', papiamento: 'E mucha ta {hunga}', meanings: { en: 'The child is playing', nl: 'Het kind speelt', es: 'El niño está jugando' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
-    { id: 'v-sent-7', papiamento: 'Nos ta {siña} Papiamentu', meanings: { en: 'We are learning Papiamentu', nl: 'Wij leren Papiaments', es: 'Estamos aprendiendo Papiamento' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
+    { id: 'v-sent-7', papiamento: 'Nos ta {siña} Papiamentu', meanings: { en: 'We are learning Papiamentu', nl: 'Wij leren Papiaments', es: 'Estamos aprendiendo papiamento' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-8', papiamento: 'Bo ta {wak} TV?', meanings: { en: 'Are you watching TV?', nl: 'Kijk je naar de tv?', es: '¿Ves la televisión?' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
 
     // --- PREPOSITIONS ---
@@ -418,7 +418,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'soc-6', papiamento: 'Kon yama bo?', meanings: { en: 'What is your name?', nl: 'Hoe heet jij?', es: '¿Cómo te llamas?' }, category: 'social', type: 'sentence' },
     { id: 'soc-7', papiamento: 'Unda bo ta {biba}?', meanings: { en: 'Where do you live?', nl: 'Waar woon je?', es: '¿Dónde vives?' }, category: 'social', type: 'sentence' },
     { id: 'soc-8', papiamento: 'Mi ta biba na Aruba', meanings: { en: 'I live in Aruba', nl: 'Ik woon op Aruba', es: 'Vivo en Aruba' }, category: 'social', type: 'sentence' },
-    { id: 'soc-9', papiamento: 'Bo ta {papia} Papiamentu?', meanings: { en: 'Do you speak Papiamentu?', nl: 'Spreek je Papiaments?', es: '¿Hablas Papiamento?' }, category: 'social', type: 'sentence' },
+    { id: 'soc-9', papiamento: 'Bo ta {papia} Papiamentu?', meanings: { en: 'Do you speak Papiamentu?', nl: 'Spreek je Papiaments?', es: '¿Hablas papiamento?' }, category: 'social', type: 'sentence' },
     { id: 'soc-10', papiamento: 'Mi no ta {komprendé} bon', meanings: { en: 'I do not understand well', nl: 'Ik begrijp het niet goed', es: 'No entiendo bien' }, category: 'social', type: 'sentence' },
     { id: 'soc-11', papiamento: 'Pasa un bon dia', meanings: { en: 'Have a nice day', nl: 'Fijne dag', es: 'Que tengas un buen día' }, category: 'social', type: 'phrase' },
 
@@ -549,7 +549,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'sent-nat-2', papiamento: 'E {pushi} ta drumi riba kama', meanings: { en: 'The cat sleeps on the bed', nl: 'De kat slaapt op het bed', es: 'El gato duerme en la cama' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-nat-3', papiamento: 'Mi ta stima kore {kabai}', meanings: { en: 'I love riding horses', nl: 'Ik rij graag paard', es: 'Me encanta montar a caballo' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-nat-4', papiamento: 'E {yuana} ta kome blachi', meanings: { en: 'The iguana eats leaves', nl: 'De leguaan eet bladeren', es: 'La iguana come hojas' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
-    { id: 'sent-nat-5', papiamento: 'E {tortuga} ta landa den laman', meanings: { en: 'The turtle swims in the sea', nl: 'De schildpad zwemt in de zee', es: 'La tortuga nada en el mar' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
+    { id: 'sent-nat-5', papiamento: 'E {turtuga} ta landa den laman', meanings: { en: 'The turtle swims in the sea', nl: 'De schildpad zwemt in de zee', es: 'La tortuga nada en el mar' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
 
     // City
     { id: 'sent-cit-1', papiamento: 'Mi mester bai {banko} awe', meanings: { en: 'I need to go to the bank today', nl: 'Ik moet vandaag naar de bank', es: 'Necesito ir al banco hoy' }, category: 'places', type: 'sentence', tags: ['cloze'] },
@@ -698,7 +698,7 @@ export const vocabulary: VocabEntry[] = [
 
     // Business Phrases
     { id: 'sent-bus-1', papiamento: 'Nos mester sera un {trato}', meanings: { en: 'We need to close a deal', nl: 'We moeten een deal sluiten', es: 'Tenemos que cerrar un trato' }, category: 'work', type: 'sentence', tags: ['cloze', 'business'] },
-    { id: 'sent-bus-2', papiamento: 'E {presupuesto} ta aproba', meanings: { en: 'The budget is approved', nl: 'De begroting is goedgekeurd', es: 'El presupuesto está aprobado' }, category: 'work', type: 'sentence', tags: ['cloze', 'business'] },
+    { id: 'sent-bus-2', papiamento: 'E {presupuesto} ta aprobá', meanings: { en: 'The budget is approved', nl: 'De begroting is goedgekeurd', es: 'El presupuesto está aprobado' }, category: 'work', type: 'sentence', tags: ['cloze', 'business'] },
     {
         id: 'sent-bus-3', papiamento: 'Atentamente', meanings: { en: 'Sincerely (Formal)', nl: 'Hoogachtend', es: 'Atentamente' }, category: 'work', type: 'phrase', tags: ['business'],
         culturalTip: {

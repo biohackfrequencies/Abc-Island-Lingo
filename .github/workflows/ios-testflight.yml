@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       build_number:
-        description: iOS build number. Leave empty to use the number in Xcode (14).
+        description: iOS build number. Leave empty to use the number in Xcode (15).
         required: false
         default: ""
         type: string
