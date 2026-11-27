@@ -21,9 +21,16 @@ export interface DialogueLine {
     isInteractive?: boolean; // If true, this line is hidden/tobefilled
 }
 
+export interface MatchPair {
+    /** Papiamentu side of a matching pair. */
+    left: string;
+    /** Meaning in the learner's language. */
+    right: string;
+}
+
 export interface Question {
     id: string;
-    type: 'translate' | 'match' | 'multiple-choice' | 'order' | 'cloze' | 'spelling' | 'dialogue';
+    type: 'translate' | 'match' | 'multiple-choice' | 'order' | 'cloze' | 'spelling' | 'dialogue' | 'true-false' | 'tap-picture' | 'picture-word';
     prompt: LocalizedContent;
     pronunciation?: string; // e.g., "Bon dee-a"
     options?: string[] | Record<Language, string[]>; // Context-aware options
@@ -31,10 +38,18 @@ export interface Question {
     explanation?: LocalizedContent; // Explanation shown after answer
     audio?: string; // Path to audio file
     image?: string; // URL to image
+    /** Big pictogram for true/false when no photograph or drawing is available. */
+    emoji?: string;
+    /** Picture choices for tap-the-picture. `options` repeats the image paths. */
+    pictures?: { src: string; label?: string }[];
+    /** Correct pairs for a matching question. `options` is the shuffled meaning column. */
+    pairs?: MatchPair[];
     dialogueLines?: DialogueLine[]; // For dialogue questions
     culturalTip?: LocalizedContent; // Cultural or language tip
     /** Vocabulary or conversation id, so a missed item can be rebuilt in another language. */
     sourceId?: string;
+    /** Every vocabulary id a question practices, including each tile in a match. */
+    sourceIds?: string[];
 }
 
 export interface DictionaryEntry {
@@ -48,7 +63,8 @@ export interface DictionaryEntry {
 export type ContentStrategy =
     | { type: 'ids'; ids: string[] }
     | { type: 'tag'; tag: string; count?: number }
-    | { type: 'category'; category: string; count?: number };
+    | { type: 'category'; category: string; count?: number }
+    | { type: 'review' };
 
 export interface LessonConfig {
     id: string;
@@ -59,6 +75,10 @@ export interface LessonConfig {
     topic: string;
     description: Record<Language, string>;
     content: ContentStrategy;
+    /** End-of-unit practice. The course builder fills in the recycled words. */
+    role?: 'review';
     /** Dialogue tags to include even when the lesson content is chosen by id. */
     dialogueTags?: string[];
+    /** Conversations chosen by category, used when a lesson no longer filters by category. */
+    dialogueCategories?: string[];
 }

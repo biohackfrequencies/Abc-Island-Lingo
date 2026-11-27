@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Layers } from 'lucide-react';
 import { messages } from '../i18n/messages';
 import { useStore } from '../store/useStore';
 import { LessonCatalog } from './LessonCatalog';
@@ -15,6 +17,10 @@ export const Lessons: React.FC = () => {
             <header className="p-6 pb-2">
                 <h1 className="text-3xl font-extrabold">{copy.lessonsTitle}</h1>
                 <p className="text-gray-400 mt-1">{copy.lessonsSubtitle}</p>
+                <Link to="/flashcards" data-testid="lessons-flashcards" className="mt-4 inline-flex items-center gap-2 rounded-xl bg-slate-800 px-4 py-3 font-bold text-brand-teal">
+                    <Layers size={18} />
+                    {copy.flashcardsTitle}
+                </Link>
             </header>
             <div className="px-6 pb-6">
                 <RemoteLessonList />

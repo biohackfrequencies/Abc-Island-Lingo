@@ -1,0 +1,209 @@
+# Picture credits
+
+Every picture in this folder is original AI-generated artwork created for ABC Island Lingo by Heartbeat Frequencies LLC. Heartbeat Frequencies LLC owns these images. There is no third-party licence.
+
+- `food-6.webp` — Galiña (Chicken). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-5.webp` — Aros (Rice). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-4.webp` — Té (Tea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-2.webp` — Pan (Bread). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rest-6.webp` — Serbes (Beer). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rest-2.webp` — Mesa (Table). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-2.webp` — Bientu (Wind). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-3.webp` — Nubia (Cloud). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-1.webp` — Solo (Sun). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wea-4.webp` — Laman (Sea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-1.webp` — Kas (House). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-2.webp` — Kushina (Kitchen). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-4.webp` — Baño (Bathroom). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-6.webp` — Bentana (Window). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hse-7.webp` — Porta (Door). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plc-1.webp` — Skol (School). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plc-4.webp` — Supermerkado (Supermarket). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-3.webp` — Flor (Flower). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-2.webp` — Palu (Tree). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plc-6.webp` — Kaya (Street). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-4.webp` — Seru (Hill/Mountain). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `drk-2.webp` — Djus (Juice). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-2.webp` — Pushi (Cat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-4.webp` — Yuana (Iguana). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-1.webp` — Kachó (Dog). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-5.webp` — Turtuga (Turtle). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `drk-3.webp` — Lechi (Milk). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-3.webp` — Kabai (Horse). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-9.webp` — Blenchi (Hummingbird). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trav-3.webp` — Avion (Airplane). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `ani-8.webp` — Baka (Cow). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trav-4.webp` — Boto (Boat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trav-6.webp` — Taksi (Taxi). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-5.webp` — Keshi (Cheese). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-2.webp` — Salu (Salt). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-1.webp` — Suku (Sugar). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-7.webp` — Webu (Egg). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-8.webp` — Karni (Meat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-ing-9.webp` — Fruta (Fruit). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-1.webp` — Apel (Apple). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-2.webp` — Bakoba (Banana). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-4.webp` — Tomati (Tomato). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-3.webp` — Lamunchi (Lemon/Lime). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-5.webp` — Siboyo (Onion). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-fv-6.webp` — Batata (Potato). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `cloth-1.webp` — Kamisa (Shirt). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hous-rm-4.webp` — Stul (Chair). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `cloth-3.webp` — Sapatu (Shoes). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hous-rm-6.webp` — Kama (Bed). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-1.webp` — Laman (Beach/Sea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-2.webp` — Santu (Sand). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-6.webp` — Luna (Moon). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-4.webp` — Hòfi (Garden). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trans-1.webp` — Outo (Car). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `nat-env-7.webp` — Strea (Star). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trans-2.webp` — Autobus (Bus). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `trans-5.webp` — Baiskel (Bicycle). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-5.webp` — Danki (Thank you). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-7.webp` — Ayó (Goodbye). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-11.webp` — Si (Yes). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-12.webp` — Nò (No). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-13.webp` — Kiko (What). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-14.webp` — Unda (Where). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-15.webp` — Ken (Who). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-q1.webp` — Dikon (Why). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bas-q2.webp` — Ki ora (What time/When). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-1.webp` — Unu (One). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-2.webp` — Dos (Two). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-3.webp` — Tres (Three). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-4.webp` — Kuater (Four). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-5.webp` — Sinku (Five). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-6.webp` — Seis (Six). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-7.webp` — Shete (Seven). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-8.webp` — Ocho (Eight). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-9.webp` — Nuebe (Nine). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-10.webp` — Dies (Ten). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-11.webp` — Diesun (Eleven). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-12.webp` — Diesdos (Twelve). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-15.webp` — Diessinku (Fifteen). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-20.webp` — Binti (Twenty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-21.webp` — Bintiun (Twenty-one). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-30.webp` — Trinta (Thirty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-40.webp` — Kuarenta (Forty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-50.webp` — Sinkuenta (Fifty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-60.webp` — Sesenta (Sixty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-70.webp` — Setenta (Seventy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-80.webp` — Ochenta (Eighty). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-90.webp` — Nobenta (Ninety). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-100.webp` — Shen (One Hundred). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-200.webp` — Dosshen (Two Hundred). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-500.webp` — Sinkushen (Five Hundred). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `num-1000.webp` — Mil (One Thousand). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-1.webp` — Kòrá (Red). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-2.webp` — Blou (Blue). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-3.webp` — Bèrdè (Green). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-4.webp` — Hel (Yellow). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-5.webp` — Pretu (Black). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-6.webp` — Blanku (White). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-7.webp` — Oraño (Orange). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-8.webp` — Gris (Grey). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-9.webp` — Rosa (Pink). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-10.webp` — Biña (Purple). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `col-11.webp` — Maron (Brown). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-1.webp` — Tata (Father). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-2.webp` — Mama (Mother). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-3.webp` — Ruman (Sibling). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-4.webp` — Ruman hòmber (Brother). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-5.webp` — Ruman muhé (Sister). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-6.webp` — Wela (Grandmother). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-7.webp` — Welo (Grandfather). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-1.webp` — Kontentu (Happy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-2.webp` — Tristu (Sad). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-3.webp` — Rabia (Angry). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `emo-4.webp` — Kansá (Tired). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-1.webp` — Awa (Water). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-3.webp` — Kòfi (Coffee). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `food-7.webp` — Piska (Fish). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-1.webp` — Liber (Free/Available). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-2.webp` — Okupá (Busy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-3.webp` — Ban (Let\). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-meet-5.webp` — Idea (Idea). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-1.webp` — Robes (Left). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-2.webp` — Drechi (Right). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-3.webp` — Padilanti (Straight). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-7.webp` — Aki (Here). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `dir-8.webp` — Aya (There). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-1.webp` — Mi (I). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-2.webp` — Bo (You). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-3.webp` — E (He/She/It). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-4.webp` — Nos (We). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-5.webp` — Boso (You (All)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `pro-6.webp` — Nan (They). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-1.webp` — Ta (To be). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-2.webp` — Tin (To have). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-3.webp` — Bai (To go). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-4.webp` — Bin (To come). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-5.webp` — Kome (To eat). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-6.webp` — Bebe (To drink). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-7.webp` — Drumi (To sleep). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-12.webp` — Traha (To work). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-13.webp` — Baila (To dance). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-14.webp` — Lesa (To read). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-15.webp` — Skirbi (To write). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-16.webp` — Kore (To run/drive). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-17.webp` — Hunga (To play). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-18.webp` — Siña (To learn). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-19.webp` — Wak (To watch/look). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `v-20.webp` — Kumpra (To buy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-1.webp` — Riba (On). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-2.webp` — Bou di (Under). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-3.webp` — Promé (Before). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `prep-4.webp` — Después (After). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-1.webp` — Trabou (Work/Job). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-2.webp` — Ofisina (Office). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-3.webp` — Reunion (Meeting). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-4.webp` — Hefe (Boss). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-5.webp` — Kolega (Colleague). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `wrk-6.webp` — Solisitá (To apply (job)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-1.webp` — Salú (Health). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-2.webp` — Dòkter (Doctor). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-3.webp` — Doló (Pain). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-4.webp` — Remedi (Medicine). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `hlt-5.webp` — Kurpa (Body). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-1.webp` — Opinion (Opinion). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-2.webp` — Pensamentu (Thought). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-3.webp` — Libertat (Freedom). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-4.webp` — Futuro (Future). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `abs-5.webp` — Kere (To believe). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-1.webp` — Nòmber (Name). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-2.webp` — Biba (To live). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-3.webp` — Papia (To speak). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-4.webp` — Komprendé (To understand). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-gen-7.webp` — Pordon (Excuse me). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `soc-gen-8.webp` — Ata (Here is/There is). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-1.webp` — Tio (Uncle). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-2.webp` — Tanta (Aunt). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-3.webp` — Prima (Cousin (female)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-4.webp` — Primu (Cousin (male)). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-5.webp` — Subrina (Niece). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-6.webp` — Subrino (Nephew). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `fam-ext-7.webp` — Nieto (Grandchild). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-1.webp` — Lanta (To get up/Wake up). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-2.webp` — Baña (To bathe/Shower). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-3.webp` — Bistí (To dress/Get dressed). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `rout-7.webp` — Limpia (To clean). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-1.webp` — Flornan (Flowers). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-2.webp` — Kasnan (Houses). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-3.webp` — Bukinan (Books). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-4.webp` — Autonan (Cars). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-5.webp` — Muchanan (Children). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-6.webp` — Dianan (Days). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `plur-7.webp` — Hendenan (People). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-1.webp` — Invershon (Investment). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-2.webp` — Presupuesto (Budget). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-3.webp` — Negosiashon (Negotiation). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-4.webp` — Ganashi (Profit). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-5.webp` — Pèrdida (Loss). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-6.webp` — Maneho (Management/Policy). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `bus-7.webp` — Kontrato (Contract). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-1.webp` — Teoria (Theory). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-2.webp` — Hipótesis (Hypothesis). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-3.webp` — Análisis (Analysis). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-4.webp` — Konklushon (Conclusion). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-5.webp` — Investigashon (Research). Original AI-generated artwork. Heartbeat Frequencies LLC.
+- `acad-6.webp` — Argumento (Argument). Original AI-generated artwork. Heartbeat Frequencies LLC.

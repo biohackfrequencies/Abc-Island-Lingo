@@ -8,7 +8,7 @@ import { messages } from '../i18n/messages';
 import { isLessonLocked } from '../lib/progress';
 import { useStore } from '../store/useStore';
 import type { Language, Question } from '../types';
-import { generateLesson, questionForPractice } from '../utils/lessonGenerator';
+import { generateLesson, matchKey, questionForPractice } from '../utils/lessonGenerator';
 import { PaywallCard } from './PaywallCard';
 
 interface PlacedWord {
@@ -107,6 +107,8 @@ export const LessonPlayer: React.FC = () => {
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
     const [placed, setPlaced] = useState<PlacedWord[]>([]);
+    const [matchLeft, setMatchLeft] = useState<string | null>(null);
+    const [matchPairs, setMatchPairs] = useState<{ left: string; right: string }[]>([]);
     const [round, setRound] = useState<'lesson' | 'review'>('lesson');
     const [reviewQueue, setReviewQueue] = useState<Question[]>([]);
     const sessionMisses = useRef<Map<string, Question>>(new Map());
@@ -180,6 +182,22 @@ export const LessonPlayer: React.FC = () => {
         setSelectedOption(null);
         setIsCorrect(null);
         setPlaced([]);
+        setMatchLeft(null);
+        setMatchPairs([]);
+    };
+
+    const chooseMatch = (side: 'left' | 'right', value: string) => {
+        if (isCorrect !== null || currentQuestion.type !== 'match' || !currentQuestion.pairs) return;
+        if (side === 'left') {
+            setMatchLeft(value);
+            return;
+        }
+        if (!matchLeft) return;
+        const next = matchPairs.filter((pair) => pair.left !== matchLeft && pair.right !== value);
+        next.push({ left: matchLeft, right: value });
+        setMatchPairs(next);
+        setMatchLeft(null);
+        setSelectedOption(next.length === currentQuestion.pairs.length ? matchKey(next) : null);
     };
 
     const commitPlaced = (next: PlacedWord[]) => {
@@ -245,16 +263,15 @@ export const LessonPlayer: React.FC = () => {
         : (getCorrectAnswer() as string);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 flex flex-col w-full max-w-3xl mx-auto text-white shadow-2xl">
+        <div className="relative min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 flex flex-col w-full max-w-3xl mx-auto overflow-x-hidden text-white shadow-2xl">
             {/* Header */}
             <div className="p-4 pt-[calc(env(safe-area-inset-top)+1rem)] flex items-center gap-4">
                 <button
                     onClick={() => navigate('/dashboard')}
-                    className="fixed top-4 left-4 z-50 p-3 rounded-full bg-slate-900/50 backdrop-blur-sm border border-white/10 text-white hover:bg-slate-800 transition-all mt-[env(safe-area-inset-top)]"
+                    className="absolute top-4 left-4 z-50 p-3 rounded-full bg-slate-900/50 backdrop-blur-sm border border-white/10 text-white hover:bg-slate-800 transition-all mt-[env(safe-area-inset-top)]"
                 >
                     <X size={28} />
                 </button>
-                <div className="w-12"></div> {/* Spacer for fixed button */}
                 <div className="flex-1 h-3 md:h-4 bg-slate-800 rounded-full overflow-hidden">
                     <div
                         className="h-full bg-brand-green transition-all duration-300 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
@@ -264,12 +281,18 @@ export const LessonPlayer: React.FC = () => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-6 md:p-12 flex flex-col justify-center max-w-3xl w-full mx-auto">
-                <div className="mb-8 md:mb-16 text-center">
+            <div className="flex-1 min-w-0 w-full px-4 py-6 sm:px-6 md:px-10 flex flex-col justify-center">
+                <div className="mb-6 md:mb-10 w-full min-w-0 text-center">
                     {reviewing && (
                         <p className="text-brand-teal font-bold uppercase tracking-wide text-sm mb-3">{copy.reviewBanner}</p>
                     )}
-                    <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 leading-relaxed">
+                    {currentQuestion.type === 'true-false' && currentQuestion.image && (
+                        <img src={currentQuestion.image} alt="" className="w-40 h-40 md:w-52 md:h-52 object-cover rounded-3xl mx-auto mb-4 border border-white/10" data-testid="exercise-image" />
+                    )}
+                    {currentQuestion.type === 'true-false' && !currentQuestion.image && currentQuestion.emoji && (
+                        <div className="text-7xl md:text-8xl mb-4" data-testid="exercise-emoji">{currentQuestion.emoji}</div>
+                    )}
+                    <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 leading-relaxed" data-testid="question-prompt">
                         {currentQuestion.type === 'cloze'
                             ? promptText.split('\n\n')[0]
                             : promptText}
@@ -280,7 +303,7 @@ export const LessonPlayer: React.FC = () => {
                 </div>
 
                 {/* Question Types Logic */}
-                <div className="w-full">
+                <div className="w-full min-w-0" data-testid={`question-${currentQuestion.type}`}>
                     {/* Spelling (Input) */}
                     {currentQuestion.type === 'spelling' && (
                         <div className="w-full">
@@ -381,6 +404,136 @@ export const LessonPlayer: React.FC = () => {
                                         {opt}
                                     </button>
                                 ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* True or false, with an emoji when the word has an obvious picture */}
+                    {currentQuestion.type === 'true-false' && (
+                        <div className="grid grid-cols-2 gap-3 md:gap-6">
+                            {getLocalizedOptions().map((opt, idx) => (
+                                <button
+                                    key={`${opt}-${idx}`}
+                                    type="button"
+                                    onClick={() => !isCorrect && setSelectedOption(opt)}
+                                    className={`
+                                        p-6 md:p-10 border-2 rounded-2xl font-bold transition-all text-xl md:text-3xl
+                                        ${selectedOption === opt
+                                            ? isCorrect === null
+                                                ? 'border-brand-teal bg-brand-teal/20 text-brand-teal'
+                                                : isCorrect
+                                                    ? 'border-green-500 bg-green-500/20 text-green-400'
+                                                    : 'border-red-500 bg-red-500/20 text-red-400'
+                                            : 'border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 hover:border-slate-500'
+                                        }
+                                    `}
+                                >
+                                    {opt}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+
+                    {currentQuestion.type === 'tap-picture' && currentQuestion.pictures && (
+                        <div className="mx-auto grid w-full min-w-0 max-w-lg grid-cols-2 gap-3" data-testid="picture-grid">
+                            {currentQuestion.pictures.map((tile) => (
+                                <button
+                                    key={tile.src}
+                                    type="button"
+                                    onClick={() => !isCorrect && setSelectedOption(tile.src)}
+                                    className={`min-w-0 w-full overflow-hidden rounded-2xl border-2 bg-slate-800 text-left ${
+                                        selectedOption === tile.src
+                                            ? isCorrect === null
+                                                ? 'border-brand-teal'
+                                                : isCorrect
+                                                    ? 'border-green-500'
+                                                    : 'border-red-500'
+                                            : 'border-slate-700'
+                                    }`}
+                                >
+                                    <img src={tile.src} alt={tile.label ?? ''} className="block aspect-square h-auto w-full max-w-full object-cover" />
+                                    {tile.label && <span className="block truncate px-3 py-2 text-sm font-bold text-slate-200 md:text-base">{tile.label}</span>}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+
+                    {currentQuestion.type === 'picture-word' && (
+                        <div data-testid="picture-word">
+                            {currentQuestion.image && (
+                                <img src={currentQuestion.image} alt="" className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-3xl mx-auto mb-6 border border-white/10" data-testid="exercise-image" />
+                            )}
+                            <div className="grid gap-3 md:gap-4">
+                                {getLocalizedOptions().map((opt, idx) => (
+                                    <button
+                                        key={`${opt}-${idx}`}
+                                        type="button"
+                                        onClick={() => !isCorrect && setSelectedOption(opt)}
+                                        className={`p-4 md:p-6 border-2 rounded-2xl text-left font-bold text-lg md:text-2xl ${
+                                            selectedOption === opt
+                                                ? isCorrect === null
+                                                    ? 'border-brand-teal bg-brand-teal/20 text-brand-teal'
+                                                    : isCorrect
+                                                        ? 'border-green-500 bg-green-500/20 text-green-400'
+                                                        : 'border-red-500 bg-red-500/20 text-red-400'
+                                                : 'border-slate-700 bg-slate-800 text-slate-300'
+                                        }`}
+                                    >
+                                        {opt}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Tap the matching pairs */}
+                    {currentQuestion.type === 'match' && currentQuestion.pairs && (
+                        <div className="space-y-4">
+                            <p className="text-center text-gray-400">{copy.tapPairs}</p>
+                            <div className="grid grid-cols-2 gap-3 md:gap-4" data-testid="match-board">
+                                <div className="flex flex-col gap-3">
+                                    {currentQuestion.pairs.map((pair) => {
+                                        const paired = matchPairs.findIndex((item) => item.left === pair.left);
+                                        const selected = matchLeft === pair.left;
+                                        return (
+                                            <button
+                                                key={pair.left}
+                                                type="button"
+                                                data-testid="match-left"
+                                                onClick={() => chooseMatch('left', pair.left)}
+                                                className={`p-4 md:p-5 rounded-2xl border-2 font-bold text-left text-base md:text-xl ${
+                                                    selected
+                                                        ? 'border-brand-teal bg-brand-teal/20 text-brand-teal'
+                                                        : paired >= 0
+                                                            ? 'border-emerald-400/80 bg-emerald-500/10 text-white'
+                                                            : 'border-slate-700 bg-slate-800 text-white'
+                                                }`}
+                                            >
+                                                {pair.left}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                                <div className="flex flex-col gap-3">
+                                    {getLocalizedOptions().map((meaning, idx) => {
+                                        const paired = matchPairs.findIndex((item) => item.right === meaning);
+                                        return (
+                                            <button
+                                                key={`${meaning}-${idx}`}
+                                                type="button"
+                                                data-testid="match-right"
+                                                onClick={() => chooseMatch('right', meaning)}
+                                                className={`p-4 md:p-5 rounded-2xl border-2 font-bold text-left text-base md:text-xl ${
+                                                    paired >= 0
+                                                        ? 'border-emerald-400/80 bg-emerald-500/10 text-white'
+                                                        : 'border-slate-700 bg-slate-800 text-slate-200 hover:border-slate-500'
+                                                }`}
+                                            >
+                                                {meaning}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     )}

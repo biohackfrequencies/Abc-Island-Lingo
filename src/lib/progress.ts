@@ -1,3 +1,5 @@
+import { readFlashcards, type CardProgress } from './flashcardBoxes';
+import { isStoredMistake, type StoredMistake } from './mistakes';
 import type { Language } from '../types';
 
 export const FREE_UNIT_MAX = 2;
@@ -55,6 +57,57 @@ export function nextStreak(streak: number, lastStudyDate: string | null, today: 
         return { streak: Math.max(streak, 0) + 1, lastStudyDate: today };
     }
     return { streak: 1, lastStudyDate: today };
+}
+
+/**
+ * Keep finished lessons, XP, and the premium flag when the course gains lessons.
+ * New lesson ids stay unfinished, so the extra practice is there to do.
+ * Version 0 stored less; later versions already have XP and a display name.
+ */
+export function migratePersistedState(persisted: unknown, version: number): ProgressSnapshot & {
+    language: Language | null;
+    isPremium: boolean;
+    displayName: string;
+    mistakes: StoredMistake[];
+    flashcards: Record<string, CardProgress>;
+} {
+    const raw = (persisted ?? {}) as Partial<ProgressSnapshot> & {
+        language?: Language | null;
+        isPremium?: boolean;
+        displayName?: string;
+        mistakes?: unknown;
+        completedLessons?: unknown;
+        flashcards?: unknown;
+    };
+    const flashcards = readFlashcards(raw.flashcards);
+    const completed = Array.from(new Set(
+        (Array.isArray(raw.completedLessons) ? raw.completedLessons : []).filter((id): id is string => typeof id === 'string'),
+    ));
+    const mistakes = Array.isArray(raw.mistakes) ? raw.mistakes.filter(isStoredMistake) : [];
+    if (version >= 1 && typeof raw.xp === 'number' && raw.displayName) {
+        return {
+            language: raw.language ?? null,
+            isPremium: Boolean(raw.isPremium),
+            completedLessons: completed,
+            mistakes,
+            xp: raw.xp,
+            streak: typeof raw.streak === 'number' ? raw.streak : 0,
+            lastStudyDate: raw.lastStudyDate ?? null,
+            displayName: raw.displayName,
+            flashcards,
+        };
+    }
+    return {
+        language: raw.language ?? null,
+        isPremium: Boolean(raw.isPremium),
+        completedLessons: completed,
+        mistakes,
+        xp: typeof raw.xp === 'number' ? raw.xp : completed.length * XP_PER_LESSON,
+        streak: typeof raw.streak === 'number' ? raw.streak : 0,
+        lastStudyDate: raw.lastStudyDate ?? null,
+        displayName: raw.displayName?.trim() || 'Learner',
+        flashcards,
+    };
 }
 
 export function applyLessonCompletion(state: ProgressSnapshot, lessonId: string, locked: boolean, today: string): ProgressSnapshot {

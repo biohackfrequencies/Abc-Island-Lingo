@@ -3,6 +3,8 @@ import { BottomNav } from './components/BottomNav';
 import { Culture } from './components/Culture';
 import { Dashboard } from './components/Dashboard';
 import { Dictionary } from './components/Dictionary';
+import { FlashcardPlayer } from './components/FlashcardPlayer';
+import { Flashcards } from './components/Flashcards';
 import { IapProvider } from './components/IapProvider';
 import { LessonPlayer } from './components/LessonPlayer';
 import { Lessons } from './components/Lessons';
@@ -38,6 +40,8 @@ function App() {
                         <Route path="/lesson/:lessonId" element={<LessonRoute />} />
                         <Route path="/review" element={<LessonPlayer key="review" />} />
                         <Route path="/dictionary" element={<Layout><Dictionary /></Layout>} />
+                        <Route path="/flashcards" element={<Layout><Flashcards /></Layout>} />
+                        <Route path="/flashcards/:deckId" element={<FlashcardPlayer />} />
                     </Routes>
                 </div>
             </Router>

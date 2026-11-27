@@ -27,24 +27,24 @@ There is no Mac in this setup. GitHub builds the iOS app when you ask it to.
 1. Open the repository on GitHub and choose Actions.
 2. Choose **iOS TestFlight** in the left column.
 3. Choose **Run workflow**. Leave the branch as the one you want to ship.
-4. The build number box can stay empty. Empty uses the number already in Xcode, which is **13** for this release. Type a higher whole number only when Apple says that build was already uploaded.
+4. The build number box can stay empty. Empty uses the number already in Xcode, which is **14** for this release. Type a higher whole number only when Apple says that build was already uploaded.
 5. Run it.
 
 The workflow builds the web app, syncs the iOS project, archives it, signs it, and uploads that build to TestFlight. It does not submit the app for App Store review.
 
 It uses the GitHub-hosted `macos-15` runner. The `macos-26` label never started a machine on this account, and `macos-latest` points at that same image, so neither is used. `macos-15` opens Xcode 16.4 by default, and App Store Connect rejects that older SDK. The workflow switches to the newest Xcode 26 installed on the image before it archives. The iOS deployment target stays **15.0**, which is the oldest target Xcode 26 accepts.
 
-Signing uses the App Store Connect API key already stored as these four repository secrets, and no others: `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8_BASE64` (the `.p8` file as one line of base64), and `APPLE_TEAM_ID`. The key needs the Admin role so Apple can create the certificate. The bundle id is `com.papiamentolearn.app`. The marketing version is **1.0.2**. Purchases use StoreKit and RevenueCat. The old `com.apple.developer.in-app-purchase` entitlements key is not used, because automatic signing cannot put that key in a profile.
+Signing uses the App Store Connect API key already stored as these four repository secrets, and no others: `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8_BASE64` (the `.p8` file as one line of base64), and `APPLE_TEAM_ID`. The key needs the Admin role so Apple can create the certificate. The bundle id is `com.papiamentolearn.app`. The marketing version is **1.0.3**. Purchases use StoreKit and RevenueCat. The old `com.apple.developer.in-app-purchase` entitlements key is not used, because automatic signing cannot put that key in a profile.
 
 This app uses Swift packages, so the workflow does not install CocoaPods.
 
 ## Versions for this release
 
-- iOS marketing version **1.0.2**, build **13**
-- Android `versionName` **1.0.2**, `versionCode` **5**
-- npm package version **1.0.2**
+- iOS marketing version **1.0.3**, build **14**
+- Android `versionName` **1.0.3**, `versionCode` **6**
+- npm package version **1.0.3**
 
-Android `versionCode` **5** is the next Play upload after **4**. The public `versionName` is **1.0.2**, matching iOS. The Play listing icon is `store/google-play-icon-512.png`, the same ABC mark as the launcher. Nothing here was submitted to the stores.
+Android `versionCode` **6** is the next Play upload after **5**. The public `versionName` is **1.0.3**, matching iOS. The Play listing icon is `store/google-play-icon-512.png`, the same ABC mark as the launcher. Nothing here was submitted to the stores.
 
 ## Update lessons and the phrase of the week
 
