@@ -206,6 +206,8 @@ test('official Curaçao and Bonaire spellings replace clear errors', () => {
     assert.equal(pap('trav-5'), 'Karchi');
     assert.equal(pap('emo-4'), 'Kansá');
     assert.equal(pap('shop-3'), 'Karu');
+    assert.equal(pap('wrk-2'), 'Ofisina');
+    assert.equal(pap('food-ing-8'), 'Karni');
     assert.equal(pap('abs-5'), 'Kere');
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('flamingo')));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('siete')));

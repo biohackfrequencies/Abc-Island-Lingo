@@ -263,16 +263,15 @@ export const LessonPlayer: React.FC = () => {
         : (getCorrectAnswer() as string);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 flex flex-col w-full max-w-3xl mx-auto text-white shadow-2xl">
+        <div className="relative min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 flex flex-col w-full max-w-3xl mx-auto overflow-x-hidden text-white shadow-2xl">
             {/* Header */}
             <div className="p-4 pt-[calc(env(safe-area-inset-top)+1rem)] flex items-center gap-4">
                 <button
                     onClick={() => navigate('/dashboard')}
-                    className="fixed top-4 left-4 z-50 p-3 rounded-full bg-slate-900/50 backdrop-blur-sm border border-white/10 text-white hover:bg-slate-800 transition-all mt-[env(safe-area-inset-top)]"
+                    className="absolute top-4 left-4 z-50 p-3 rounded-full bg-slate-900/50 backdrop-blur-sm border border-white/10 text-white hover:bg-slate-800 transition-all mt-[env(safe-area-inset-top)]"
                 >
                     <X size={28} />
                 </button>
-                <div className="w-12"></div> {/* Spacer for fixed button */}
                 <div className="flex-1 h-3 md:h-4 bg-slate-800 rounded-full overflow-hidden">
                     <div
                         className="h-full bg-brand-green transition-all duration-300 shadow-[0_0_10px_rgba(34,197,94,0.5)]"
@@ -282,8 +281,8 @@ export const LessonPlayer: React.FC = () => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-6 md:p-12 flex flex-col justify-center max-w-3xl w-full mx-auto">
-                <div className="mb-8 md:mb-16 text-center">
+            <div className="flex-1 min-w-0 w-full px-4 py-6 sm:px-6 md:px-10 flex flex-col justify-center">
+                <div className="mb-6 md:mb-10 w-full min-w-0 text-center">
                     {reviewing && (
                         <p className="text-brand-teal font-bold uppercase tracking-wide text-sm mb-3">{copy.reviewBanner}</p>
                     )}
@@ -304,7 +303,7 @@ export const LessonPlayer: React.FC = () => {
                 </div>
 
                 {/* Question Types Logic */}
-                <div className="w-full" data-testid={`question-${currentQuestion.type}`}>
+                <div className="w-full min-w-0" data-testid={`question-${currentQuestion.type}`}>
                     {/* Spelling (Input) */}
                     {currentQuestion.type === 'spelling' && (
                         <div className="w-full">
@@ -436,13 +435,13 @@ export const LessonPlayer: React.FC = () => {
                     )}
 
                     {currentQuestion.type === 'tap-picture' && currentQuestion.pictures && (
-                        <div className="grid grid-cols-2 gap-3 md:gap-4" data-testid="picture-grid">
+                        <div className="mx-auto grid w-full min-w-0 max-w-lg grid-cols-2 gap-3" data-testid="picture-grid">
                             {currentQuestion.pictures.map((tile) => (
                                 <button
                                     key={tile.src}
                                     type="button"
                                     onClick={() => !isCorrect && setSelectedOption(tile.src)}
-                                    className={`rounded-2xl border-2 overflow-hidden text-left bg-slate-800 ${
+                                    className={`min-w-0 w-full overflow-hidden rounded-2xl border-2 bg-slate-800 text-left ${
                                         selectedOption === tile.src
                                             ? isCorrect === null
                                                 ? 'border-brand-teal'
@@ -452,8 +451,8 @@ export const LessonPlayer: React.FC = () => {
                                             : 'border-slate-700'
                                     }`}
                                 >
-                                    <img src={tile.src} alt={tile.label ?? ''} className="w-full aspect-square object-cover" />
-                                    {tile.label && <span className="block px-3 py-2 text-sm md:text-base font-bold text-slate-200">{tile.label}</span>}
+                                    <img src={tile.src} alt={tile.label ?? ''} className="block aspect-square h-auto w-full max-w-full object-cover" />
+                                    {tile.label && <span className="block truncate px-3 py-2 text-sm font-bold text-slate-200 md:text-base">{tile.label}</span>}
                                 </button>
                             ))}
                         </div>

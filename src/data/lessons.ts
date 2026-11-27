@@ -90,7 +90,7 @@ const lessonBlueprints: LessonConfig[] = [
         unit: 2,
         category: 'Numbernan i Kolornan',
         level: 'A1',
-        title: 'Kolornan Kompleto',
+        title: 'Kolónan Kompleto',
         topic: 'All Colors',
         description: { en: 'Red, Blue, Purple, Pink.', nl: 'Rood, Blauw, Paars, Roze.', es: 'Rojo, Azul, Morado, Rosa.' },
         // Strategy: mix basic and advanced colors
@@ -126,7 +126,7 @@ const lessonBlueprints: LessonConfig[] = [
         unit: 3,
         category: 'Actionan',
         level: 'A1',
-        title: 'Accionnan (Action Verbs)',
+        title: 'Akshonnan (Action Verbs)',
         topic: 'Common Actions',
         description: { en: 'Work, Dance, Play.', nl: 'Werken, Dansen, Spelen.', es: 'Trabajar, Bailar, Jugar.' },
         content: { type: 'tag', tag: 'verb-word' } // Only the verb words
@@ -393,7 +393,7 @@ const lessonBlueprints: LessonConfig[] = [
         unit: 7,
         category: 'Konversashon Diarío',
         level: 'A1',
-        title: 'Bebidas (Drinks)',
+        title: 'Bibidanan (Drinks)',
         topic: 'Thirst & Drinks',
         description: { en: 'Water, Juice, Milk.', nl: 'Water, Sap, Melk.', es: 'Agua, Jugo, Leche.' },
         content: { type: 'tag', tag: 'drinks' }
@@ -468,7 +468,7 @@ const lessonBlueprints: LessonConfig[] = [
         unit: 8,
         category: 'Salud i Kurpa',
         level: 'B2',
-        title: 'Salud',
+        title: 'Salú',
         topic: 'Health & Body',
         description: { en: 'Doctor & Pain.', nl: 'Dokter & Pijn.', es: 'Doctor y Dolor.' },
         content: { type: 'category', category: 'health' }
@@ -532,7 +532,7 @@ const lessonBlueprints: LessonConfig[] = [
     {
         id: 'l9c-formal',
         unit: 9,
-        category: 'Papiamento Formal',
+        category: 'Papiamentu Formal',
         level: 'C1',
         title: 'Repaso 9',
         topic: 'Unit review',

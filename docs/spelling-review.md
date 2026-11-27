@@ -80,10 +80,35 @@ A native speaker should confirm these. They were not changed because the list do
 - **Flèt** is the official spelling of the course’s hummingbird word. **Blenchi** is also a headword and is the usual word for a hummingbird. Both may be right, or only one of them.
 - **Batata** is a headword. The gloss says potato. On the islands it often means sweet potato.
 - **Koreo** in “Kantor di koreo” is not a headword. The Dutch “kantoor” was corrected; “koreo” was left.
-- **Oficina** is not a headword (neither is “ofisina” in this list).
 - **Tortuga, nietu, primo, subrino, wiel, apel / apèl** are missing or ambiguous in the basic list. They are common teaching words and were left as written.
 - **Kiko, unda, ken, kuantu, ayo, riba** are not tagged as headwords in the extracted list. They are standard and were left.
 - **Ayo** does not appear as its own headword. It is the usual goodbye and was left.
 - The future sentence “Nos {lo} lesa despues” puts “lo” after the subject. Other future lines put “Lo” before the subject.
 - The same idea is stored twice in a few places (police station, bank, church, library, taxi, sea, flower, hill, living room, table, “have a nice day”, “what is your name?”).
 - English screens still say “Papiamento” in a few places (“Learning Papiamento”, “Type the Papiamento word”). That is the usual English name of the language, not a Papiamentu spelling, so the interface was left as it is.
+- Lesson titles **Muebles**, **Medio Ambiente**, and **Medio di Transporte** are Spanish. The book has “ambiente” and “transporte”, but not a clear Papiamentu title to swap in.
+- **Oranje** (orange) is a Dutch loan and is not a headword. No official colour-word replacement was found.
+- **W.C.** and **TV** are abbreviations. The book’s alphabet says the letter c is named “se”, but it does not give a Papiamentu spelling for the toilet or for television.
+- **Carlos** in a dialogue is a person’s name, so the Spanish spelling was left.
+
+## Second pass: c, q, z, v, and ll
+
+Every Papiamentu string in the vocabulary, the dialogues, and the lesson titles was scanned for `c` (other than `ch`), `q`, `z`, `v`, and `ll`.
+
+No Papiamentu field contains `q`, `z`, or `ll`.
+
+`c` and `v` hits, and what happened:
+
+| Hit | Decision |
+|---|---|
+| Oficina, oficina | Changed to Ofisina. Spanish c before i is written s. A native word list also spells it ofisina. The book’s basic list does not include either form. |
+| Carne | Changed to Karni. Headword “karni”. |
+| Accionnan | Changed to Akshonnan. Headword “akshon”. |
+| Bebidas | Changed to Bibidanan. Headword “bibida”, plus the plural -nan. |
+| Kolornan | Changed to Kolónan. Headword “koló”. |
+| Salud (lesson title) | Changed to Salú, matching the word already corrected. |
+| Papiamento Formal | Changed to Papiamentu Formal. |
+| Avion | Kept. Headword “avion”. |
+| Televishon | Kept. Headword “televishon”. |
+| Invershon, Investigashon, Konvoi | Kept. All three are headwords, so the v stays. |
+| Carlos, W.C., TV, Oranje | Kept and listed above as doubtful. |

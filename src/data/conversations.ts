@@ -69,7 +69,7 @@ export const conversations: Conversation[] = [
         category: 'work',
         tags: ['work', 'office'],
         lines: [
-            { speaker: 'A', text: 'Bon bini na nos oficina.', translation: 'Welcome to our office.' },
+            { speaker: 'A', text: 'Bon bini na nos ofisina.', translation: 'Welcome to our office.' },
             { speaker: 'B', text: 'Masha danki. Unda mi lugá ta?', translation: 'Thank you very much. Where is my place/desk?' },
             { speaker: 'A', text: 'Bo lugá ta banda di e bentana.', translation: 'Your place is next to the window.', isInteractive: true },
             { speaker: 'B', text: 'Fantástiko. Mi gusta lus.', translation: 'Fantastic. I like light.' }

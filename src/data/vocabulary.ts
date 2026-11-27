@@ -376,7 +376,7 @@ export const vocabulary: VocabEntry[] = [
 
     // --- WORK & BUSINESS (B1) ---
     { id: 'wrk-1', papiamento: 'Trabou', meanings: { en: 'Work/Job', nl: 'Werk', es: 'Trabajo' }, category: 'work', type: 'word' },
-    { id: 'wrk-2', papiamento: 'Oficina', meanings: { en: 'Office', nl: 'Kantoor', es: 'Oficina' }, category: 'work', type: 'word' },
+    { id: 'wrk-2', papiamento: 'Ofisina', meanings: { en: 'Office', nl: 'Kantoor', es: 'Oficina' }, category: 'work', type: 'word' },
     { id: 'wrk-3', papiamento: 'Reunion', meanings: { en: 'Meeting', nl: 'Vergadering', es: 'Reunión' }, category: 'work', type: 'word' },
     { id: 'wrk-4', papiamento: 'Hefe', meanings: { en: 'Boss', nl: 'Baas', es: 'Jefe' }, category: 'work', type: 'word' },
     { id: 'wrk-5', papiamento: 'Kolega', meanings: { en: 'Colleague', nl: 'Collega', es: 'Colega' }, category: 'work', type: 'word' },
@@ -536,7 +536,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'food-ing-5', papiamento: 'Keshi', meanings: { en: 'Cheese', nl: 'Kaas', es: 'Queso' }, category: 'food', type: 'word' },
     { id: 'food-ing-6', papiamento: 'Ham', meanings: { en: 'Ham', nl: 'Ham', es: 'Jamón' }, category: 'food', type: 'word' },
     { id: 'food-ing-7', papiamento: 'Webu', meanings: { en: 'Egg', nl: 'Ei', es: 'Huevo' }, category: 'food', type: 'word' },
-    { id: 'food-ing-8', papiamento: 'Carne', meanings: { en: 'Meat', nl: 'Vlees', es: 'Carne' }, category: 'food', type: 'word' },
+    { id: 'food-ing-8', papiamento: 'Karni', meanings: { en: 'Meat', nl: 'Vlees', es: 'Carne' }, category: 'food', type: 'word' },
     { id: 'food-ing-9', papiamento: 'Fruta', meanings: { en: 'Fruit', nl: 'Fruit', es: 'Fruta' }, category: 'food', type: 'word' },
     { id: 'food-ing-10', papiamento: 'Bèrdura', meanings: { en: 'Vegetables', nl: 'Groenten', es: 'Verduras' }, category: 'food', type: 'word' },
 
