@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
-# Archive ABC Island Lingo with App Store Connect automatic signing.
-# This does not upload the app and does not submit it for review.
+# Archive ABC Island Lingo without signing.
+# A fresh GitHub runner has no Apple Development certificate. Automatic
+# signing during archive would create one, and this account is already at
+# Apple's certificate limit. This step does not call Apple and does not
+# pass -allowProvisioningUpdates or the API key.
+# Signing happens later, in export-ios-ipa.sh, with Apple's cloud-managed
+# App Store distribution.
 # Do not pass CODE_SIGN_ENTITLEMENTS. This app has no profile entitlements.
 # com.apple.developer.in-app-purchase is not one, and Xcode rejects the archive
 # when that key is requested. StoreKit purchases do not need it.
 set -euo pipefail
 
-: "${API_KEY_PATH:?}"
-: "${ASC_KEY_ID:?}"
-: "${ASC_ISSUER_ID:?}"
-: "${APPLE_TEAM_ID:?}"
 : "${GITHUB_WORKSPACE:?}"
 : "${RUNNER_TEMP:?}"
 : "${GITHUB_ENV:?}"
@@ -25,20 +26,17 @@ xcodebuild \
   -configuration Release \
   -destination "generic/platform=iOS" \
   -archivePath "${archive_path}" \
-  -allowProvisioningUpdates \
-  -authenticationKeyPath "${API_KEY_PATH}" \
-  -authenticationKeyID "${ASC_KEY_ID}" \
-  -authenticationKeyIssuerID "${ASC_ISSUER_ID}" \
   archive \
-  DEVELOPMENT_TEAM="${APPLE_TEAM_ID}" \
-  CODE_SIGN_STYLE=Automatic \
+  CODE_SIGNING_ALLOWED=NO \
+  CODE_SIGNING_REQUIRED=NO \
+  CODE_SIGN_IDENTITY="" \
   2>&1 | tee "${log}"
 status=${PIPESTATUS[0]}
 set -e
 
 if [ "${status}" -ne 0 ]; then
-  if grep -E -i -q "cloud signing permission|not authorized to perform|does not have permission" "${log}"; then
-    echo "::error::Apple rejected the API key while signing. Cloud signing needs an App Store Connect Team key with the Admin role. An App Manager key cannot create the signing certificate."
+  if grep -E -q "maximum number of certificates|iOS App Development" "${log}"; then
+    echo "::error::Archive tried to create or use an Apple Development certificate. It must stay unsigned. Signing belongs in the export step."
   fi
   if grep -E -q "supported deployment target" "${log}"; then
     echo "::error::Xcode refused the iOS deployment target. This project is set to 15.0, which is the oldest target Xcode 26 accepts."
