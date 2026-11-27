@@ -124,6 +124,41 @@ A Bonaire resident settled the three items the dictionaries left open.
 
 Every other Papiamentu **despues** now has the accent too: the preposition **Después** (prep-4), **Te después** (soc-extra-2), and the dialogue line “Danki! Nos ta papia después.” Spanish interface text was already “después” and was left as it was. Other future lines that put **Lo** before the subject were not part of this decision.
 
+## Learner-language check (English, Dutch, Spanish)
+
+Every vocabulary gloss, lesson description, exercise prompt, button, flashcard label, dialogue translation, and the 1.0.3 release notes was read against the Papiamentu line. Dutch was checked against the official spelling (ik rij, not ik rijd; kijken naar). Spanish “ta” glosses now include both ser and estar, and the mockingbird uses the RAE word sinsonte. Release notes use no extra Papiamentu vocabulary. “Papiamentu” in the English note is the Buki di Oro name of the language.
+
+| Old | New | Where | Why |
+|---|---|---|---|
+| Yo soy | Yo soy/estoy | bas-16 | “Ta” is both ser and estar |
+| Tú eres | Tú eres/estás | bas-17 | Same |
+| Él/Ella/Eso es | Él/Ella es/está | bas-18 | Same |
+| A qué hora | A qué hora/Cuándo | bas-q2 | English and Dutch also say “when” |
+| Tot ziens | Tot later | soc-extra-2 | “Te después” is “see you later”, not a general goodbye |
+| Where is the beach? / Waar is het strand? / ¿Dónde está la playa? | Where is the sea? / Waar is de zee? / ¿Dónde está el mar? | dir-9 and the directions dialogue | “Laman” is the sea. The same fix is in “na laman” and “bai laman” lines |
+| Me voy | Voy | v-9 | “Me voy” means “I’m leaving” |
+| Kijk je TV? | Kijk je naar de tv? | v-sent-8 | Dutch “kijken” takes “naar” |
+| Hij at brood | Hij was brood aan het eten | gram-eat-past-imp | Matches “was eating” and “estaba comiendo” |
+| Zij sliepen | Zij waren aan het slapen | gram-sleep-past-imp | Matches “were sleeping” |
+| Ik werkte gisteren | Ik was gisteren aan het werken | gram-work-past | Matches “was working” |
+| We are reading books / Wij lezen boeken / Estamos leyendo libros | a book / een boek / un libro | gram-read-pres | “Buki” is singular |
+| Sinsajo | Sinsonte | ani-10 | RAE word for a mockingbird |
+| Citroen | Citroen/limoen | food-fv-3 | The English gloss is lemon and lime |
+| De soep mist zout | De soep heeft te weinig zout | sent-food-2 | “Mist” is not the usual way to say the soup needs salt |
+| Fornuis | Fornuis/oven | hous-rm-8 | The English gloss is stove and oven |
+| Ik kijk televisie | Ik kijk naar de televisie | sent-hous-3 | Same “kijken naar” rule |
+| Ik rijd auto | Ik rij auto | sent-trans-1 | Present “ik rij” has no d |
+| De kat slaapt op bed | De kat slaapt op het bed | sent-nat-2 | Complete Dutch phrase |
+| the menú | the menu | restaurant dialogue | English should not keep the Papiamentu accent |
+| We talk later | We’ll talk later | meetup dialogue | Matches “papia después” |
+| Broers/Zus | Broers/Zussen | family lesson | Both sides are plural |
+| Ticket | Kaartje | travel lesson | Dutch word already used for “karchi” |
+| Tas, Kar, Kassa | Tassen, karretjes, kassa | supermarket lesson | Matches the plural English line |
+| Simple: Sujeto + Verbo | Sencillo: sujeto + verbo | sentence lesson | “Simple” was copied from English |
+| Mix Verleden, Heden & Toekomst | Verleden, heden en toekomst door elkaar | grammar lesson | “Mix” is not the Dutch sentence |
+| Pensamientos e Ideas | Pensamientos e ideas | abstract lesson | Ordinary Spanish does not capitalize “ideas” |
+| Unit 1 en 2 | Units 1 en 2 | Dutch lessons and flashcards subtitles | The verb “zijn” needs the plural |
+
 ## Still doubtful
 
 - English buttons still say “Papiamento” (“Learning Papiamento”, “Type the Papiamento word”). That is the English name of the language. Papiamentu sentences already use Papiamentu.

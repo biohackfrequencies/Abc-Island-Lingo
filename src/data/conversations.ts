@@ -36,8 +36,8 @@ export const conversations: Conversation[] = [
         category: 'restaurant',
         tags: ['food', 'restaurant'],
         lines: [
-            { speaker: 'A', text: 'Bon nochi. Mi por haña e menú?', translation: 'Good evening. Can I have the menú?' },
-            { speaker: 'B', text: 'Sigur, ata e menú aki.', translation: 'Sure, here is the menú.' },
+            { speaker: 'A', text: 'Bon nochi. Mi por haña e menú?', translation: 'Good evening. Can I have the menu?' },
+            { speaker: 'B', text: 'Sigur, ata e menú aki.', translation: 'Sure, here is the menu.' },
             { speaker: 'A', text: 'Danki. Bo tin sòpi di piska?', translation: 'Thanks. Do you have fish soup?', isInteractive: true },
             { speaker: 'B', text: 'Si, e sòpi ta dushi awe.', translation: 'Yes, the soup is delicious today.' }
         ]
@@ -47,8 +47,8 @@ export const conversations: Conversation[] = [
         category: 'directions',
         tags: ['places', 'directions'],
         lines: [
-            { speaker: 'A', text: 'Pordon, unda e laman ta?', translation: 'Excuse me, where is the beach?' },
-            { speaker: 'B', text: 'E laman ta serka.', translation: 'The beach is close.' },
+            { speaker: 'A', text: 'Pordon, unda e laman ta?', translation: 'Excuse me, where is the sea?' },
+            { speaker: 'B', text: 'E laman ta serka.', translation: 'The sea is close.' },
             { speaker: 'A', text: 'Mi mester kana of kore auto?', translation: 'Do I need to walk or drive?', isInteractive: true },
             { speaker: 'B', text: 'Bo por kana. Sigui padilanti.', translation: 'You can walk. Go straight.' }
         ]
@@ -104,7 +104,7 @@ export const conversations: Conversation[] = [
         tags: ['grammar-tabata'],
         lines: [
             { speaker: 'A', text: 'Unda bo tabata ayera?', translation: 'Where were you yesterday?' },
-            { speaker: 'B', text: 'Mi tabata na laman.', translation: 'I was at the beach.' },
+            { speaker: 'B', text: 'Mi tabata na laman.', translation: 'I was at the sea.' },
             { speaker: 'A', text: 'E awa tabata dushi?', translation: 'Was the water nice?', isInteractive: true },
             { speaker: 'B', text: 'Si, e tabata masha dushi.', translation: 'Yes, it was very nice.' }
         ]
@@ -127,7 +127,7 @@ export const conversations: Conversation[] = [
         tags: ['exam-mixed'],
         lines: [
             { speaker: 'A', text: 'Kon bo wikènt tabata?', translation: 'How was your weekend? (Past)' },
-            { speaker: 'B', text: 'E tabata bon. Mi a bai laman.', translation: 'It was good. I went to the beach. (Past)' },
+            { speaker: 'B', text: 'E tabata bon. Mi a bai laman.', translation: 'It was good. I went to the sea. (Past)' },
             { speaker: 'A', text: 'Dushi. Kiko bo ta hasi awo?', translation: 'Nice. What are you doing now? (Present)' },
             { speaker: 'B', text: 'Mi ta traha, pero mañan mi lo drumi.', translation: 'I am working, but tomorrow I will sleep. (Pres/Fut)' },
             { speaker: 'A', text: 'Bo lo bai fiesta mañan anochi?', translation: 'Will you go to the party tomorrow night? (Future)', isInteractive: true },
@@ -158,7 +158,7 @@ export const conversations: Conversation[] = [
             { speaker: 'A', text: 'Trankil. Kiko bo ta hasi aki?', translation: 'Chilled. What are you doing here?', isInteractive: true },
             { speaker: 'B', text: 'Mi ta buska un regalo pa mi mama.', translation: 'I am looking for a gift for my mom.' },
             { speaker: 'A', text: 'Aha, wak e tienda aya.', translation: 'Aha, look at that shop over there.' },
-            { speaker: 'B', text: 'Danki! Nos ta papia después.', translation: 'Thanks! We talk later.' }
+            { speaker: 'B', text: 'Danki! Nos ta papia después.', translation: 'Thanks! We’ll talk later.' }
         ]
     },
     {

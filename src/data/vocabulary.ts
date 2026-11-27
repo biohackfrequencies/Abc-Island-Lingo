@@ -108,13 +108,13 @@ export const vocabulary: VocabEntry[] = [
     { id: 'bas-14', papiamento: 'Unda', meanings: { en: 'Where', nl: 'Waar', es: 'Dónde' }, category: 'basics', type: 'word', tags: ['questions'] },
     { id: 'bas-15', papiamento: 'Ken', meanings: { en: 'Who', nl: 'Wie', es: 'Quién' }, category: 'basics', type: 'word', tags: ['questions'] },
     { id: 'bas-q1', papiamento: 'Dikon', meanings: { en: 'Why', nl: 'Waarom', es: 'Por qué' }, category: 'basics', type: 'word', tags: ['questions'] },
-    { id: 'bas-q2', papiamento: 'Ki ora', meanings: { en: 'What time/When', nl: 'Hoe laat/Wanneer', es: 'A qué hora' }, category: 'basics', type: 'word', tags: ['questions'] },
+    { id: 'bas-q2', papiamento: 'Ki ora', meanings: { en: 'What time/When', nl: 'Hoe laat/Wanneer', es: 'A qué hora/Cuándo' }, category: 'basics', type: 'word', tags: ['questions'] },
 
     // Sentence Building Basics
     {
         id: 'bas-16',
         papiamento: 'Mi ta',
-        meanings: { en: 'I am', nl: 'Ik ben', es: 'Yo soy' },
+        meanings: { en: 'I am', nl: 'Ik ben', es: 'Yo soy/estoy' },
         category: 'basics',
         type: 'phrase',
         tags: ['structure'], // Added tag
@@ -124,8 +124,8 @@ export const vocabulary: VocabEntry[] = [
             es: "La estructura del papiamento es simple: Sujeto + Verbo + Objeto. 'Mi' (Sujeto) + 'ta' (Verbo)."
         }
     },
-    { id: 'bas-17', papiamento: 'Bo ta', meanings: { en: 'You are', nl: 'Jij bent', es: 'Tú eres' }, category: 'basics', type: 'phrase', tags: ['structure'] },
-    { id: 'bas-18', papiamento: 'E ta', meanings: { en: 'He/She/It is', nl: 'Hij/Zij/Het is', es: 'Él/Ella/Eso es' }, category: 'basics', type: 'phrase', tags: ['structure'] },
+    { id: 'bas-17', papiamento: 'Bo ta', meanings: { en: 'You are', nl: 'Jij bent', es: 'Tú eres/estás' }, category: 'basics', type: 'phrase', tags: ['structure'] },
+    { id: 'bas-18', papiamento: 'E ta', meanings: { en: 'He/She/It is', nl: 'Hij/Zij/Het is', es: 'Él/Ella es/está' }, category: 'basics', type: 'phrase', tags: ['structure'] },
     { id: 'bas-19', papiamento: 'Kiko esaki ta?', meanings: { en: 'What is this?', nl: 'Wat is dit?', es: '¿Qué es esto?' }, category: 'basics', type: 'sentence', tags: ['cloze', 'questions'] },
     { id: 'bas-20', papiamento: 'Unda bo ta?', meanings: { en: 'Where are you?', nl: 'Waar ben je?', es: '¿Dónde estás?' }, category: 'basics', type: 'sentence', tags: ['cloze', 'questions'] },
     { id: 'bas-21', papiamento: 'Ken e ta?', meanings: { en: 'Who is he/she?', nl: 'Wie is hij/zij?', es: '¿Quién es él/ella?' }, category: 'basics', type: 'sentence', tags: ['questions'] },
@@ -254,7 +254,7 @@ export const vocabulary: VocabEntry[] = [
 
     // --- SOCIAL EXPANSION (UNIT 7) ---
     { id: 'soc-extra-1', papiamento: 'Pasa un bon dia', meanings: { en: 'Have a nice day', nl: 'Fijne dag verder', es: 'Ten un buen día' }, category: 'social', type: 'phrase', tags: ['social-extra'] },
-    { id: 'soc-extra-2', papiamento: 'Te después', meanings: { en: 'See you later', nl: 'Tot ziens', es: 'Hasta luego' }, category: 'social', type: 'phrase', tags: ['social-extra'] },
+    { id: 'soc-extra-2', papiamento: 'Te después', meanings: { en: 'See you later', nl: 'Tot later', es: 'Hasta luego' }, category: 'social', type: 'phrase', tags: ['social-extra'] },
     { id: 'soc-extra-3', papiamento: 'Kiko bo ta hasi awe?', meanings: { en: 'What are you doing today?', nl: 'Wat doe je vandaag?', es: '¿Qué haces hoy?' }, category: 'social', type: 'sentence', tags: ['social-extra'] },
 
     // --- SOCIAL MEETUP VOCABULARY (Unit 7 Expansion) ---
@@ -300,7 +300,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'dir-5', papiamento: 'Bira robes', meanings: { en: 'Turn left', nl: 'Sla linksaf', es: 'Gira a la izquierda' }, category: 'directions', type: 'phrase' },
     { id: 'dir-7', papiamento: 'Aki', meanings: { en: 'Here', nl: 'Hier', es: 'Aquí' }, category: 'directions', type: 'word' },
     { id: 'dir-8', papiamento: 'Aya', meanings: { en: 'There', nl: 'Daar', es: 'Allí' }, category: 'directions', type: 'word' },
-    { id: 'dir-9', papiamento: 'Unda e laman ta?', meanings: { en: 'Where is the beach?', nl: 'Waar is het strand?', es: '¿Dónde está la playa?' }, category: 'directions', type: 'sentence' },
+    { id: 'dir-9', papiamento: 'Unda e laman ta?', meanings: { en: 'Where is the sea?', nl: 'Waar is de zee?', es: '¿Dónde está el mar?' }, category: 'directions', type: 'sentence' },
     { id: 'dir-10', papiamento: 'E ta serka', meanings: { en: 'It is close', nl: 'Het is dichtbij', es: 'Está cerca' }, category: 'directions', type: 'sentence' },
 
     // --- PLACES ---
@@ -334,7 +334,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'v-6', papiamento: 'Bebe', meanings: { en: 'To drink', nl: 'Drinken', es: 'Beber' }, category: 'verbs', type: 'word' },
     { id: 'v-7', papiamento: 'Drumi', meanings: { en: 'To sleep', nl: 'Slapen', es: 'Dormir' }, category: 'verbs', type: 'word' },
     { id: 'v-8', papiamento: 'E {ta} drumi', meanings: { en: 'He sleeps', nl: 'Hij slaapt', es: 'Él duerme' }, category: 'verbs', type: 'sentence' },
-    { id: 'v-9', papiamento: 'Mi {ta} bai', meanings: { en: 'I am going', nl: 'Ik ga', es: 'Me voy' }, category: 'verbs', type: 'sentence' },
+    { id: 'v-9', papiamento: 'Mi {ta} bai', meanings: { en: 'I am going', nl: 'Ik ga', es: 'Voy' }, category: 'verbs', type: 'sentence' },
     { id: 'v-10', papiamento: 'Bo {tin} plaka', meanings: { en: 'You have money', nl: 'Jij hebt geld', es: 'Tienes dinero' }, category: 'verbs', type: 'sentence' },
     { id: 'v-11', papiamento: 'Nos {ta} famia', meanings: { en: 'We are family', nl: 'Wij zijn familie', es: 'Somos familia' }, category: 'verbs', type: 'sentence' },
 
@@ -357,7 +357,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'v-sent-5', papiamento: 'Mi ta {kore} mainta', meanings: { en: 'I run in the morning', nl: 'Ik ren \'s ochtends', es: 'Corro por la mañana' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-6', papiamento: 'E mucha ta {hunga}', meanings: { en: 'The child is playing', nl: 'Het kind speelt', es: 'El niño está jugando' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-7', papiamento: 'Nos ta {siña} Papiamentu', meanings: { en: 'We are learning Papiamentu', nl: 'Wij leren Papiaments', es: 'Estamos aprendiendo Papiamento' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
-    { id: 'v-sent-8', papiamento: 'Bo ta {wak} TV?', meanings: { en: 'Are you watching TV?', nl: 'Kijk je TV?', es: '¿Ves la televisión?' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
+    { id: 'v-sent-8', papiamento: 'Bo ta {wak} TV?', meanings: { en: 'Are you watching TV?', nl: 'Kijk je naar de tv?', es: '¿Ves la televisión?' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
 
     // --- PREPOSITIONS ---
     { id: 'prep-1', papiamento: 'Riba', meanings: { en: 'On', nl: 'Op', es: 'Sobre' }, category: 'prepositions', type: 'word' },
@@ -431,18 +431,18 @@ export const vocabulary: VocabEntry[] = [
 
     // Verb: Kome (To eat)
     { id: 'gram-eat-pres', papiamento: 'E {ta} kome pan', meanings: { en: 'He is eating bread', nl: 'Hij eet brood', es: 'Él está comiendo pan' }, category: 'verbs', type: 'sentence', tags: ['grammar-ta'] },
-    { id: 'gram-eat-past-imp', papiamento: 'E {tabata} kome pan', meanings: { en: 'He was eating bread', nl: 'Hij at brood', es: 'Él estaba comiendo pan' }, category: 'verbs', type: 'sentence', tags: ['grammar-tabata'] },
+    { id: 'gram-eat-past-imp', papiamento: 'E {tabata} kome pan', meanings: { en: 'He was eating bread', nl: 'Hij was brood aan het eten', es: 'Él estaba comiendo pan' }, category: 'verbs', type: 'sentence', tags: ['grammar-tabata'] },
     { id: 'gram-eat-past-perf', papiamento: 'E {a} kome pan', meanings: { en: 'He ate bread', nl: 'Hij heeft brood gegeten', es: 'Él comió pan' }, category: 'verbs', type: 'sentence', tags: ['grammar-a'] },
     { id: 'gram-eat-fut', papiamento: '{Lo} e kome pan', meanings: { en: 'He will eat bread', nl: 'Hij zal brood eten', es: 'Él comerá pan' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
 
     // Verb: Drumi (To sleep)
     { id: 'gram-sleep-pres', papiamento: 'Nan {ta} drumi', meanings: { en: 'They are sleeping', nl: 'Zij slapen', es: 'Ellos están durmiendo' }, category: 'verbs', type: 'sentence', tags: ['grammar-ta'] },
-    { id: 'gram-sleep-past-imp', papiamento: 'Nan {tabata} drumi', meanings: { en: 'They were sleeping', nl: 'Zij sliepen', es: 'Ellos estaban durmiendo' }, category: 'verbs', type: 'sentence', tags: ['grammar-tabata'] },
+    { id: 'gram-sleep-past-imp', papiamento: 'Nan {tabata} drumi', meanings: { en: 'They were sleeping', nl: 'Zij waren aan het slapen', es: 'Ellos estaban durmiendo' }, category: 'verbs', type: 'sentence', tags: ['grammar-tabata'] },
     { id: 'gram-sleep-fut', papiamento: '{Lo} nan drumi', meanings: { en: 'They will sleep', nl: 'Zij zullen slapen', es: 'Ellos dormirán' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
 
     // Verb: Traha (To work) - NEW
     { id: 'gram-work-pres', papiamento: 'Mi {ta} traha duru', meanings: { en: 'I am working hard', nl: 'Ik werk hard', es: 'Estoy trabajando duro' }, category: 'verbs', type: 'sentence', tags: ['grammar-ta'] },
-    { id: 'gram-work-past', papiamento: 'Mi {tabata} traha ayera', meanings: { en: 'I was working yesterday', nl: 'Ik werkte gisteren', es: 'Estaba trabajando ayer' }, category: 'verbs', type: 'sentence', tags: ['grammar-tabata'] },
+    { id: 'gram-work-past', papiamento: 'Mi {tabata} traha ayera', meanings: { en: 'I was working yesterday', nl: 'Ik was gisteren aan het werken', es: 'Estaba trabajando ayer' }, category: 'verbs', type: 'sentence', tags: ['grammar-tabata'] },
     { id: 'gram-work-fut', papiamento: '{Lo} mi traha mañan', meanings: { en: 'I will work tomorrow', nl: 'Ik zal morgen werken', es: 'Trabajaré mañana' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
 
     // Verb: Hunga (To play) - NEW
@@ -451,7 +451,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'gram-play-fut', papiamento: '{Lo} e mucha hunga', meanings: { en: 'The child will play', nl: 'Het kind zal spelen', es: 'El niño jugará' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
 
     // Verb: Lesa (To read) - NEW
-    { id: 'gram-read-pres', papiamento: 'Nos {ta} lesa buki', meanings: { en: 'We are reading books', nl: 'Wij lezen boeken', es: 'Estamos leyendo libros' }, category: 'verbs', type: 'sentence', tags: ['grammar-ta'] },
+    { id: 'gram-read-pres', papiamento: 'Nos {ta} lesa buki', meanings: { en: 'We are reading a book', nl: 'Wij lezen een boek', es: 'Estamos leyendo un libro' }, category: 'verbs', type: 'sentence', tags: ['grammar-ta'] },
     { id: 'gram-read-past', papiamento: 'Nos {a} lesa e buki', meanings: { en: 'We read the book (finished)', nl: 'Wij hebben het boek gelezen', es: 'Leímos el libro' }, category: 'verbs', type: 'sentence', tags: ['grammar-a'] },
     { id: 'gram-read-fut', papiamento: 'Nos {lo} lesa después', meanings: { en: 'We will read later', nl: 'Wij zullen later lezen', es: 'Leeremos más tarde' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
 
@@ -500,7 +500,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'ani-6', papiamento: 'Prikichi', meanings: { en: 'Parakeet', nl: 'Parkiet', es: 'Perico' }, category: 'nature', type: 'word' },
     { id: 'ani-8', papiamento: 'Baka', meanings: { en: 'Cow', nl: 'Koe', es: 'Vaca' }, category: 'nature', type: 'word' },
     { id: 'ani-9', papiamento: 'Blenchi', meanings: { en: 'Hummingbird', nl: 'Kolibrie', es: 'Colibrí' }, category: 'nature', type: 'word' },
-    { id: 'ani-10', papiamento: 'Chuchubi', meanings: { en: 'Mockingbird', nl: 'Spotlijster', es: 'Sinsajo' }, category: 'nature', type: 'word' },
+    { id: 'ani-10', papiamento: 'Chuchubi', meanings: { en: 'Mockingbird', nl: 'Spotlijster', es: 'Sinsonte' }, category: 'nature', type: 'word' },
 
     // --- CITY & PLACES EXPANSION ---
     { id: 'city-1', papiamento: 'Banko', meanings: { en: 'Bank', nl: 'Bank', es: 'Banco' }, category: 'places', type: 'word' },
@@ -537,7 +537,7 @@ export const vocabulary: VocabEntry[] = [
     // --- FRUITS & VEGGIES ---
     { id: 'food-fv-1', papiamento: 'Apel', meanings: { en: 'Apple', nl: 'Appel', es: 'Manzana' }, category: 'food', type: 'word' },
     { id: 'food-fv-2', papiamento: 'Bakoba', meanings: { en: 'Banana', nl: 'Banaan', es: 'Banana' }, category: 'food', type: 'word' },
-    { id: 'food-fv-3', papiamento: 'Lamunchi', meanings: { en: 'Lemon/Lime', nl: 'Citroen', es: 'Limón' }, category: 'food', type: 'word' },
+    { id: 'food-fv-3', papiamento: 'Lamunchi', meanings: { en: 'Lemon/Lime', nl: 'Citroen/limoen', es: 'Limón' }, category: 'food', type: 'word' },
     { id: 'food-fv-4', papiamento: 'Tomati', meanings: { en: 'Tomato', nl: 'Tomaat', es: 'Tomate' }, category: 'food', type: 'word' },
     { id: 'food-fv-5', papiamento: 'Siboyo', meanings: { en: 'Onion', nl: 'Ui', es: 'Cebolla' }, category: 'food', type: 'word' },
     { id: 'food-fv-6', papiamento: 'Batata', meanings: { en: 'Potato', nl: 'Aardappel', es: 'Papa' }, category: 'food', type: 'word' },
@@ -546,7 +546,7 @@ export const vocabulary: VocabEntry[] = [
     // --- CONTEXT SENTENCES (CLOZE) ---
     // Nature
     { id: 'sent-nat-1', papiamento: 'E {kachó} ta kore duru', meanings: { en: 'The dog runs fast', nl: 'De hond rent hard', es: 'El perro corre rápido' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
-    { id: 'sent-nat-2', papiamento: 'E {pushi} ta drumi riba kama', meanings: { en: 'The cat sleeps on the bed', nl: 'De kat slaapt op bed', es: 'El gato duerme en la cama' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
+    { id: 'sent-nat-2', papiamento: 'E {pushi} ta drumi riba kama', meanings: { en: 'The cat sleeps on the bed', nl: 'De kat slaapt op het bed', es: 'El gato duerme en la cama' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-nat-3', papiamento: 'Mi ta stima kore {kabai}', meanings: { en: 'I love riding horses', nl: 'Ik rij graag paard', es: 'Me encanta montar a caballo' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-nat-4', papiamento: 'E {yuana} ta kome blachi', meanings: { en: 'The iguana eats leaves', nl: 'De leguaan eet bladeren', es: 'La iguana come hojas' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-nat-5', papiamento: 'E {tortuga} ta landa den laman', meanings: { en: 'The turtle swims in the sea', nl: 'De schildpad zwemt in de zee', es: 'La tortuga nada en el mar' }, category: 'nature', type: 'sentence', tags: ['cloze'] },
@@ -567,7 +567,7 @@ export const vocabulary: VocabEntry[] = [
 
     // Food
     { id: 'sent-food-1', papiamento: 'Bo kièr {suku} den bo kòfi?', meanings: { en: 'Do you want sugar in your coffee?', nl: 'Wil je suiker in je koffie?', es: '¿Quieres azúcar en tu café?' }, category: 'food', type: 'sentence', tags: ['cloze'] },
-    { id: 'sent-food-2', papiamento: 'E sòpi falta {salu}', meanings: { en: 'The soup lacks salt', nl: 'De soep mist zout', es: 'A la sopa le falta sal' }, category: 'food', type: 'sentence', tags: ['cloze'] },
+    { id: 'sent-food-2', papiamento: 'E sòpi falta {salu}', meanings: { en: 'The soup lacks salt', nl: 'De soep heeft te weinig zout', es: 'A la sopa le falta sal' }, category: 'food', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-food-3', papiamento: 'Pone {manteka} riba e pan', meanings: { en: 'Put butter on the bread', nl: 'Doe boter op het brood', es: 'Pon mantequilla en el pan' }, category: 'food', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-food-4', papiamento: 'Mi gusta kome {keshi}', meanings: { en: 'I like eating cheese', nl: 'Ik eet graag kaas', es: 'Me gusta comer queso' }, category: 'food', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-food-5', papiamento: 'E {fruta} ta dushi', meanings: { en: 'The fruit is delicious', nl: 'Het fruit is lekker', es: 'La fruta es deliciosa' }, category: 'food', type: 'sentence', tags: ['cloze'] },
@@ -618,14 +618,14 @@ export const vocabulary: VocabEntry[] = [
     { id: 'hous-rm-5', papiamento: 'Televishon', meanings: { en: 'Television', nl: 'Televisie', es: 'Televisión' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-6', papiamento: 'Kama', meanings: { en: 'Bed', nl: 'Bed', es: 'Cama' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-7', papiamento: 'Kashi', meanings: { en: 'Cupboard/Closet', nl: 'Kast', es: 'Armario' }, category: 'house', type: 'word', tags: ['furniture'] },
-    { id: 'hous-rm-8', papiamento: 'Fòrnu', meanings: { en: 'Stove/Oven', nl: 'Fornuis', es: 'Estufa' }, category: 'house', type: 'word', tags: ['furniture'] },
+    { id: 'hous-rm-8', papiamento: 'Fòrnu', meanings: { en: 'Stove/Oven', nl: 'Fornuis/oven', es: 'Estufa' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-9', papiamento: 'Frishidèr', meanings: { en: 'Fridge', nl: 'Koelkast', es: 'Nevera' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-10', papiamento: 'W.C.', meanings: { en: 'Toilet', nl: 'W.C.', es: 'Baño' }, category: 'house', type: 'word', tags: ['rooms'] },
 
     // House Sentences
     { id: 'sent-hous-1', papiamento: 'E {sofá} ta nobo', meanings: { en: 'The sofa is new', nl: 'De bank is nieuw', es: 'El sofá es nuevo' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
     { id: 'sent-hous-2', papiamento: 'Pone e pan riba {mesa}', meanings: { en: 'Put the bread on the table', nl: 'Leg het brood op tafel', es: 'Pon el pan en la mesa' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
-    { id: 'sent-hous-3', papiamento: 'Mi ta wak {televishon}', meanings: { en: 'I am watching television', nl: 'Ik kijk televisie', es: 'Estoy viendo televisión' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
+    { id: 'sent-hous-3', papiamento: 'Mi ta wak {televishon}', meanings: { en: 'I am watching television', nl: 'Ik kijk naar de televisie', es: 'Estoy viendo televisión' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
     { id: 'sent-hous-4', papiamento: 'E {kama} ta grandi', meanings: { en: 'The bed is big', nl: 'Het bed is groot', es: 'La cama es grande' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
 
     // --- NATURE & ENVIRONMENT EXPANSION ---
@@ -638,7 +638,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'nat-env-8', papiamento: 'Seru', meanings: { en: 'Hill/Mountain', nl: 'Heuvel/Berg', es: 'Cerro/Montaña' }, category: 'nature', type: 'word', tags: ['environment'] },
 
     // Nature Sentences
-    { id: 'sent-env-1', papiamento: 'Nos ta bai {laman}', meanings: { en: 'We are going to the beach', nl: 'Wij gaan naar het strand', es: 'Vamos a la playa' }, category: 'nature', type: 'sentence', tags: ['cloze', 'environment'] },
+    { id: 'sent-env-1', papiamento: 'Nos ta bai {laman}', meanings: { en: 'We are going to the sea', nl: 'Wij gaan naar de zee', es: 'Vamos al mar' }, category: 'nature', type: 'sentence', tags: ['cloze', 'environment'] },
     { id: 'sent-env-2', papiamento: 'E {flornan} ta bunita', meanings: { en: 'The flowers are beautiful', nl: 'De bloemen zijn mooi', es: 'Las flores son hermosas' }, category: 'nature', type: 'sentence', tags: ['cloze', 'environment'] },
     { id: 'sent-env-3', papiamento: 'Mira e {luna} den shelu', meanings: { en: 'Look at the moon in the sky', nl: 'Kijk naar de maan in de lucht', es: 'Mira la luna en el cielo' }, category: 'nature', type: 'sentence', tags: ['cloze', 'environment'] },
     { id: 'sent-env-4', papiamento: 'E {santu} ta kayente', meanings: { en: 'The sand is hot', nl: 'Het zand is heet', es: 'La arena está caliente' }, category: 'nature', type: 'sentence', tags: ['cloze', 'environment'] },
@@ -674,7 +674,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'trans-7', papiamento: 'Wil', meanings: { en: 'Wheel', nl: 'Wiel', es: 'Rueda' }, category: 'places', type: 'word', tags: ['transport'] },
 
     // Transport Sentences
-    { id: 'sent-trans-1', papiamento: 'Mi ta kore {outo}', meanings: { en: 'I drive a car', nl: 'Ik rijd auto', es: 'Conduzco un carro' }, category: 'places', type: 'sentence', tags: ['cloze', 'transport'] },
+    { id: 'sent-trans-1', papiamento: 'Mi ta kore {outo}', meanings: { en: 'I drive a car', nl: 'Ik rij auto', es: 'Conduzco un carro' }, category: 'places', type: 'sentence', tags: ['cloze', 'transport'] },
     { id: 'sent-trans-2', papiamento: 'E {taksi} ta kosta hopi', meanings: { en: 'The taxi costs a lot', nl: 'De taxi kost veel', es: 'El taxi cuesta mucho' }, category: 'places', type: 'sentence', tags: ['cloze', 'transport'] },
     { id: 'sent-trans-3', papiamento: 'Warda riba e {konvoi}', meanings: { en: 'Wait for the bus', nl: 'Wacht op de bus', es: 'Espera el autobús' }, category: 'places', type: 'sentence', tags: ['cloze', 'transport'] },
 

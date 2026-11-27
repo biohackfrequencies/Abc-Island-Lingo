@@ -30,7 +30,7 @@ const lessonBlueprints: LessonConfig[] = [
         level: 'A1',
         title: 'Traha Frase (Sentences)',
         topic: 'Sentence Structure',
-        description: { en: 'Simple: Subject + Verb.', nl: 'Simpel: Onderwerp + Werkwoord.', es: 'Simple: Sujeto + Verbo.' },
+        description: { en: 'Simple: Subject + Verb.', nl: 'Simpel: Onderwerp + Werkwoord.', es: 'Sencillo: sujeto + verbo.' },
         content: { type: 'tag', tag: 'structure' }
     },
     {
@@ -105,7 +105,7 @@ const lessonBlueprints: LessonConfig[] = [
         level: 'A1',
         title: 'Famia Serka',
         topic: 'Close Family',
-        description: { en: 'Mom, Dad, Siblings.', nl: 'Mama, Papa, Broers/Zus.', es: 'Mamá, Papá, Hermanos.' },
+        description: { en: 'Mom, Dad, Siblings.', nl: 'Mama, Papa, Broers/Zussen.', es: 'Mamá, Papá, Hermanos.' },
         content: { type: 'category', category: 'family' }
     },
     {
@@ -292,7 +292,7 @@ const lessonBlueprints: LessonConfig[] = [
         level: 'B1',
         title: 'Biahe (Travel)',
         topic: 'Travel & Transport',
-        description: { en: 'Airport, Ticket, Suitcase.', nl: 'Vliegveld, Ticket, Koffer.', es: 'Aeropuerto, Boleto, Maleta.' },
+        description: { en: 'Airport, Ticket, Suitcase.', nl: 'Vliegveld, Kaartje, Koffer.', es: 'Aeropuerto, Boleto, Maleta.' },
         content: { type: 'tag', tag: 'travel' }
     },
     {
@@ -354,7 +354,7 @@ const lessonBlueprints: LessonConfig[] = [
         level: 'B2',
         title: 'Eksamen Final (Mixed Tenses)',
         topic: 'Mastering Time',
-        description: { en: 'Mix Past, Present & Future.', nl: 'Mix Verleden, Heden & Toekomst.', es: 'Mezcla Pasado, Presente y Futuro.' },
+        description: { en: 'Mix Past, Present & Future.', nl: 'Verleden, heden en toekomst door elkaar.', es: 'Mezcla Pasado, Presente y Futuro.' },
         content: {
             type: 'ids',
             ids: [
@@ -405,7 +405,7 @@ const lessonBlueprints: LessonConfig[] = [
         level: 'A1',
         title: 'Supermarket',
         topic: 'Shopping for Food',
-        description: { en: 'Bags, Carts, Cashier.', nl: 'Tas, Kar, Kassa.', es: 'Bolsa, Carrito, Caja.' },
+        description: { en: 'Bags, Carts, Cashier.', nl: 'Tassen, karretjes, kassa.', es: 'Bolsa, Carrito, Caja.' },
         content: { type: 'tag', tag: 'supermarket' }
     },
     {
@@ -480,7 +480,7 @@ const lessonBlueprints: LessonConfig[] = [
         level: 'B2',
         title: 'Opinion i Futuro',
         topic: 'Abstract Concepts',
-        description: { en: 'Thoughts & Ideas.', nl: 'Gedachten & Ideeën.', es: 'Pensamientos e Ideas.' },
+        description: { en: 'Thoughts & Ideas.', nl: 'Gedachten & Ideeën.', es: 'Pensamientos e ideas.' },
         content: { type: 'category', category: 'abstract' }
     },
     {
