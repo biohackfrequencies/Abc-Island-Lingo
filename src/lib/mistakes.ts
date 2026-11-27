@@ -13,7 +13,7 @@ export interface StoredMistake {
 
 export type NewMistake = Omit<StoredMistake, 'missedAt'>;
 
-const QUESTION_TYPES = new Set(['translate', 'match', 'multiple-choice', 'order', 'cloze', 'spelling', 'dialogue']);
+const QUESTION_TYPES = new Set(['translate', 'match', 'multiple-choice', 'order', 'cloze', 'spelling', 'dialogue', 'true-false']);
 
 export function isStoredMistake(value: unknown): value is StoredMistake {
     if (!value || typeof value !== 'object') return false;

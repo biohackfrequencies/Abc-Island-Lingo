@@ -3,14 +3,14 @@ import { persist } from 'zustand/middleware';
 import { getRemoteLesson } from '../content/remote';
 import { lessons } from '../data/lessons';
 import type { Language } from '../types';
-import { isStoredMistake, removeMistake, upsertMistake, type NewMistake, type StoredMistake } from '../lib/mistakes';
+import { removeMistake, upsertMistake, type NewMistake, type StoredMistake } from '../lib/mistakes';
 import {
     applyLessonCompletion,
     defaultDisplayName,
     isDefaultDisplayName,
     isLessonLocked,
     localDateString,
-    XP_PER_LESSON,
+    migratePersistedState,
     type ProgressSnapshot,
 } from '../lib/progress';
 
@@ -74,29 +74,8 @@ export const useStore = create<AppState>()(
         }),
         {
             name: 'papiamento-storage',
-            version: 2,
-            migrate: (persisted, version) => {
-                const raw = (persisted ?? {}) as Partial<AppState>;
-                const completed = Array.from(new Set(raw.completedLessons ?? []));
-                const mistakes = Array.isArray(raw.mistakes) ? raw.mistakes.filter(isStoredMistake) : [];
-                if (version >= 1 && typeof raw.xp === 'number' && raw.displayName) {
-                    return {
-                        ...raw,
-                        completedLessons: completed,
-                        mistakes,
-                    } as AppState;
-                }
-                return {
-                    language: raw.language ?? null,
-                    isPremium: Boolean(raw.isPremium),
-                    completedLessons: completed,
-                    mistakes,
-                    xp: typeof raw.xp === 'number' ? raw.xp : completed.length * XP_PER_LESSON,
-                    streak: typeof raw.streak === 'number' ? raw.streak : 0,
-                    lastStudyDate: raw.lastStudyDate ?? null,
-                    displayName: raw.displayName?.trim() || 'Learner',
-                } as AppState;
-            },
+            version: 3,
+            migrate: (persisted, version) => migratePersistedState(persisted, version) as AppState,
         }
     )
 );

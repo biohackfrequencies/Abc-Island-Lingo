@@ -1,6 +1,7 @@
 import { type LessonConfig } from '../types';
+import { expandCourse } from '../utils/coursePlan';
 
-export const lessons: LessonConfig[] = [
+const lessonBlueprints: LessonConfig[] = [
     // --- UNIT 1: INTRODUCTION ---
     {
         id: 'l1-basics',
@@ -55,6 +56,16 @@ export const lessons: LessonConfig[] = [
         content: { type: 'tag', tag: '1-10' }
     },
     {
+        id: 'l2-numbers-11-20',
+        unit: 2,
+        category: 'Numbernan i Kolornan',
+        level: 'A1',
+        title: 'Numbernan 11-20',
+        topic: 'Eleven to twenty',
+        description: { en: 'Eleven, twelve and fifteen.', nl: 'Elf, twaalf en vijftien.', es: 'Once, doce y quince.' },
+        content: { type: 'tag', tag: '11-20' }
+    },
+    {
         id: 'l3-numbers-20-100',
         unit: 2,
         category: 'Numbernan i Kolornan',
@@ -96,6 +107,19 @@ export const lessons: LessonConfig[] = [
         topic: 'Close Family',
         description: { en: 'Mom, Dad, Siblings.', nl: 'Mama, Papa, Broers/Zus.', es: 'Mamá, Papá, Hermanos.' },
         content: { type: 'category', category: 'family' }
+    },
+    {
+        id: 'l3-verbs-core',
+        unit: 3,
+        category: 'Actionan',
+        level: 'A1',
+        title: 'Verbonan Básiko',
+        topic: 'Core Verbs',
+        description: { en: 'To be, to have, to go.', nl: 'Zijn, hebben, gaan.', es: 'Ser, tener, ir.' },
+        content: {
+            type: 'ids',
+            ids: ['v-1', 'v-2', 'v-3', 'v-4', 'v-5', 'v-6', 'v-7', 'v-8', 'v-9', 'v-10', 'v-11'],
+        },
     },
     {
         id: 'l3-verbs-1',
@@ -242,6 +266,16 @@ export const lessons: LessonConfig[] = [
         content: { type: 'category', category: 'directions' }
     },
     {
+        id: 'l5-prepositions',
+        unit: 5,
+        category: 'Direkshonan i Lugarnan',
+        level: 'B1',
+        title: 'Preposishon',
+        topic: 'Prepositions',
+        description: { en: 'On, under, before, after.', nl: 'Op, onder, voor, na.', es: 'Sobre, debajo, antes, después.' },
+        content: { type: 'category', category: 'prepositions' }
+    },
+    {
         id: 'l14-places',
         unit: 5,
         category: 'Direkshonan i Lugarnan',
@@ -385,6 +419,16 @@ export const lessons: LessonConfig[] = [
         content: { type: 'tag', tag: 'clothing' }
     },
     {
+        id: 'l7-prices',
+        unit: 7,
+        category: 'Situashonnan',
+        level: 'A1',
+        title: 'Presio',
+        topic: 'Prices',
+        description: { en: 'How much does this cost?', nl: 'Hoeveel kost dit?', es: '¿Cuánto cuesta esto?' },
+        content: { type: 'ids', ids: ['shop-1', 'shop-2', 'shop-3', 'shop-4', 'shop-5'] }
+    },
+    {
         id: 'l7-shopping-extra',
         unit: 7,
         category: 'Situashonnan',
@@ -440,14 +484,27 @@ export const lessons: LessonConfig[] = [
         content: { type: 'category', category: 'abstract' }
     },
     {
+        id: 'l8-work',
+        unit: 8,
+        category: 'Trabou',
+        level: 'B2',
+        title: 'Trabou',
+        topic: 'Work',
+        description: { en: 'The office, the boss, a meeting.', nl: 'Het kantoor, de baas, een vergadering.', es: 'La oficina, el jefe, una reunión.' },
+        content: { type: 'ids', ids: ['wrk-1', 'wrk-2', 'wrk-3', 'wrk-4', 'wrk-5', 'wrk-6', 'wrk-7', 'wrk-8'] },
+        dialogueTags: ['work'],
+    },
+    {
         id: 'l23-conversation',
         unit: 8,
         category: 'Konversashon',
         level: 'B2',
-        title: 'Papiamento Sosial',
-        topic: 'Social Conversation',
-        description: { en: 'Meeting people.', nl: 'Mensen ontmoeten.', es: 'Conocer gente.' },
-        content: { type: 'category', category: 'social' }
+        title: 'Repaso 8',
+        topic: 'Unit review',
+        description: { en: 'Practice words from this unit.', nl: 'Oefen woorden uit deze unit.', es: 'Practica palabras de esta unidad.' },
+        role: 'review',
+        content: { type: 'review' },
+        dialogueCategories: ['social'],
     },
 
     // --- SECTION 5: MASTERY (C1) ---
@@ -477,10 +534,12 @@ export const lessons: LessonConfig[] = [
         unit: 9,
         category: 'Papiamento Formal',
         level: 'C1',
-        title: 'Papiamento Formal',
-        topic: 'Formal Etiquette',
-        description: { en: 'Polite speech & Letters.', nl: 'Beleefd taalgebruik & Brieven.', es: 'Habla cortés y Cartas.' },
-        // Can filter by tag 'business' or 'academic' phrases, or mix them. Let's make a tag for formal specifically later, or reuse business
-        content: { type: 'tag', tag: 'business' }
+        title: 'Repaso 9',
+        topic: 'Unit review',
+        description: { en: 'Practice business and academic words.', nl: 'Oefen zakelijke en academische woorden.', es: 'Practica palabras de negocios y estudio.' },
+        role: 'review',
+        content: { type: 'review' },
     }
 ];
+
+export const lessons: LessonConfig[] = expandCourse(lessonBlueprints);
