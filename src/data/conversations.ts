@@ -38,7 +38,7 @@ export const conversations: Conversation[] = [
         lines: [
             { speaker: 'A', text: 'Bon nochi. Mi por haña e menú?', translation: 'Good evening. Can I have the menu?' },
             { speaker: 'B', text: 'Sigur, ata e menú aki.', translation: 'Sure, here is the menu.' },
-            { speaker: 'A', text: 'Danki. Bo tin sòpi di piska?', translation: 'Thanks. Do you have fish soup?', isInteractive: true },
+            { speaker: 'A', text: 'Danki. Bo tin sòpi di piská?', translation: 'Thanks. Do you have fish soup?', isInteractive: true },
             { speaker: 'B', text: 'Si, e sòpi ta dushi awe.', translation: 'Yes, the soup is delicious today.' }
         ]
     },

@@ -142,7 +142,7 @@ function generateSpelling(id: string, vocab: VocabEntry, lang: Language): Questi
     const prompts: Record<Language, string> = {
         en: `Type the Papiamento word for "${vocab.meanings.en}"`,
         nl: `Typ het Papiaments voor "${vocab.meanings.nl}"`,
-        es: `Escribe en Papiamento "${vocab.meanings.es}"`,
+        es: `Escribe en papiamento "${vocab.meanings.es}"`,
     };
     return {
         id,

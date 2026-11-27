@@ -238,6 +238,10 @@ test('official Curaçao and Bonaire spellings replace clear errors', () => {
     assert.ok(conversations.some((conversation) => conversation.lines.some((line) => line.text.includes('después'))));
     assert.ok(!conversations.some((conversation) => conversation.lines.some((line) => line.text.toLowerCase().includes('despues'))));
     assert.equal(pap('trans-7'), 'Wil');
+    assert.equal(pap('food-7'), 'Piská');
+    assert.ok(String(pap('sent-nat-5')).includes('{turtuga}'));
+    assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('tortuga')));
+    assert.ok(!vocabulary.some((entry) => /piska(?!á)/i.test(entry.papiamento)));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('flamingo')));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('siete')));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('tike')));
