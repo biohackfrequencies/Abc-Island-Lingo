@@ -8,7 +8,7 @@ import { vocabulary } from '../data/vocabulary.ts';
 import { isLessonLocked } from '../lib/progress.ts';
 import type { Language, Question } from '../types/index.ts';
 import { displayPap } from './coursePlan.ts';
-import { generateLesson, matchKey, questionForPractice } from './lessonGenerator.ts';
+import { answerFeedback, generateLesson, matchKey, questionForPractice } from './lessonGenerator.ts';
 
 /** Exact copies of another entry. The surviving id still teaches the word. Lesson ids are unchanged. */
 const RETIRED_DUPLICATES = new Set([
@@ -277,4 +277,25 @@ test('picture exercises use the corrected words and appear in every unit', () =>
         assert.ok((seen.get(unit)?.size ?? 0) > 0, `unit ${unit} has no picture exercise`);
     }
     assert.ok(tap > 0 && fromPicture > 0);
+    const greetings = english.find(({ lesson }) => lesson.id === 'l1-basics');
+    const greetingPhotos = greetings?.questions.filter((question) => question.type === 'tap-picture' || question.type === 'picture-word') ?? [];
+    assert.ok(greetingPhotos.length >= 1 && greetingPhotos.length <= 2, `l1-basics has ${greetingPhotos.length} picture exercises`);
+    for (const question of greetingPhotos) {
+        assert.ok(question.sourceId === 'bas-5' || question.sourceId === 'bas-7');
+        const feedback = answerFeedback(question, 'en');
+        assert.equal(feedback.includes('/assets/'), false);
+        assert.equal(feedback.includes('.webp'), false);
+        assert.match(feedback, /\(.+\)$/);
+    }
+    const tapPicture = english.flatMap(({ questions }) => questions).find((question) => question.type === 'tap-picture');
+    assert.ok(tapPicture);
+    assert.match(String(tapPicture.correctAnswer), /\/assets\//);
+    const tapFeedback = answerFeedback(tapPicture, 'en');
+    assert.equal(tapFeedback.includes('/assets/'), false, tapFeedback);
+    const truth = english.flatMap(({ questions }) => questions).find((question) => question.type === 'true-false' && question.image);
+    assert.ok(truth);
+    assert.equal(answerFeedback(truth, 'en').includes('/assets/'), false);
+    const fromWord = english.flatMap(({ questions }) => questions).find((question) => question.type === 'picture-word');
+    assert.ok(fromWord);
+    assert.equal(answerFeedback(fromWord, 'nl').includes('/assets/'), false);
 });
