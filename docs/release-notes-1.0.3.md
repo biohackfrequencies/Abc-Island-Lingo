@@ -8,6 +8,7 @@
 - Spelling checked against Papiamentu dictionaries
 - Back and close stay on screen, under the notch and the Android status bar
 - A wrong picture answer shows the word, not a file name
+- Larger home-screen icon: the ABC mark is close to its earlier size, on a dark background
 
 ## Nederlands
 
@@ -17,6 +18,7 @@
 - Spelling nagekeken met woordenboeken van het Papiaments
 - Terug en sluiten blijven in beeld, ook bij een inkeping of onder de statusbalk van Android
 - Bij een fout plaatje zie je het woord, niet de bestandsnaam.
+- Groter icoon op het startscherm: de ABC-letters zijn weer ongeveer zo groot als eerder, op een donkere achtergrond
 
 ## Español
 
@@ -26,3 +28,4 @@
 - Ortografía revisada con diccionarios de papiamento
 - Volver y cerrar siguen visibles, también con muesca o bajo la barra de estado de Android
 - Una respuesta incorrecta en un ejercicio con imagen muestra la palabra, no el nombre del archivo
+- Icono más grande en la pantalla de inicio: las letras ABC vuelven a un tamaño parecido al de antes, sobre un fondo oscuro
