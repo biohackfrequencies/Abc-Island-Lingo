@@ -156,7 +156,7 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `prep-1.webp` — Riba (On). illustration. On. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `prep-2.webp` — Bou di (Under). illustration. Under. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `prep-3.webp` — Promé (Before). illustration. Before. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `prep-4.webp` — Despues (After). illustration. After. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `prep-4.webp` — Después (After). illustration. After. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `wrk-1.webp` — Trabou (Work/Job). illustration. Work/Job. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `wrk-2.webp` — Oficina (Office). illustration. Office. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `wrk-3.webp` — Reunion (Meeting). illustration. Meeting. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
@@ -188,7 +188,7 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `fam-ext-4.webp` — Primu (Cousin (male)). illustration. Cousin (male). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-5.webp` — Subrina (Niece). illustration. Niece. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-6.webp` — Subrino (Nephew). illustration. Nephew. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-7.webp` — Nietu (Grandchild). illustration. Grandchild. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `fam-ext-7.webp` — Nieto (Grandchild). illustration. Grandchild. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `rout-1.webp` — Lanta (To get up/Wake up). illustration. To get up/Wake up. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `rout-2.webp` — Baña (To bathe/Shower). illustration. To bathe/Shower. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `rout-3.webp` — Bistí (To dress/Get dressed). illustration. To dress/Get dressed. ABC Island Lingo. Original work, all rights reserved by the app. original illustration

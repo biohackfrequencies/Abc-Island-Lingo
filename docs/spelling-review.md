@@ -112,11 +112,20 @@ Removed, with the id that remains: pub-3 (city-1 Banko), pub-5 (city-5 Bibliotek
 
 These look alike but the glosses differ, so both stay: Laman “Sea” and Laman “Beach/Sea”, Bistí “to dress” and Bistí “clothes”, Seru with two Spanish glosses, and the two “Kon yama bo?” / “Pasa un bon dia” lines whose Dutch wording is not the same.
 
+## Decided by the owner
+
+A Bonaire resident settled the three items the dictionaries left open.
+
+| Decision | Where |
+|---|---|
+| Grandchild is **Nieto**, not Nietu | fam-ext-7 |
+| Nephew stays **Subrino** | fam-ext-6 |
+| The future line keeps **lo** after the subject: “Nos lo lesa después” | gram-read-fut, stored as `Nos {lo} lesa después` so the blank still falls on lo |
+
+Every other Papiamentu **despues** now has the accent too: the preposition **Después** (prep-4), **Te después** (soc-extra-2), and the dialogue line “Danki! Nos ta papia después.” Spanish interface text was already “después” and was left as it was. Other future lines that put **Lo** before the subject were not part of this decision.
+
 ## Still doubtful
 
-- **Nietu** (grandchild) is not a Buki headword. de Beijer, which uses Aruba spelling, has nieto. No second Curaçao or Bonaire dictionary gave nietu.
-- **Subrino** (nephew) is in de Beijer. The Buki headword is subrina, not subrino.
-- **“Nos {lo} lesa despues”** puts lo after the subject. Other future lines put Lo first. Dictionaries do not settle the order.
 - English buttons still say “Papiamento” (“Learning Papiamento”, “Type the Papiamento word”). That is the English name of the language. Papiamentu sentences already use Papiamentu.
 - **W.C.** and **TV** are abbreviations. televishon is the headword for the set. The book does not spell the toilet or the abbreviation.
 - **Carlos** is a person’s name.

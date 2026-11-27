@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { baselinePractice } from '../data/baselinePractice.ts';
+import { conversations } from '../data/conversations.ts';
 import { lessons } from '../data/lessons.ts';
 import { pictures } from '../data/pictures.ts';
 import { vocabulary } from '../data/vocabulary.ts';
@@ -229,6 +230,13 @@ test('official Curaçao and Bonaire spellings replace clear errors', () => {
     assert.equal(pap('pub-2'), 'Pòstkantor');
     assert.equal(pap('sup-1'), 'Garoshi');
     assert.equal(pap('bas-7'), 'Ayó');
+    assert.equal(pap('fam-ext-7'), 'Nieto');
+    assert.equal(pap('fam-ext-6'), 'Subrino');
+    assert.equal(pap('gram-read-fut'), 'Nos {lo} lesa después');
+    assert.equal(pap('prep-4'), 'Después');
+    assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('despues')));
+    assert.ok(conversations.some((conversation) => conversation.lines.some((line) => line.text.includes('después'))));
+    assert.ok(!conversations.some((conversation) => conversation.lines.some((line) => line.text.toLowerCase().includes('despues'))));
     assert.equal(pap('trans-7'), 'Wil');
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('flamingo')));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('siete')));

@@ -254,7 +254,7 @@ export const vocabulary: VocabEntry[] = [
 
     // --- SOCIAL EXPANSION (UNIT 7) ---
     { id: 'soc-extra-1', papiamento: 'Pasa un bon dia', meanings: { en: 'Have a nice day', nl: 'Fijne dag verder', es: 'Ten un buen día' }, category: 'social', type: 'phrase', tags: ['social-extra'] },
-    { id: 'soc-extra-2', papiamento: 'Te despues', meanings: { en: 'See you later', nl: 'Tot ziens', es: 'Hasta luego' }, category: 'social', type: 'phrase', tags: ['social-extra'] },
+    { id: 'soc-extra-2', papiamento: 'Te después', meanings: { en: 'See you later', nl: 'Tot ziens', es: 'Hasta luego' }, category: 'social', type: 'phrase', tags: ['social-extra'] },
     { id: 'soc-extra-3', papiamento: 'Kiko bo ta hasi awe?', meanings: { en: 'What are you doing today?', nl: 'Wat doe je vandaag?', es: '¿Qué haces hoy?' }, category: 'social', type: 'sentence', tags: ['social-extra'] },
 
     // --- SOCIAL MEETUP VOCABULARY (Unit 7 Expansion) ---
@@ -363,7 +363,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'prep-1', papiamento: 'Riba', meanings: { en: 'On', nl: 'Op', es: 'Sobre' }, category: 'prepositions', type: 'word' },
     { id: 'prep-2', papiamento: 'Bou di', meanings: { en: 'Under', nl: 'Onder', es: 'Debajo de' }, category: 'prepositions', type: 'word' },
     { id: 'prep-3', papiamento: 'Promé', meanings: { en: 'Before', nl: 'Voor', es: 'Antes' }, category: 'prepositions', type: 'word' },
-    { id: 'prep-4', papiamento: 'Despues', meanings: { en: 'After', nl: 'Na', es: 'Después' }, category: 'prepositions', type: 'word' },
+    { id: 'prep-4', papiamento: 'Después', meanings: { en: 'After', nl: 'Na', es: 'Después' }, category: 'prepositions', type: 'word' },
 
     // --- SHOPPING ---
     { id: 'shop-1', papiamento: 'Kuantu', meanings: { en: 'How much', nl: 'Hoeveel', es: 'Cuánto' }, category: 'shopping', type: 'word' },
@@ -453,7 +453,7 @@ export const vocabulary: VocabEntry[] = [
     // Verb: Lesa (To read) - NEW
     { id: 'gram-read-pres', papiamento: 'Nos {ta} lesa buki', meanings: { en: 'We are reading books', nl: 'Wij lezen boeken', es: 'Estamos leyendo libros' }, category: 'verbs', type: 'sentence', tags: ['grammar-ta'] },
     { id: 'gram-read-past', papiamento: 'Nos {a} lesa e buki', meanings: { en: 'We read the book (finished)', nl: 'Wij hebben het boek gelezen', es: 'Leímos el libro' }, category: 'verbs', type: 'sentence', tags: ['grammar-a'] },
-    { id: 'gram-read-fut', papiamento: 'Nos {lo} lesa despues', meanings: { en: 'We will read later', nl: 'Wij zullen later lezen', es: 'Leeremos más tarde' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
+    { id: 'gram-read-fut', papiamento: 'Nos {lo} lesa después', meanings: { en: 'We will read later', nl: 'Wij zullen later lezen', es: 'Leeremos más tarde' }, category: 'verbs', type: 'sentence', tags: ['grammar-lo'] },
 
     // --- FOOD: DRINKS ---
     { id: 'drk-1', papiamento: 'Refresko', meanings: { en: 'Soda', nl: 'Frisdrank', es: 'Refresco' }, category: 'food', type: 'word', tags: ['drinks'] },
@@ -579,7 +579,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'fam-ext-4', papiamento: 'Primu', meanings: { en: 'Cousin (male)', nl: 'Neef', es: 'Primo' }, category: 'family', type: 'word', tags: ['extended-family'] },
     { id: 'fam-ext-5', papiamento: 'Subrina', meanings: { en: 'Niece', nl: 'Nichtje', es: 'Sobrina' }, category: 'family', type: 'word', tags: ['extended-family'] },
     { id: 'fam-ext-6', papiamento: 'Subrino', meanings: { en: 'Nephew', nl: 'Neefje', es: 'Sobrino' }, category: 'family', type: 'word', tags: ['extended-family'] },
-    { id: 'fam-ext-7', papiamento: 'Nietu', meanings: { en: 'Grandchild', nl: 'Kleinkind', es: 'Nieto' }, category: 'family', type: 'word', tags: ['extended-family'] },
+    { id: 'fam-ext-7', papiamento: 'Nieto', meanings: { en: 'Grandchild', nl: 'Kleinkind', es: 'Nieto' }, category: 'family', type: 'word', tags: ['extended-family'] },
 
     // Family Sentences
     { id: 'sent-fam-1', papiamento: 'Mi {tio} ta traha na banko', meanings: { en: 'My uncle works at the bank', nl: 'Mijn oom werkt bij de bank', es: 'Mi tío trabaja en el banco' }, category: 'family', type: 'sentence', tags: ['cloze', 'extended-family'] },

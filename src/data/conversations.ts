@@ -158,7 +158,7 @@ export const conversations: Conversation[] = [
             { speaker: 'A', text: 'Trankil. Kiko bo ta hasi aki?', translation: 'Chilled. What are you doing here?', isInteractive: true },
             { speaker: 'B', text: 'Mi ta buska un regalo pa mi mama.', translation: 'I am looking for a gift for my mom.' },
             { speaker: 'A', text: 'Aha, wak e tienda aya.', translation: 'Aha, look at that shop over there.' },
-            { speaker: 'B', text: 'Danki! Nos ta papia despues.', translation: 'Thanks! We talk later.' }
+            { speaker: 'B', text: 'Danki! Nos ta papia después.', translation: 'Thanks! We talk later.' }
         ]
     },
     {
