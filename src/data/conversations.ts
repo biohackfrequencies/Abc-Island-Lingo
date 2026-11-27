@@ -47,7 +47,7 @@ export const conversations: Conversation[] = [
         category: 'directions',
         tags: ['places', 'directions'],
         lines: [
-            { speaker: 'A', text: 'Pardon, unda e laman ta?', translation: 'Excuse me, where is the beach?' },
+            { speaker: 'A', text: 'Pordon, unda e laman ta?', translation: 'Excuse me, where is the beach?' },
             { speaker: 'B', text: 'E laman ta serka.', translation: 'The beach is close.' },
             { speaker: 'A', text: 'Mi mester kana of kore auto?', translation: 'Do I need to walk or drive?', isInteractive: true },
             { speaker: 'B', text: 'Bo por kana. Sigui padilanti.', translation: 'You can walk. Go straight.' }

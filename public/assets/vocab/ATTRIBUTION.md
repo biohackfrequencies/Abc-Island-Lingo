@@ -27,10 +27,10 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `ani-2.webp` — Pushi (Cat). photo. House Cat. Ian Livesey. CC0 1.0. https://stocksnap.io/photo/house-cat-7C71QVWOH7
 - `ani-4.webp` — Yuana (Iguana). photo. Iguana seen near San Juan del Sur, Nicaragua, in 2013. It is likely a Green Iguana.. burch19958. CC0 1.0. https://www.flickr.com/photos/192021451@N07/52738767102
 - `ani-1.webp` — Kachó (Dog). photo. Friendly Dog. alfy777. CC0 1.0. https://www.flickr.com/photos/198507664@N02/52966842450
-- `ani-5.webp` — Tortuga (Turtle). photo. Sea Turtle. Jeremy Bishop. CC0 1.0. https://stocksnap.io/photo/sea-turtle-18PXAI1ZTV
+- `ani-5.webp` — Turtuga (Turtle). photo. Sea Turtle. Jeremy Bishop. CC0 1.0. https://stocksnap.io/photo/sea-turtle-18PXAI1ZTV
 - `drk-3.webp` — Lechi (Milk). photo. Two Glasses of Milk. Alabama Extension. CC0 1.0. https://www.flickr.com/photos/184594136@N08/52633675811
 - `ani-3.webp` — Kabai (Horse). photo. Brown Horse. Brooke Cagle. CC0 1.0. https://stocksnap.io/photo/brown-horse-VMYS969OUD
-- `ani-9.webp` — Flèt (Hummingbird). illustration. Original bird drawing. ABC Island Lingo. Original work, all rights reserved by the app.
+- `ani-9.webp` — Blenchi (Hummingbird). illustration. Original bird drawing. ABC Island Lingo. Original work, all rights reserved by the app.
 - `ani-7.webp` — Galiña (Chicken). photo. Chicken Bird. Freestocks.org. CC0 1.0. https://stocksnap.io/photo/chicken-bird-H9ZUJQQBS7
 - `trav-3.webp` — Avion (Airplane). photo. Airplane Sky. %u8D1D%u8389%u513F%20NG. CC0 1.0. https://stocksnap.io/photo/airplane-sky-DYPWDEEILG
 - `ani-8.webp` — Baka (Cow). photo. Dairy Cow. Amanda Kerr. CC0 1.0. https://stocksnap.io/photo/dairy-cow-U2LI0UIPFI
@@ -62,7 +62,7 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `trans-2.webp` — Autobus (Bus). photo. Stratford City Bus Station Sept 2025. tsiusing107. CC0 1.0. https://www.flickr.com/photos/202996452@N08/54765481998
 - `trans-5.webp` — Baiskel (Bicycle). photo. 'twas a fine night to bicycle with mobi from 14th and main to granville island! 20160919_181310. roland. CC0 1.0. https://www.flickr.com/photos/35034347371@N01/29181382683
 - `bas-5.webp` — Danki (Thank you). illustration. Thank you. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `bas-7.webp` — Ayo (Goodbye). illustration. Goodbye. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `bas-7.webp` — Ayó (Goodbye). illustration. Goodbye. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `bas-11.webp` — Si (Yes). illustration. Yes. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `bas-12.webp` — Nò (No). illustration. No. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `bas-13.webp` — Kiko (What). illustration. What. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
@@ -85,16 +85,16 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `num-15.webp` — Diessinku (Fifteen). illustration. Fifteen. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `num-20.webp` — Binti (Twenty). illustration. Twenty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `num-21.webp` — Bintiun (Twenty-one). illustration. Twenty-one. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-30.webp` — Trinti (Thirty). illustration. Thirty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-40.webp` — Kuarenti (Forty). illustration. Forty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-50.webp` — Sinkuenti (Fifty). illustration. Fifty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-60.webp` — Sesenti (Sixty). illustration. Sixty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-70.webp` — Setenti (Seventy). illustration. Seventy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-80.webp` — Ochenti (Eighty). illustration. Eighty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-90.webp` — Nobenti (Ninety). illustration. Ninety. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-30.webp` — Trinta (Thirty). illustration. Thirty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-40.webp` — Kuarenta (Forty). illustration. Forty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-50.webp` — Sinkuenta (Fifty). illustration. Fifty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-60.webp` — Sesenta (Sixty). illustration. Sixty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-70.webp` — Setenta (Seventy). illustration. Seventy. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-80.webp` — Ochenta (Eighty). illustration. Eighty. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-90.webp` — Nobenta (Ninety). illustration. Ninety. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `num-100.webp` — Shen (One Hundred). illustration. One Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `num-200.webp` — Dosshen (Two Hundred). illustration. Two Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `num-500.webp` — Sinkushenti (Five Hundred). illustration. Five Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `num-500.webp` — Sinkushen (Five Hundred). illustration. Five Hundred. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `num-1000.webp` — Mil (One Thousand). illustration. One Thousand. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-1.webp` — Kòrá (Red). illustration. Red. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-2.webp` — Blou (Blue). illustration. Blue. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
@@ -102,7 +102,7 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `col-4.webp` — Hel (Yellow). illustration. Yellow. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-5.webp` — Pretu (Black). illustration. Black. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-6.webp` — Blanku (White). illustration. White. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `col-7.webp` — Oranje (Orange). illustration. Orange. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `col-7.webp` — Oraño (Orange). illustration. Orange. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-8.webp` — Gris (Grey). illustration. Grey. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-9.webp` — Rosa (Pink). illustration. Pink. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `col-10.webp` — Biña (Purple). illustration. Purple. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
@@ -180,12 +180,12 @@ Each file is named with the vocabulary id. Photographs are CC0. Drawings were ma
 - `soc-gen-1.webp` — Nòmber (Name). illustration. Name. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `soc-gen-2.webp` — Si (Yes). illustration. Yes. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `soc-gen-3.webp` — Nò (No). illustration. No. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `soc-gen-7.webp` — Pardon (Excuse me). illustration. Excuse me. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `soc-gen-7.webp` — Pordon (Excuse me). illustration. Excuse me. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `soc-gen-8.webp` — Ata (Here is/There is). illustration. Here is/There is. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-1.webp` — Tio (Uncle). illustration. Uncle. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-2.webp` — Tanta (Aunt). illustration. Aunt. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-3.webp` — Prima (Cousin (female)). illustration. Cousin (female). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
-- `fam-ext-4.webp` — Primo (Cousin (male)). illustration. Cousin (male). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
+- `fam-ext-4.webp` — Primu (Cousin (male)). illustration. Cousin (male). ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-5.webp` — Subrina (Niece). illustration. Niece. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-6.webp` — Subrino (Nephew). illustration. Nephew. ABC Island Lingo. Original work, all rights reserved by the app. original illustration
 - `fam-ext-7.webp` — Nietu (Grandchild). illustration. Grandchild. ABC Island Lingo. Original work, all rights reserved by the app. original illustration

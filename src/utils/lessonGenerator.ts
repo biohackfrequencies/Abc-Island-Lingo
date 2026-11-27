@@ -434,6 +434,13 @@ function adjacentIssues(questions: Question[]): number {
     return issues;
 }
 
+function relocate(questions: Question[], from: number, to: number): Question[] {
+    const next = [...questions];
+    const [item] = next.splice(from, 1);
+    next.splice(to > from ? to - 1 : to, 0, item);
+    return next;
+}
+
 /** Break up runs of the same exercise without testing a word before it is shown. */
 function repairOrder(questions: Question[]): Question[] {
     const arranged = [...questions];
@@ -457,6 +464,17 @@ function repairOrder(questions: Question[]): Question[] {
                 arranged.splice(0, arranged.length, ...next);
                 changed = true;
                 break;
+            }
+            if (changed) break;
+            for (let from = 0; from < arranged.length && !changed; from++) {
+                for (let to = 0; to < arranged.length; to++) {
+                    if (from === to) continue;
+                    const next = relocate(arranged, from, to);
+                    if (!introOk(next) || adjacentIssues(next) >= before) continue;
+                    arranged.splice(0, arranged.length, ...next);
+                    changed = true;
+                    break;
+                }
             }
         }
         if (!changed) break;

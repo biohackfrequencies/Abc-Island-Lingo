@@ -238,7 +238,7 @@ const lessonBlueprints: LessonConfig[] = [
         unit: 4,
         category: 'Tempo i Kas',
         level: 'A2',
-        title: 'Muebles (Furniture)',
+        title: 'Muebel (Furniture)',
         topic: 'Inside the House',
         description: { en: 'Table, Chair, Bed.', nl: 'Tafel, Stoel, Bed.', es: 'Mesa, Silla, Cama.' },
         content: { type: 'tag', tag: 'furniture' }
@@ -300,7 +300,7 @@ const lessonBlueprints: LessonConfig[] = [
         unit: 5,
         category: 'Direkshonan i Lugarnan',
         level: 'B1',
-        title: 'Medio di Transporte',
+        title: 'Transporte',
         topic: 'Transport',
         description: { en: 'Bus, Car, Taxi.', nl: 'Bus, Auto, Taxi.', es: 'Autobús, Carro, Taxi.' },
         content: { type: 'tag', tag: 'transport' }

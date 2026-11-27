@@ -12,15 +12,15 @@ Ids were left unchanged so saved progress still matches. Only the written Papiam
 | Siete | Shete | num-7 | Same section: “7 shete”. “siete” does not appear |
 | Diesinku | Diessinku | num-15 | “15 diessinku” |
 | Binti-un | Bintiun | num-21 | Compounds are one word, as in “31 trintiun” |
-| Trinta | Trinti | num-30 and “Mi tin {trinti} aña” | “31 trintiun” |
-| Kuarenta | Kuarenti | num-40 | “42 kuarentidos” |
-| Sinkuenta | Sinkuenti | num-50 | “sinkuentiseis”, “sinkuentiocho” |
-| Sesenta | Sesenti | num-60 | Same -enti pattern as 30, 40, 50, 80 and 90. The book does not print 60 on its own |
-| Setenta | Setenti | num-70 | Same pattern. 70 is not printed on its own |
-| Ochenta | Ochenti | num-80 | “187 shentiochentishete” |
-| Nobenta | Nobenti | num-90 | “nuebeshentinobentinuebe” |
+| Trinta | Trinta | num-30 and “Mi tin {trinta} aña” | Standalone headword is “trinta”. “31 trintiun” is the fused form only. See the dictionary pass |
+| Kuarenta | Kuarenta | num-40 | Headword “kuarenta”. “42 kuarentidos” is the fused form |
+| Sinkuenta | Sinkuenta | num-50 | Headword “sinkuenta” |
+| Sesenta | Sesenta | num-60 | Headword “sesenta”, not “sesenti” |
+| Setenta | Setenta | num-70 | Headword “setenta”, not “setenti” |
+| Ochenta | Ochenta | num-80 | Headword “ochenta”. “187 shentiochentishete” is the fused form |
+| Nobenta | Nobenta | num-90 | Headword “nobenta” |
 | Dos shen | Dosshen | num-200 | “200 dosshen” |
-| Sinku shen | Sinkushenti | num-500 | 300 is “tresshenti” and 600 is “seisshenti”. 500 is not printed on its own |
+| Sinku shen | Sinkushen | num-500 | Headword “sinkushen”. “tresshentikuarentinuebe” is 349 fused, not the word for 300 |
 | Robez / Bira robez | Robes / Bira robes | dir-1, dir-5 | Headword “robes” (adverb). The list does not use “robez” |
 | Aròs | Aros | food-5 | Headword “aros” |
 | Galina | Galiña | food-6 | Headword “galiña” |
@@ -37,7 +37,7 @@ Ids were left unchanged so saved progress still matches. Only the written Papiam
 | Kree | Kere | abs-5 | Headword “kere” (verb, to believe) |
 | Komprondé | Komprendé | soc-4 and “Mi no ta {komprendé} bon” | Headword “komprendé” |
 | Nomber / Mi nomber ta... | Nòmber / Mi nòmber ta... | soc-gen-1, soc-gen-5 | Headword “nòmber”. soc-1 was already “Nòmber” |
-| Flet | Flèt | ani-9 | Headword “flèt” |
+| Flet | Blenchi | ani-9 | Hummingbird is “blenchi”. “flèt” is a different headword. See the dictionary pass |
 | Paspoort / paspoort | Pasport / pasport | trav-1 and “Bo tin bo {pasport}?” | Headword “pasport” |
 | Kaartchi | Karchi | trav-5 | Headword “karchi” |
 | tike | karchi | “Mi tin mi {karchi} di avion” | Same headword. The blank did not match the ticket word |
@@ -57,7 +57,7 @@ Ids were left unchanged so saved progress still matches. Only the written Papiam
 | hotel | hotèl | “E hotèl ta grandi” | Headword “hotèl” |
 | difisil | difísil | “E trabou ta difísil” | Headword “difísil” |
 | merdia | mèrdia | “Kuminda di mèrdia” | Headword “mèrdia” |
-| Kantoor | Kantor | “Kantor di koreo” | Headword “kantor” |
+| Kantoor | Pòstkantor | pub-2 | “pòstkantor” is the post office. “koreo” is not a headword |
 | kier | kièr | “Mi kièr”, “Bo kièr”, and the shop dialogue | Headword “kièr” |
 | luga | lugá | the office dialogue | Headword “lugá” |
 | menu | menú | the restaurant dialogue | Headword “menú” |
@@ -69,27 +69,57 @@ Ids were left unchanged so saved progress still matches. Only the written Papiam
 
 Flamingo is not a course word. The Papiamentu name is **chogogo** (Buki di Oro headword; Wiktionary: flamingo). No picture is labelled “flamingo”.
 
-## Still doubtful, left unchanged
+## Dictionary pass
 
-A native speaker should confirm these. They were not changed because the list does not show a single clear replacement, or because speakers use more than one word.
+Checked the doubtful items, and a seeded sample of 100 other course entries (`random.Random(20261127)` over the vocabulary), against the Buki di Oro headword list and at least one other dictionary. A spelling was changed only when two of those sources agreed. Image files under `public/assets/vocab` were not regenerated. Credit labels in `ATTRIBUTION.md` were updated so they name the corrected word.
 
-- **60 Sesenti** and **70 Setenti** follow the book’s -enti pattern, but those two numbers are not printed as standalone words.
-- **500 Sinkushenti** follows “tresshenti” and “seisshenti”. The book does not print 500.
-- **Yèski** (fridge) is not a headword. The list has **frishidèr**. Both are heard; the course still teaches yèski.
-- **Gora** (cap) is a headword, and so is **pet**. It is not certain from the list alone that “gora” means a cap.
-- **Flèt** is the official spelling of the course’s hummingbird word. **Blenchi** is also a headword and is the usual word for a hummingbird. Both may be right, or only one of them.
-- **Batata** is a headword. The gloss says potato. On the islands it often means sweet potato.
-- **Koreo** in “Kantor di koreo” is not a headword. The Dutch “kantoor” was corrected; “koreo” was left.
-- **Tortuga, nietu, primo, subrino, wiel, apel / apèl** are missing or ambiguous in the basic list. They are common teaching words and were left as written.
-- **Kiko, unda, ken, kuantu, ayo, riba** are not tagged as headwords in the extracted list. They are standard and were left.
-- **Ayo** does not appear as its own headword. It is the usual goodbye and was left.
-- The future sentence “Nos {lo} lesa despues” puts “lo” after the subject. Other future lines put “Lo” before the subject.
-- The same idea is stored twice in a few places (police station, bank, church, library, taxi, sea, flower, hill, living room, table, “have a nice day”, “what is your name?”).
-- English screens still say “Papiamento” in a few places (“Learning Papiamento”, “Type the Papiamento word”). That is the usual English name of the language, not a Papiamentu spelling, so the interface was left as it is.
-- Lesson titles **Muebles**, **Medio Ambiente**, and **Medio di Transporte** are Spanish. The book has “ambiente” and “transporte”, but not a clear Papiamentu title to swap in.
-- **Oranje** (orange) is a Dutch loan and is not a headword. No official colour-word replacement was found.
-- **W.C.** and **TV** are abbreviations. The book’s alphabet says the letter c is named “se”, but it does not give a Papiamentu spelling for the toilet or for television.
-- **Carlos** in a dialogue is a person’s name, so the Spanish spelling was left.
+| Decision | Where | Sources |
+|---|---|---|
+| Trinti, Kuarenti, Sinkuenti, Sesenti, Setenti, Ochenti, Nobenti go back to Trinta, Kuarenta, Sinkuenta, Sesenta, Setenta, Ochenta, Nobenta. The fused spellings (trintiun, kuarentidos, shentiochentishete) are only for a ten plus a unit. | num-30–90 and “Mi tin {trinta} aña” | Buki di Oro headwords trinta, kuarenta, sinkuenta, sesenta, setenta, ochenta, nobenta. [Banko di Palabra](https://bankodipalabra.com/palabra/trinta) glosses trinta as dertig, [kuarenta](https://bankodipalabra.com/palabra/kuarenta) as veertig, [sinkuenta](https://bankodipalabra.com/palabra/sinkuenta) as vijftig, [setenta](https://bankodipalabra.com/palabra/setenta) as zeventig, [ochenta](https://bankodipalabra.com/palabra/ochenta) as tachtig, [nobenta](https://bankodipalabra.com/palabra/nobenta) as negentig. [de Beijer](https://de-beijer.aw/pap/papiamento-nederlands.html) has sesenta = zestig and setenta = zeventig. [Omniglot](https://www.omniglot.com/language/numbers/papiamento.htm) prints the same -enta forms. |
+| Sinkushenti → Sinkushen | num-500 | Buki headword sinkushen. [Banko di Palabra](https://bankodipalabra.com/palabra/sinkushen) glosses it as vijfhonderd. dosshen and tresshen stay, matching [dosshen](https://bankodipalabra.com/palabra/dosshen) and [tresshen](https://bankodipalabra.com/palabra/tresshen). |
+| Flèt → Blenchi | ani-9 | [de Beijer](https://de-beijer.aw/pap/papiamento-nederlands.html) blenchi = colibri. [Jansen](https://www.dbnl.org/tekst/jans550dicc01_01/jans550dicc01_01_0004.php) blen'chi = kolibrie. [Wiktionary](https://en.wiktionary.org/wiki/hummingbird) and [Glosbe](https://glosbe.com/en/pap/hummingbird) both give blenchi. Buki lists blenchi as the noun. flèt is a different noun and was not glossed as a hummingbird. |
+| Yèski → Frishidèr | hous-rm-9 | Buki headword frishidèr. [Banko di Palabra](https://bankodipalabra.com/palabra/frishid%C3%A8r%20ku%20tres%20porta) describes the fridge. [vokabeln.de](http://www.vokabeln.de/v7/vorschau/Papiamento_Alltag.htm) frishidèr = Kühlschrank. yèski is not a headword. |
+| Gora → Pèchi | cloth-7, gloss narrowed to Cap | [Banko di Palabra](https://bankodipalabra.com/palabra/p%C3%A8chi) hulandes: pet, and the A1/A2 glossary. de Beijer: pèchi = pet. [Glosbe](https://glosbe.com/nl/pap/pet) lists pèchi for Dutch pet. gora is a Buki noun, but none of these dictionaries gloss it as a cap. |
+| Oranje → Oraño | col-7 | Buki lists oraño as adjective and noun. [Banko di Palabra](https://bankodipalabra.com/palabra/ora%C3%B1o) hulandes: oranje, English: orange. [Glosbe](https://glosbe.com/en/pap/orange) gives oraño. |
+| Kantor di koreo → Pòstkantor | pub-2 | [vokabeln.de](http://www.vokabeln.de/v7/vorschau/Papiamento_Alltag.htm) pòstkantor = Postamt. The Boom NT2 word list gives postkantoor as pòstkantor. [Banko di Palabra](https://bankodipalabra.com/palabra/p%C3%B2st) and [de Beijer](https://de-beijer.aw/pap/papiamento-nederlands.html) gloss the noun pòst as post. koreo is not a Buki headword. |
+| Tortuga → Turtuga | ani-5 | Buki headword turtuga. [Banko di Palabra](https://bankodipalabra.com/palabra/turtuga). de Beijer’s tòrtuga is the Aruba spelling. |
+| Primo → Primu | fam-ext-4 | Buki headword primu. [Banko di Palabra](https://bankodipalabra.com/palabra/primu) English: cousin, Dutch: neef (kind van oom of tante). de Beijer’s primo is the Spanish-influenced form. |
+| Wiel → Wil | trans-7 | Buki headword wil. de Beijer: wil = stuur, stuurwiel, wiel. |
+| Ayo → Ayó | bas-7 and the greeting | Buki headword ayó (interjection). de Beijer: ayó = daag, vaarwel. |
+| Pardon → Pordon | soc-gen-7 and “Pordon, unda e laman ta?” | Buki headword pordon. de Beijer: pordon = vergiffenis, pidi pordon. |
+| Kar → Garoshi | sup-1, shopping cart | Buki headword garoshi. [de Beijer](https://de-beijer.aw/pap/papiamento-nederlands.html): garoshi = kar, boodschappenwagen. The [A1/A2 glossary](https://bankodipalabra.com/glosario/3) glosses garoshi as karretje, kart, winkelwagen. |
+| sopi → sòpi in “E sòpi falta {salu}” | sent-food-2 | Buki writes sòpi. de Beijer: sòpi = soep. |
+| Muebles → Muebel | lesson title | Buki headword muebel. de Beijer: muebel = meubel. |
+| Medio di Transporte → Transporte | lesson title | Buki headword transporte. [Banko di Palabra](https://bankodipalabra.com/palabra/transporte) hulandes: transport. |
+| Batata stays “Potato” | food-fv-6 | [Banko di Palabra](https://bankodipalabra.com/palabra/batata) English: potato, Dutch: aardappel. de Beijer: batata = aardappel. Jansen’s list uses batata dushi for the sweet potato, so the plain gloss stays potato. |
+| Apel stays | food-fv-1 | Buki uses apel in the accent rules and as a headword. de Beijer’s aplu is the Aruba form. |
+| Kiko, unda, ken, kuantu, riba stay | question words and the preposition | All five are in the Buki list. de Beijer glosses kiko as wat, unda as waar, and riba as op. kuantu is the Curaçao headword. de Beijer’s kuanto is Aruba. |
+| Medio Ambiente stays | lesson title | de Beijer: medio ambiente = milieu, and the bare noun ambiente = sfeer. Buki lists ambiente. Shortening the title to Ambiente would teach the wrong meaning. No second dictionary contradicted the phrase. |
+
+### Sample of 100 other words
+
+Seed 20261127. Ninety-seven of the hundred already matched a Buki di Oro token, or were the regular plural -nan of one (Autonan, Kasnan, Muchanan, Flornan). The three that did not were Pardon, the leftover “sopi”, and Kar. Those three are the Pordon, sòpi, and Garoshi rows above.
+
+The hundred ids: num-7, food-fv-7, plc-6, acad-3, v-8, city-7, rest-4, shop-8, pro-8, nat-3, dir-4, plc-10, sent-col-2, bus-2, rest-11, gram-work-fut, num-6, shop-6, plur-4, wea-7, num-9, food-fv-3, plur-2, sent-fam-3, sup-2, rest-6, nat-env-2, sent-hous-4, num-3, num-100, gram-eat-pres, ani-2, food-ing-9, sent-env-3, sent-fam-1, cloth-4, trav-1, plur-5, pro-3, gram-read-past, hous-rm-4, bus-3, ani-8, num-5, gram-read-fut, dir-6, soc-gen-7, shop-9, hlt-5, plc-2, rest-8, sent-plur-2, nat-env-1, abs-5, plur-1, food-9, gram-sleep-fut, sent-food-2, dir-3, pro-7, soc-gen-6, sent-plur-3, fam-8, sent-rout-2, hous-rm-8, cloth-1, plc-9, fam-3, nat-env-4, v-14, trans-1, col-9, sup-1, sent-env-4, food-ing-8, col-11, col-4, num-1, sent-rout-4, sent-nat-4, sent-pub-2, v-5, hse-6, pro-5, v-sent-3, gram-go-fut, sent-trv-5, sent-env-2, dir-8, bas-q2, fam-1, sent-cit-3, hous-rm-3, emo-1, sent-cloth-3, city-2, ani-1, gram-play-fut, cloth-3, soc-extra-2.
+
+dir-6, pro-7, and hous-rm-3 were in that sample and were later removed as exact duplicates of unda, “Mi ta”, and mesa. The surviving entries are the ones the sample checked.
+
+### Duplicates
+
+Nineteen entries were the same Papiamentu and the same English, Dutch, and Spanish as another entry. The later copy was removed. Lesson ids are unchanged, so saved lesson progress and XP still match. A saved mistake that points at a removed id still opens the stored question. The word itself remains on the earlier id.
+
+Removed, with the id that remains: pub-3 (city-1 Banko), pub-5 (city-5 Biblioteka), pub-4 (city-4 Misa), pub-1 (city-3 Warda di Polis), ani-7 (food-6 Galiña), nat-env-5 (nat-3 Flor), hous-rm-1 (hse-5 Sala), hous-rm-3 (rest-2 Mesa), trans-4 (trav-6 Taksi), rout-4 (v-5 Kome), rout-5 (v-12 Traha), rout-6 (v-7 Drumi), pro-7 (bas-16 Mi ta), soc-gen-1 (soc-1 Nòmber), soc-gen-2 (bas-11 Si), soc-gen-3 (bas-12 Nò), dir-6 (bas-14 Unda), sent-plur-1 (sent-env-2), sent-acad-2 (abs-6).
+
+These look alike but the glosses differ, so both stay: Laman “Sea” and Laman “Beach/Sea”, Bistí “to dress” and Bistí “clothes”, Seru with two Spanish glosses, and the two “Kon yama bo?” / “Pasa un bon dia” lines whose Dutch wording is not the same.
+
+## Still doubtful
+
+- **Nietu** (grandchild) is not a Buki headword. de Beijer, which uses Aruba spelling, has nieto. No second Curaçao or Bonaire dictionary gave nietu.
+- **Subrino** (nephew) is in de Beijer. The Buki headword is subrina, not subrino.
+- **“Nos {lo} lesa despues”** puts lo after the subject. Other future lines put Lo first. Dictionaries do not settle the order.
+- English buttons still say “Papiamento” (“Learning Papiamento”, “Type the Papiamento word”). That is the English name of the language. Papiamentu sentences already use Papiamentu.
+- **W.C.** and **TV** are abbreviations. televishon is the headword for the set. The book does not spell the toilet or the abbreviation.
+- **Carlos** is a person’s name.
 
 ## Second pass: c, q, z, v, and ll
 
@@ -111,4 +141,4 @@ No Papiamentu field contains `q`, `z`, or `ll`.
 | Avion | Kept. Headword “avion”. |
 | Televishon | Kept. Headword “televishon”. |
 | Invershon, Investigashon, Konvoi | Kept. All three are headwords, so the v stays. |
-| Carlos, W.C., TV, Oranje | Kept and listed above as doubtful. |
+| Carlos, W.C., TV | Kept. See the remaining toss-ups. Oranje was later changed to Oraño. |

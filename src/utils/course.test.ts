@@ -9,6 +9,12 @@ import type { Language, Question } from '../types/index.ts';
 import { displayPap } from './coursePlan.ts';
 import { generateLesson, matchKey, questionForPractice } from './lessonGenerator.ts';
 
+/** Exact copies of another entry. The surviving id still teaches the word. Lesson ids are unchanged. */
+const RETIRED_DUPLICATES = new Set([
+    'pub-3', 'pub-5', 'rout-6', 'sent-plur-1', 'nat-env-5', 'ani-7', 'rout-4', 'hous-rm-3', 'pro-7',
+    'pub-4', 'soc-gen-3', 'soc-gen-1', 'hous-rm-1', 'sent-acad-2', 'soc-gen-2', 'trans-4', 'rout-5', 'dir-6', 'pub-1',
+]);
+
 const ORIGINAL_IDS = [
     'l1-basics', 'l9-pronouns', 'l1b-sentence-structure', 'l1c-questions',
     'l2-numbers-1-10', 'l3-numbers-20-100', 'l3b-numbers-1000', 'l4-colors',
@@ -46,6 +52,7 @@ test('the course is longer and every old item is practiced at least as often', (
     }
     assert.ok(exercises > 989, `expected more than 989 exercises, got ${exercises}`);
     for (const [id, before] of Object.entries(baselinePractice)) {
+        if (RETIRED_DUPLICATES.has(id)) continue;
         assert.ok((counts.get(id) ?? 0) >= before, `${id} dropped from ${before} to ${counts.get(id) ?? 0}`);
     }
     for (const entry of vocabulary) {
@@ -209,6 +216,20 @@ test('official Curaçao and Bonaire spellings replace clear errors', () => {
     assert.equal(pap('wrk-2'), 'Ofisina');
     assert.equal(pap('food-ing-8'), 'Karni');
     assert.equal(pap('abs-5'), 'Kere');
+    assert.equal(pap('num-30'), 'Trinta');
+    assert.equal(pap('num-60'), 'Sesenta');
+    assert.equal(pap('num-70'), 'Setenta');
+    assert.equal(pap('num-500'), 'Sinkushen');
+    assert.equal(pap('ani-9'), 'Blenchi');
+    assert.equal(pap('hous-rm-9'), 'Frishidèr');
+    assert.equal(pap('col-7'), 'Oraño');
+    assert.equal(pap('cloth-7'), 'Pèchi');
+    assert.equal(pap('ani-5'), 'Turtuga');
+    assert.equal(pap('fam-ext-4'), 'Primu');
+    assert.equal(pap('pub-2'), 'Pòstkantor');
+    assert.equal(pap('sup-1'), 'Garoshi');
+    assert.equal(pap('bas-7'), 'Ayó');
+    assert.equal(pap('trans-7'), 'Wil');
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('flamingo')));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('siete')));
     assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('tike')));
