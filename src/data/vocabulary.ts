@@ -131,13 +131,13 @@ export const vocabulary: VocabEntry[] = [
     { id: 'bas-21', papiamento: 'Ken e ta?', meanings: { en: 'Who is he/she?', nl: 'Wie is hij/zij?', es: '¿Quién es él/ella?' }, category: 'basics', type: 'sentence', tags: ['questions'] },
 
     // --- NUMBERS 1-10 ---
-    { id: 'num-1', papiamento: 'Uno', meanings: { en: 'One', nl: 'Eén', es: 'Uno' }, category: 'numbers', type: 'word', tags: ['1-10'] },
+    { id: 'num-1', papiamento: 'Unu', meanings: { en: 'One', nl: 'Eén', es: 'Uno' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-2', papiamento: 'Dos', meanings: { en: 'Two', nl: 'Twee', es: 'Dos' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-3', papiamento: 'Tres', meanings: { en: 'Three', nl: 'Drie', es: 'Tres' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-4', papiamento: 'Kuater', meanings: { en: 'Four', nl: 'Vier', es: 'Cuatro' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-5', papiamento: 'Sinku', meanings: { en: 'Five', nl: 'Vijf', es: 'Cinco' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-6', papiamento: 'Seis', meanings: { en: 'Six', nl: 'Zes', es: 'Seis' }, category: 'numbers', type: 'word', tags: ['1-10'] },
-    { id: 'num-7', papiamento: 'Siete', meanings: { en: 'Seven', nl: 'Zeven', es: 'Siete' }, category: 'numbers', type: 'word', tags: ['1-10'] },
+    { id: 'num-7', papiamento: 'Shete', meanings: { en: 'Seven', nl: 'Zeven', es: 'Siete' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-8', papiamento: 'Ocho', meanings: { en: 'Eight', nl: 'Acht', es: 'Ocho' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-9', papiamento: 'Nuebe', meanings: { en: 'Nine', nl: 'Negen', es: 'Nueve' }, category: 'numbers', type: 'word', tags: ['1-10'] },
     { id: 'num-10', papiamento: 'Dies', meanings: { en: 'Ten', nl: 'Tien', es: 'Diez' }, category: 'numbers', type: 'word', tags: ['1-10'] },
@@ -145,7 +145,7 @@ export const vocabulary: VocabEntry[] = [
     // --- NUMBERS 11-20 ---
     { id: 'num-11', papiamento: 'Diesun', meanings: { en: 'Eleven', nl: 'Elf', es: 'Once' }, category: 'numbers', type: 'word', tags: ['11-20'] },
     { id: 'num-12', papiamento: 'Diesdos', meanings: { en: 'Twelve', nl: 'Twaalf', es: 'Doce' }, category: 'numbers', type: 'word', tags: ['11-20'] },
-    { id: 'num-15', papiamento: 'Diesinku', meanings: { en: 'Fifteen', nl: 'Vijftien', es: 'Quince' }, category: 'numbers', type: 'word', tags: ['11-20'] },
+    { id: 'num-15', papiamento: 'Diessinku', meanings: { en: 'Fifteen', nl: 'Vijftien', es: 'Quince' }, category: 'numbers', type: 'word', tags: ['11-20'] },
     {
         id: 'num-20', papiamento: 'Binti', meanings: { en: 'Twenty', nl: 'Twintig', es: 'Veinte' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'],
         culturalTip: {
@@ -154,23 +154,23 @@ export const vocabulary: VocabEntry[] = [
             es: "Los números en Papiamento son muy similares al español y portugués debido a raíces históricas."
         }
     },
-    { id: 'num-21', papiamento: 'Binti-un', meanings: { en: 'Twenty-one', nl: 'Eenentwintig', es: 'Veintiuno' }, category: 'numbers', type: 'word', tags: ['20-100'] },
-    { id: 'num-30', papiamento: 'Trinta', meanings: { en: 'Thirty', nl: 'Dertig', es: 'Treinta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
-    { id: 'num-40', papiamento: 'Kuarenta', meanings: { en: 'Forty', nl: 'Veertig', es: 'Cuarenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
-    { id: 'num-50', papiamento: 'Sinkuenta', meanings: { en: 'Fifty', nl: 'Vijftig', es: 'Cincuenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
-    { id: 'num-60', papiamento: 'Sesenta', meanings: { en: 'Sixty', nl: 'Zestig', es: 'Sesenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
-    { id: 'num-70', papiamento: 'Setenta', meanings: { en: 'Seventy', nl: 'Zeventig', es: 'Setenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
-    { id: 'num-80', papiamento: 'Ochenta', meanings: { en: 'Eighty', nl: 'Tachtig', es: 'Ochenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
-    { id: 'num-90', papiamento: 'Nobenta', meanings: { en: 'Ninety', nl: 'Negentig', es: 'Noventa' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-21', papiamento: 'Bintiun', meanings: { en: 'Twenty-one', nl: 'Eenentwintig', es: 'Veintiuno' }, category: 'numbers', type: 'word', tags: ['20-100'] },
+    { id: 'num-30', papiamento: 'Trinti', meanings: { en: 'Thirty', nl: 'Dertig', es: 'Treinta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-40', papiamento: 'Kuarenti', meanings: { en: 'Forty', nl: 'Veertig', es: 'Cuarenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-50', papiamento: 'Sinkuenti', meanings: { en: 'Fifty', nl: 'Vijftig', es: 'Cincuenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-60', papiamento: 'Sesenti', meanings: { en: 'Sixty', nl: 'Zestig', es: 'Sesenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-70', papiamento: 'Setenti', meanings: { en: 'Seventy', nl: 'Zeventig', es: 'Setenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-80', papiamento: 'Ochenti', meanings: { en: 'Eighty', nl: 'Tachtig', es: 'Ochenta' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
+    { id: 'num-90', papiamento: 'Nobenti', meanings: { en: 'Ninety', nl: 'Negentig', es: 'Noventa' }, category: 'numbers', type: 'word', tags: ['20-100', 'tens'] },
 
     // Hundreds
     { id: 'num-100', papiamento: 'Shen', meanings: { en: 'One Hundred', nl: 'Honderd', es: 'Cien' }, category: 'numbers', type: 'word', tags: ['100-1000', 'hundreds'] },
-    { id: 'num-200', papiamento: 'Dos shen', meanings: { en: 'Two Hundred', nl: 'Tweehonderd', es: 'Doscientos' }, category: 'numbers', type: 'word', tags: ['100-1000'] },
-    { id: 'num-500', papiamento: 'Sinku shen', meanings: { en: 'Five Hundred', nl: 'Vijfhonderd', es: 'Quinientos' }, category: 'numbers', type: 'word', tags: ['100-1000'] },
+    { id: 'num-200', papiamento: 'Dosshen', meanings: { en: 'Two Hundred', nl: 'Tweehonderd', es: 'Doscientos' }, category: 'numbers', type: 'word', tags: ['100-1000'] },
+    { id: 'num-500', papiamento: 'Sinkushenti', meanings: { en: 'Five Hundred', nl: 'Vijfhonderd', es: 'Quinientos' }, category: 'numbers', type: 'word', tags: ['100-1000'] },
     { id: 'num-1000', papiamento: 'Mil', meanings: { en: 'One Thousand', nl: 'Duizend', es: 'Mil' }, category: 'numbers', type: 'word', tags: ['100-1000'] },
 
     // Sentences with Numbers
-    { id: 'sent-num-1', papiamento: 'Mi tin {trinta} aña', meanings: { en: 'I am thirty years old', nl: 'Ik ben dertig jaar oud', es: 'Tengo treinta años' }, category: 'numbers', type: 'sentence', tags: ['20-100', 'context'] },
+    { id: 'sent-num-1', papiamento: 'Mi tin {trinti} aña', meanings: { en: 'I am thirty years old', nl: 'Ik ben dertig jaar oud', es: 'Tengo treinta años' }, category: 'numbers', type: 'sentence', tags: ['20-100', 'context'] },
     { id: 'sent-num-2', papiamento: 'Esaki ta kosta {shen} florin', meanings: { en: 'This costs one hundred florins', nl: 'Dit kost honderd gulden', es: 'Esto cuesta cien florines' }, category: 'numbers', type: 'sentence', tags: ['100-1000', 'context'] },
     { id: 'sent-num-3', papiamento: 'Tin {mil} hende', meanings: { en: 'There are a thousand people', nl: 'Er zijn duizend mensen', es: 'Hay mil personas' }, category: 'numbers', type: 'sentence', tags: ['100-1000', 'context'] },
 
@@ -187,12 +187,12 @@ export const vocabulary: VocabEntry[] = [
     { id: 'col-8', papiamento: 'Gris', meanings: { en: 'Grey', nl: 'Grijs', es: 'Gris' }, category: 'colors', type: 'word', tags: ['adv-colors'] },
     { id: 'col-9', papiamento: 'Rosa', meanings: { en: 'Pink', nl: 'Roze', es: 'Rosa' }, category: 'colors', type: 'word', tags: ['adv-colors'] },
     { id: 'col-10', papiamento: 'Biña', meanings: { en: 'Purple', nl: 'Paars', es: 'Morado' }, category: 'colors', type: 'word', tags: ['adv-colors'] },
-    { id: 'col-11', papiamento: 'Marron', meanings: { en: 'Brown', nl: 'Bruin', es: 'Marrón' }, category: 'colors', type: 'word', tags: ['adv-colors'] },
+    { id: 'col-11', papiamento: 'Maron', meanings: { en: 'Brown', nl: 'Bruin', es: 'Marrón' }, category: 'colors', type: 'word', tags: ['adv-colors'] },
 
     // Color Sentences
     { id: 'sent-col-1', papiamento: 'E outo ta {kòrá}', meanings: { en: 'The car is red', nl: 'De auto is rood', es: 'El carro es rojo' }, category: 'colors', type: 'sentence', tags: ['basic-colors', 'context'] },
     { id: 'sent-col-2', papiamento: 'E shelu ta {blou}', meanings: { en: 'The sky is blue', nl: 'De lucht is blauw', es: 'El cielo es azul' }, category: 'colors', type: 'sentence', tags: ['basic-colors', 'context'] },
-    { id: 'sent-col-3', papiamento: 'Mi gusta bo bisa {rosa}', meanings: { en: 'I like your pink shirt', nl: 'Ik vind je roze shirt leuk', es: 'Me gusta tu camisa rosa' }, category: 'colors', type: 'sentence', tags: ['adv-colors', 'context'] }, // Simplified sentence
+    { id: 'sent-col-3', papiamento: 'Mi gusta bo kamisa {rosa}', meanings: { en: 'I like your pink shirt', nl: 'Ik vind je roze shirt leuk', es: 'Me gusta tu camisa rosa' }, category: 'colors', type: 'sentence', tags: ['adv-colors', 'context'] }, // Simplified sentence
     { id: 'sent-col-4', papiamento: 'E flor ta {biña}', meanings: { en: 'The flower is purple', nl: 'De bloem is paars', es: 'La flor es morada' }, category: 'colors', type: 'sentence', tags: ['adv-colors', 'context'] },
 
     // --- FAMILY ---
@@ -218,7 +218,7 @@ export const vocabulary: VocabEntry[] = [
             es: "Expresar emociones directamente es común. 'Mi ta rabia' significa 'Estoy enojado'."
         }
     },
-    { id: 'emo-4', papiamento: 'Cansa', meanings: { en: 'Tired', nl: 'Moe', es: 'Cansado' }, category: 'emotions', type: 'word' },
+    { id: 'emo-4', papiamento: 'Kansá', meanings: { en: 'Tired', nl: 'Moe', es: 'Cansado' }, category: 'emotions', type: 'word' },
     { id: 'emo-5', papiamento: 'Mi ta kontentu', meanings: { en: 'I am happy', nl: 'Ik ben blij', es: 'Estoy feliz' }, category: 'emotions', type: 'sentence' },
 
     // --- FOOD & DRINKS ---
@@ -226,10 +226,10 @@ export const vocabulary: VocabEntry[] = [
     { id: 'food-2', papiamento: 'Pan', meanings: { en: 'Bread', nl: 'Brood', es: 'Pan' }, category: 'food', type: 'word' },
     { id: 'food-3', papiamento: 'Kòfi', meanings: { en: 'Coffee', nl: 'Koffie', es: 'Café' }, category: 'food', type: 'word' },
     { id: 'food-4', papiamento: 'Té', meanings: { en: 'Tea', nl: 'Thee', es: 'Té' }, category: 'food', type: 'word' },
-    { id: 'food-5', papiamento: 'Aròs', meanings: { en: 'Rice', nl: 'Rijst', es: 'Arroz' }, category: 'food', type: 'word' },
-    { id: 'food-6', papiamento: 'Galina', meanings: { en: 'Chicken', nl: 'Kip', es: 'Pollo' }, category: 'food', type: 'word', pronunciation: 'Ga-lee-nya' },
+    { id: 'food-5', papiamento: 'Aros', meanings: { en: 'Rice', nl: 'Rijst', es: 'Arroz' }, category: 'food', type: 'word' },
+    { id: 'food-6', papiamento: 'Galiña', meanings: { en: 'Chicken', nl: 'Kip', es: 'Pollo' }, category: 'food', type: 'word', pronunciation: 'Ga-lee-nya' },
     { id: 'food-7', papiamento: 'Piska', meanings: { en: 'Fish', nl: 'Vis', es: 'Pescado' }, category: 'food', type: 'word' },
-    { id: 'food-8', papiamento: 'Mi kier awa', meanings: { en: 'I want water', nl: 'Ik wil water', es: 'Yo quiero agua' }, category: 'food', type: 'sentence' },
+    { id: 'food-8', papiamento: 'Mi kièr awa', meanings: { en: 'I want water', nl: 'Ik wil water', es: 'Yo quiero agua' }, category: 'food', type: 'sentence' },
     { id: 'food-9', papiamento: 'Mi ta bebe kòfi', meanings: { en: 'I drink coffee', nl: 'Ik drink koffie', es: 'Yo bebo café' }, category: 'food', type: 'sentence' },
     { id: 'food-10', papiamento: 'E kuminda ta bon', meanings: { en: 'The food is good', nl: 'Het eten is goed', es: 'La comida es buena' }, category: 'food', type: 'sentence' },
 
@@ -237,12 +237,12 @@ export const vocabulary: VocabEntry[] = [
     { id: 'rest-1', papiamento: 'Kuenta', meanings: { en: 'Bill', nl: 'Rekening', es: 'Cuenta' }, category: 'restaurant', type: 'word' },
     { id: 'rest-2', papiamento: 'Mesa', meanings: { en: 'Table', nl: 'Tafel', es: 'Mesa' }, category: 'restaurant', type: 'word' },
     { id: 'rest-3', papiamento: 'Desayuno', meanings: { en: 'Breakfast', nl: 'Ontbijt', es: 'Desayuno' }, category: 'restaurant', type: 'word' },
-    { id: 'rest-4', papiamento: 'Kuminda di merdia', meanings: { en: 'Lunch', nl: 'Lunch', es: 'Almuerzo' }, category: 'restaurant', type: 'word' },
+    { id: 'rest-4', papiamento: 'Kuminda di mèrdia', meanings: { en: 'Lunch', nl: 'Lunch', es: 'Almuerzo' }, category: 'restaurant', type: 'word' },
     { id: 'rest-5', papiamento: 'Sena', meanings: { en: 'Dinner', nl: 'Avondeten', es: 'Cena' }, category: 'restaurant', type: 'word' },
     { id: 'rest-6', papiamento: 'Serbes', meanings: { en: 'Beer', nl: 'Bier', es: 'Cerveza' }, category: 'restaurant', type: 'word' },
     { id: 'rest-7', papiamento: 'Dushi', meanings: { en: 'Tasty/Sweet', nl: 'Lekker', es: 'Rico/Dulce' }, category: 'restaurant', type: 'word' },
     { id: 'rest-8', papiamento: 'E kuenta por fabor', meanings: { en: 'The bill please', nl: 'De rekening alsjeblieft', es: 'La cuenta por favor' }, category: 'restaurant', type: 'sentence' },
-    { id: 'rest-9', papiamento: 'Mi kier kome', meanings: { en: 'I want to eat', nl: 'Ik wil eten', es: 'Yo quiero comer' }, category: 'restaurant', type: 'sentence' },
+    { id: 'rest-9', papiamento: 'Mi kièr kome', meanings: { en: 'I want to eat', nl: 'Ik wil eten', es: 'Yo quiero comer' }, category: 'restaurant', type: 'sentence' },
     { id: 'rest-10', papiamento: 'Bo tin...?', meanings: { en: 'Do you have...?', nl: 'Heb je...?', es: '¿Tienes...?' }, category: 'restaurant', type: 'phrase' },
     { id: 'rest-11', papiamento: 'Un serbes por fabor', meanings: { en: 'One beer please', nl: 'Een biertje alsjeblieft', es: 'Una cerveza por favor' }, category: 'restaurant', type: 'sentence' },
 
@@ -266,7 +266,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'soc-meet-5', papiamento: 'Idea', meanings: { en: 'Idea', nl: 'Idee', es: 'Idea' }, category: 'social', type: 'word', tags: ['social-meetup'] },
     { id: 'soc-meet-6', papiamento: 'Mi ta liber', meanings: { en: 'I am free', nl: 'Ik ben vrij', es: 'Estoy libre' }, category: 'social', type: 'sentence', tags: ['social-meetup'] },
     { id: 'soc-meet-7', papiamento: 'Ban kome algu', meanings: { en: 'Let\'s eat something', nl: 'Laten we iets eten', es: 'Vamos a comer algo' }, category: 'social', type: 'sentence', tags: ['social-meetup'] },
-    { id: 'soc-meet-8', papiamento: 'Bo kier bai?', meanings: { en: 'Do you want to go?', nl: 'Wil je gaan?', es: '¿Quieres ir?' }, category: 'social', type: 'sentence', tags: ['social-meetup'] },
+    { id: 'soc-meet-8', papiamento: 'Bo kièr bai?', meanings: { en: 'Do you want to go?', nl: 'Wil je gaan?', es: '¿Quieres ir?' }, category: 'social', type: 'sentence', tags: ['social-meetup'] },
 
     // --- WEATHER ---
     { id: 'wea-1', papiamento: 'Solo', meanings: { en: 'Sun', nl: 'Zon', es: 'Sol' }, category: 'weather', type: 'word' },
@@ -287,17 +287,17 @@ export const vocabulary: VocabEntry[] = [
     { id: 'hse-5', papiamento: 'Sala', meanings: { en: 'Living Room', nl: 'Woonkamer', es: 'Sala' }, category: 'house', type: 'word' },
     { id: 'hse-6', papiamento: 'Bentana', meanings: { en: 'Window', nl: 'Raam', es: 'Ventana' }, category: 'house', type: 'word' },
     { id: 'hse-7', papiamento: 'Porta', meanings: { en: 'Door', nl: 'Deur', es: 'Puerta' }, category: 'house', type: 'word' },
-    { id: 'hse-8', papiamento: 'Chiki', meanings: { en: 'Small', nl: 'Klein', es: 'Pequeño' }, category: 'house', type: 'word' },
+    { id: 'hse-8', papiamento: 'Chikí', meanings: { en: 'Small', nl: 'Klein', es: 'Pequeño' }, category: 'house', type: 'word' },
     { id: 'hse-9', papiamento: 'Grandi', meanings: { en: 'Big', nl: 'Groot', es: 'Grande' }, category: 'house', type: 'word' },
     { id: 'hse-10', papiamento: 'Esaki ta mi kas', meanings: { en: 'This is my house', nl: 'Dit is mijn huis', es: 'Esta es mi casa' }, category: 'house', type: 'sentence' },
     { id: 'hse-11', papiamento: 'E kushina ta grandi', meanings: { en: 'The kitchen is big', nl: 'De keuken is groot', es: 'La cocina es grande' }, category: 'house', type: 'sentence' },
 
     // --- DIRECTIONS ---
-    { id: 'dir-1', papiamento: 'Robez', meanings: { en: 'Left', nl: 'Links', es: 'Izquierda' }, category: 'directions', type: 'word' },
+    { id: 'dir-1', papiamento: 'Robes', meanings: { en: 'Left', nl: 'Links', es: 'Izquierda' }, category: 'directions', type: 'word' },
     { id: 'dir-2', papiamento: 'Drechi', meanings: { en: 'Right', nl: 'Rechts', es: 'Derecha' }, category: 'directions', type: 'word' },
     { id: 'dir-3', papiamento: 'Padilanti', meanings: { en: 'Straight', nl: 'Rechtdoor', es: 'Derecho' }, category: 'directions', type: 'word' },
     { id: 'dir-4', papiamento: 'Sigui padilanti', meanings: { en: 'Go straight', nl: 'Ga rechtdoor', es: 'Sigue derecho' }, category: 'directions', type: 'phrase' },
-    { id: 'dir-5', papiamento: 'Bira robez', meanings: { en: 'Turn left', nl: 'Sla linksaf', es: 'Gira a la izquierda' }, category: 'directions', type: 'phrase' },
+    { id: 'dir-5', papiamento: 'Bira robes', meanings: { en: 'Turn left', nl: 'Sla linksaf', es: 'Gira a la izquierda' }, category: 'directions', type: 'phrase' },
     { id: 'dir-6', papiamento: 'Unda', meanings: { en: 'Where', nl: 'Waar', es: 'Dónde' }, category: 'directions', type: 'word' },
     { id: 'dir-7', papiamento: 'Aki', meanings: { en: 'Here', nl: 'Hier', es: 'Aquí' }, category: 'directions', type: 'word' },
     { id: 'dir-8', papiamento: 'Aya', meanings: { en: 'There', nl: 'Daar', es: 'Allí' }, category: 'directions', type: 'word' },
@@ -306,14 +306,14 @@ export const vocabulary: VocabEntry[] = [
 
     // --- PLACES ---
     { id: 'plc-1', papiamento: 'Skol', meanings: { en: 'School', nl: 'School', es: 'Escuela' }, category: 'places', type: 'word' },
-    { id: 'plc-2', papiamento: 'Hòspital', meanings: { en: 'Hospital', nl: 'Ziekenhuis', es: 'Hospital' }, category: 'places', type: 'word' },
+    { id: 'plc-2', papiamento: 'Hospital', meanings: { en: 'Hospital', nl: 'Ziekenhuis', es: 'Hospital' }, category: 'places', type: 'word' },
     { id: 'plc-3', papiamento: 'Botika', meanings: { en: 'Pharmacy', nl: 'Apotheek', es: 'Farmacia' }, category: 'places', type: 'word' },
     { id: 'plc-4', papiamento: 'Supermerkado', meanings: { en: 'Supermarket', nl: 'Supermarkt', es: 'Supermercado' }, category: 'places', type: 'word' },
-    { id: 'plc-5', papiamento: 'Brug', meanings: { en: 'Bridge', nl: 'Brug', es: 'Puente' }, category: 'places', type: 'word' },
+    { id: 'plc-5', papiamento: 'Brùg', meanings: { en: 'Bridge', nl: 'Brug', es: 'Puente' }, category: 'places', type: 'word' },
     { id: 'plc-6', papiamento: 'Kaya', meanings: { en: 'Street', nl: 'Straat', es: 'Calle' }, category: 'places', type: 'word' },
     { id: 'plc-7', papiamento: 'Aeropuerto', meanings: { en: 'Airport', nl: 'Vliegveld', es: 'Aeropuerto' }, category: 'places', type: 'word' },
     { id: 'plc-8', papiamento: 'Mi ta bai skol', meanings: { en: 'I go to school', nl: 'Ik ga naar school', es: 'Voy a la escuela' }, category: 'places', type: 'sentence' },
-    { id: 'plc-9', papiamento: 'E hotel ta grandi', meanings: { en: 'The hotel is big', nl: 'Het hotel is groot', es: 'El hotel es grande' }, category: 'places', type: 'sentence' },
+    { id: 'plc-9', papiamento: 'E hotèl ta grandi', meanings: { en: 'The hotel is big', nl: 'Het hotel is groot', es: 'El hotel es grande' }, category: 'places', type: 'sentence' },
     { id: 'plc-10', papiamento: 'E kaya ta largu', meanings: { en: 'The street is long', nl: 'De straat is lang', es: 'La calle es larga' }, category: 'places', type: 'sentence' },
 
     // --- PRONOUNS ---
@@ -348,7 +348,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'v-16', papiamento: 'Kore', meanings: { en: 'To run/drive', nl: 'Rennen/Rijden', es: 'Correr/Conducir' }, category: 'verbs', type: 'word', tags: ['verb-training', 'verb-word'] },
     { id: 'v-17', papiamento: 'Hunga', meanings: { en: 'To play', nl: 'Spelen', es: 'Jugar' }, category: 'verbs', type: 'word', tags: ['verb-training', 'verb-word'] },
     { id: 'v-18', papiamento: 'Siña', meanings: { en: 'To learn', nl: 'Leren', es: 'Aprender' }, category: 'verbs', type: 'word', tags: ['verb-training', 'verb-word'] },
-    { id: 'v-19', papiamento: 'Wak', meanings: { en: 'To watch/look', nl: 'kijken', es: 'Mirar' }, category: 'verbs', type: 'word', tags: ['verb-training', 'verb-word'] },
+    { id: 'v-19', papiamento: 'Wak', meanings: { en: 'To watch/look', nl: 'Kijken', es: 'Mirar' }, category: 'verbs', type: 'word', tags: ['verb-training', 'verb-word'] },
     { id: 'v-20', papiamento: 'Kumpra', meanings: { en: 'To buy', nl: 'Kopen', es: 'Comprar' }, category: 'verbs', type: 'word', tags: ['verb-training', 'verb-word'] },
 
     // Verb Sentences (Training)
@@ -358,7 +358,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'v-sent-4', papiamento: 'Bo ta {skirbi} bon', meanings: { en: 'You write well', nl: 'Jij schrijft goed', es: 'Escribes bien' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-5', papiamento: 'Mi ta {kore} mainta', meanings: { en: 'I run in the morning', nl: 'Ik ren \'s ochtends', es: 'Corro por la mañana' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-6', papiamento: 'E mucha ta {hunga}', meanings: { en: 'The child is playing', nl: 'Het kind speelt', es: 'El niño está jugando' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
-    { id: 'v-sent-7', papiamento: 'Nos ta {siña} Papiamento', meanings: { en: 'We are learning Papiamento', nl: 'Wij leren Papiaments', es: 'Estamos aprendiendo Papiamento' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
+    { id: 'v-sent-7', papiamento: 'Nos ta {siña} Papiamentu', meanings: { en: 'We are learning Papiamentu', nl: 'Wij leren Papiaments', es: 'Estamos aprendiendo Papiamento' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
     { id: 'v-sent-8', papiamento: 'Bo ta {wak} TV?', meanings: { en: 'Are you watching TV?', nl: 'Kijk je TV?', es: '¿Ves la televisión?' }, category: 'verbs', type: 'sentence', tags: ['verb-training', 'verb-sentence', 'cloze'] },
 
     // --- PREPOSITIONS ---
@@ -370,7 +370,7 @@ export const vocabulary: VocabEntry[] = [
     // --- SHOPPING ---
     { id: 'shop-1', papiamento: 'Kuantu', meanings: { en: 'How much', nl: 'Hoeveel', es: 'Cuánto' }, category: 'shopping', type: 'word' },
     { id: 'shop-2', papiamento: 'Barata', meanings: { en: 'Cheap', nl: 'Goedkoop', es: 'Barato' }, category: 'shopping', type: 'word' },
-    { id: 'shop-3', papiamento: 'Karo', meanings: { en: 'Expensive', nl: 'Duur', es: 'Caro' }, category: 'shopping', type: 'word' },
+    { id: 'shop-3', papiamento: 'Karu', meanings: { en: 'Expensive', nl: 'Duur', es: 'Caro' }, category: 'shopping', type: 'word' },
     { id: 'shop-4', papiamento: 'Plaka', meanings: { en: 'Money', nl: 'Geld', es: 'Dinero' }, category: 'shopping', type: 'word' },
     { id: 'shop-5', papiamento: 'Kuantu esaki ta kosta?', meanings: { en: 'How much does this cost?', nl: 'Hoeveel kost dit?', es: '¿Cuánto cuesta esto?' }, category: 'shopping', type: 'sentence' },
 
@@ -380,18 +380,18 @@ export const vocabulary: VocabEntry[] = [
     { id: 'wrk-3', papiamento: 'Reunion', meanings: { en: 'Meeting', nl: 'Vergadering', es: 'Reunión' }, category: 'work', type: 'word' },
     { id: 'wrk-4', papiamento: 'Hefe', meanings: { en: 'Boss', nl: 'Baas', es: 'Jefe' }, category: 'work', type: 'word' },
     { id: 'wrk-5', papiamento: 'Kolega', meanings: { en: 'Colleague', nl: 'Collega', es: 'Colega' }, category: 'work', type: 'word' },
-    { id: 'wrk-6', papiamento: 'Sollicitá', meanings: { en: 'To apply (job)', nl: 'Solliciteren', es: 'Solicitar' }, category: 'work', type: 'word' },
+    { id: 'wrk-6', papiamento: 'Solisitá', meanings: { en: 'To apply (job)', nl: 'Solliciteren', es: 'Solicitar' }, category: 'work', type: 'word' },
     { id: 'wrk-7', papiamento: 'Mi tin un {reunion} importante', meanings: { en: 'I have an important meeting', nl: 'Ik heb een belangrijke vergadering', es: 'Tengo una reunión importante' }, category: 'work', type: 'sentence' },
-    { id: 'wrk-8', papiamento: 'E {trabou} ta difisil', meanings: { en: 'The work is difficult', nl: 'Het werk is moeilijk', es: 'El trabajo es difícil' }, category: 'work', type: 'sentence' },
+    { id: 'wrk-8', papiamento: 'E {trabou} ta difísil', meanings: { en: 'The work is difficult', nl: 'Het werk is moeilijk', es: 'El trabajo es difícil' }, category: 'work', type: 'sentence' },
 
     // --- HEALTH (B1) ---
-    { id: 'hlt-1', papiamento: 'Salud', meanings: { en: 'Health', nl: 'Gezondheid', es: 'Salud' }, category: 'health', type: 'word' },
-    { id: 'hlt-2', papiamento: 'Dokter', meanings: { en: 'Doctor', nl: 'Dokter', es: 'Doctor' }, category: 'health', type: 'word' },
-    { id: 'hlt-3', papiamento: 'Dolor', meanings: { en: 'Pain', nl: 'Pijn', es: 'Dolor' }, category: 'health', type: 'word' },
+    { id: 'hlt-1', papiamento: 'Salú', meanings: { en: 'Health', nl: 'Gezondheid', es: 'Salud' }, category: 'health', type: 'word' },
+    { id: 'hlt-2', papiamento: 'Dòkter', meanings: { en: 'Doctor', nl: 'Dokter', es: 'Doctor' }, category: 'health', type: 'word' },
+    { id: 'hlt-3', papiamento: 'Doló', meanings: { en: 'Pain', nl: 'Pijn', es: 'Dolor' }, category: 'health', type: 'word' },
     { id: 'hlt-4', papiamento: 'Remedi', meanings: { en: 'Medicine', nl: 'Medicijn', es: 'Medicina' }, category: 'health', type: 'word' },
     { id: 'hlt-5', papiamento: 'Kurpa', meanings: { en: 'Body', nl: 'Lichaam', es: 'Cuerpo' }, category: 'health', type: 'word' },
-    { id: 'hlt-6', papiamento: 'Mi tin {dolor} di kabes', meanings: { en: 'I have a headache', nl: 'Ik heb hoofdpijn', es: 'Tengo dolor de cabeza' }, category: 'health', type: 'sentence' },
-    { id: 'hlt-7', papiamento: 'Mi mester bai {dokter}', meanings: { en: 'I need to go to the doctor', nl: 'Ik moet naar de dokter', es: 'Necesito ir al médico' }, category: 'health', type: 'sentence' },
+    { id: 'hlt-6', papiamento: 'Mi tin {doló} di kabes', meanings: { en: 'I have a headache', nl: 'Ik heb hoofdpijn', es: 'Tengo dolor de cabeza' }, category: 'health', type: 'sentence' },
+    { id: 'hlt-7', papiamento: 'Mi mester bai {dòkter}', meanings: { en: 'I need to go to the doctor', nl: 'Ik moet naar de dokter', es: 'Necesito ir al médico' }, category: 'health', type: 'sentence' },
 
     // --- NATURE & ENVIRONMENT (B1) ---
     { id: 'nat-1', papiamento: 'Naturalesa', meanings: { en: 'Nature', nl: 'Natuur', es: 'Naturaleza' }, category: 'nature', type: 'word' },
@@ -406,7 +406,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'abs-2', papiamento: 'Pensamentu', meanings: { en: 'Thought', nl: 'Gedachte', es: 'Pensamiento' }, category: 'abstract', type: 'word' },
     { id: 'abs-3', papiamento: 'Libertat', meanings: { en: 'Freedom', nl: 'Vrijheid', es: 'Libertad' }, category: 'abstract', type: 'word' },
     { id: 'abs-4', papiamento: 'Futuro', meanings: { en: 'Future', nl: 'Toekomst', es: 'Futuro' }, category: 'abstract', type: 'word' },
-    { id: 'abs-5', papiamento: 'Kree', meanings: { en: 'To believe', nl: 'Geloven', es: 'Creer' }, category: 'abstract', type: 'word' },
+    { id: 'abs-5', papiamento: 'Kere', meanings: { en: 'To believe', nl: 'Geloven', es: 'Creer' }, category: 'abstract', type: 'word' },
     { id: 'abs-6', papiamento: 'Segun mi {opinion}', meanings: { en: 'In my opinion', nl: 'Naar mijn mening', es: 'En mi opinión' }, category: 'abstract', type: 'sentence' },
     { id: 'abs-7', papiamento: 'Nos mester pensa riba e {futuro}', meanings: { en: 'We must think about the future', nl: 'Wij moeten denken aan de toekomst', es: 'Debemos pensar en el futuro' }, category: 'abstract', type: 'sentence' },
     { id: 'abs-8', papiamento: 'Kiko ta bo {pensamentu}?', meanings: { en: 'What is your thought?', nl: 'Wat is jouw gedachte?', es: '¿Cuál es tu pensamiento?' }, category: 'abstract', type: 'sentence' },
@@ -415,13 +415,13 @@ export const vocabulary: VocabEntry[] = [
     { id: 'soc-1', papiamento: 'Nòmber', meanings: { en: 'Name', nl: 'Naam', es: 'Nombre' }, category: 'social', type: 'word' },
     { id: 'soc-2', papiamento: 'Biba', meanings: { en: 'To live', nl: 'Wonen', es: 'Vivir' }, category: 'social', type: 'word' },
     { id: 'soc-3', papiamento: 'Papia', meanings: { en: 'To speak', nl: 'Spreken', es: 'Hablar' }, category: 'social', type: 'word' },
-    { id: 'soc-4', papiamento: 'Komprondé', meanings: { en: 'To understand', nl: 'Begrijpen', es: 'Entender' }, category: 'social', type: 'word' },
+    { id: 'soc-4', papiamento: 'Komprendé', meanings: { en: 'To understand', nl: 'Begrijpen', es: 'Entender' }, category: 'social', type: 'word' },
     { id: 'soc-5', papiamento: 'Mi yama...', meanings: { en: 'My name is...', nl: 'Ik heet...', es: 'Me llamo...' }, category: 'social', type: 'phrase' },
     { id: 'soc-6', papiamento: 'Kon yama bo?', meanings: { en: 'What is your name?', nl: 'Hoe heet jij?', es: '¿Cómo te llamas?' }, category: 'social', type: 'sentence' },
     { id: 'soc-7', papiamento: 'Unda bo ta {biba}?', meanings: { en: 'Where do you live?', nl: 'Waar woon je?', es: '¿Dónde vives?' }, category: 'social', type: 'sentence' },
     { id: 'soc-8', papiamento: 'Mi ta biba na Aruba', meanings: { en: 'I live in Aruba', nl: 'Ik woon op Aruba', es: 'Vivo en Aruba' }, category: 'social', type: 'sentence' },
-    { id: 'soc-9', papiamento: 'Bo ta {papia} Papiamento?', meanings: { en: 'Do you speak Papiamento?', nl: 'Spreek je Papiaments?', es: '¿Hablas Papiamento?' }, category: 'social', type: 'sentence' },
-    { id: 'soc-10', papiamento: 'Mi no ta {komprondé} bon', meanings: { en: 'I do not understand well', nl: 'Ik begrijp het niet goed', es: 'No entiendo bien' }, category: 'social', type: 'sentence' },
+    { id: 'soc-9', papiamento: 'Bo ta {papia} Papiamentu?', meanings: { en: 'Do you speak Papiamentu?', nl: 'Spreek je Papiaments?', es: '¿Hablas Papiamento?' }, category: 'social', type: 'sentence' },
+    { id: 'soc-10', papiamento: 'Mi no ta {komprendé} bon', meanings: { en: 'I do not understand well', nl: 'Ik begrijp het niet goed', es: 'No entiendo bien' }, category: 'social', type: 'sentence' },
     { id: 'soc-11', papiamento: 'Pasa un bon dia', meanings: { en: 'Have a nice day', nl: 'Fijne dag', es: 'Que tengas un buen día' }, category: 'social', type: 'phrase' },
 
     // --- GRAMMAR: TENSES (Ta / Tabata / A / Lo) ---
@@ -469,7 +469,7 @@ export const vocabulary: VocabEntry[] = [
             es: "Un 'Batido' es un licuado de fruta fresca popular, a menudo con leche y azúcar."
         }
     },
-    { id: 'drk-5', papiamento: 'Mi kier un {refresko}', meanings: { en: 'I want a soda', nl: 'Ik wil een frisdrank', es: 'Quiero un refresco' }, category: 'food', type: 'sentence', tags: ['drinks'] },
+    { id: 'drk-5', papiamento: 'Mi kièr un {refresko}', meanings: { en: 'I want a soda', nl: 'Ik wil een frisdrank', es: 'Quiero un refresco' }, category: 'food', type: 'sentence', tags: ['drinks'] },
 
     // --- FOOD: SUPERMARKET ---
     { id: 'sup-1', papiamento: 'Kar', meanings: { en: 'Cart', nl: 'Karretje', es: 'Carrito' }, category: 'shopping', type: 'word', tags: ['supermarket'] },
@@ -480,11 +480,11 @@ export const vocabulary: VocabEntry[] = [
     { id: 'sup-6', papiamento: 'Mi mester un {bolsa}', meanings: { en: 'I need a bag', nl: 'Ik heb een tas nodig', es: 'Necesito una bolsa' }, category: 'shopping', type: 'sentence', tags: ['supermarket'] },
 
     // --- SOCIAL: GENERAL ---
-    { id: 'soc-gen-1', papiamento: 'Nomber', meanings: { en: 'Name', nl: 'Naam', es: 'Nombre' }, category: 'social', type: 'word' },
+    { id: 'soc-gen-1', papiamento: 'Nòmber', meanings: { en: 'Name', nl: 'Naam', es: 'Nombre' }, category: 'social', type: 'word' },
     { id: 'soc-gen-2', papiamento: 'Si', meanings: { en: 'Yes', nl: 'Ja', es: 'Sí' }, category: 'social', type: 'word' },
     { id: 'soc-gen-3', papiamento: 'Nò', meanings: { en: 'No', nl: 'Nee', es: 'No' }, category: 'social', type: 'word' },
     { id: 'soc-gen-4', papiamento: 'Kon yama bo?', meanings: { en: 'What is your name?', nl: 'Hoe heet je?', es: '¿Cómo te llamas?' }, category: 'social', type: 'phrase' },
-    { id: 'soc-gen-5', papiamento: 'Mi nomber ta...', meanings: { en: 'My name is...', nl: 'Mijn naam is...', es: 'Mi nombre es...' }, category: 'social', type: 'phrase' },
+    { id: 'soc-gen-5', papiamento: 'Mi nòmber ta...', meanings: { en: 'My name is...', nl: 'Mijn naam is...', es: 'Mi nombre es...' }, category: 'social', type: 'phrase' },
     { id: 'soc-gen-6', papiamento: 'Di nada', meanings: { en: 'You are welcome', nl: 'Graag gedaan', es: 'De nada' }, category: 'social', type: 'phrase' },
     { id: 'soc-gen-7', papiamento: 'Pardon', meanings: { en: 'Excuse me', nl: 'Pardon', es: 'Perdón' }, category: 'social', type: 'word' },
     { id: 'soc-gen-8', papiamento: 'Ata', meanings: { en: 'Here is/There is', nl: 'Hier is/Daar is', es: 'Aquí está' }, category: 'social', type: 'word' },
@@ -496,16 +496,16 @@ export const vocabulary: VocabEntry[] = [
     {
         id: 'ani-4', papiamento: 'Yuana', meanings: { en: 'Iguana', nl: 'Leguaan', es: 'Iguana' }, category: 'nature', type: 'word',
         culturalTip: {
-            en: "Iguana soup ('Sopi di Yuana') is a traditional delicacy believed to give strength.",
-            nl: "Leguanensoep ('Sopi di Yuana') is een traditionele delicatesse waarvan wordt gedacht dat het kracht geeft.",
-            es: "La sopa de iguana ('Sopi di Yuana') es una delicia tradicional que se cree da fuerza."
+            en: "Iguana soup ('Sòpi di Yuana') is a traditional delicacy believed to give strength.",
+            nl: "Leguanensoep ('Sòpi di Yuana') is een traditionele delicatesse waarvan wordt gedacht dat het kracht geeft.",
+            es: "La sopa de iguana ('Sòpi di Yuana') es una delicia tradicional que se cree da fuerza."
         }
     },
     { id: 'ani-5', papiamento: 'Tortuga', meanings: { en: 'Turtle', nl: 'Schildpad', es: 'Tortuga' }, category: 'nature', type: 'word' },
     { id: 'ani-6', papiamento: 'Prikichi', meanings: { en: 'Parakeet', nl: 'Parkiet', es: 'Perico' }, category: 'nature', type: 'word' },
     { id: 'ani-7', papiamento: 'Galiña', meanings: { en: 'Chicken', nl: 'Kip', es: 'Pollo' }, category: 'nature', type: 'word' },
     { id: 'ani-8', papiamento: 'Baka', meanings: { en: 'Cow', nl: 'Koe', es: 'Vaca' }, category: 'nature', type: 'word' },
-    { id: 'ani-9', papiamento: 'Flet', meanings: { en: 'Hummingbird', nl: 'Kolibrie', es: 'Colibrí' }, category: 'nature', type: 'word' },
+    { id: 'ani-9', papiamento: 'Flèt', meanings: { en: 'Hummingbird', nl: 'Kolibrie', es: 'Colibrí' }, category: 'nature', type: 'word' },
     { id: 'ani-10', papiamento: 'Chuchubi', meanings: { en: 'Mockingbird', nl: 'Spotlijster', es: 'Sinsajo' }, category: 'nature', type: 'word' },
 
     // --- CITY & PLACES EXPANSION ---
@@ -519,11 +519,11 @@ export const vocabulary: VocabEntry[] = [
     { id: 'city-8', papiamento: 'Stashon di gasolin', meanings: { en: 'Gas Station', nl: 'Benzinestation', es: 'Gasolinera' }, category: 'places', type: 'word' },
 
     // --- TRAVEL EXPANSION ---
-    { id: 'trav-1', papiamento: 'Paspoort', meanings: { en: 'Passport', nl: 'Paspoort', es: 'Pasaporte' }, category: 'places', type: 'word', tags: ['travel'] },
+    { id: 'trav-1', papiamento: 'Pasport', meanings: { en: 'Passport', nl: 'Paspoort', es: 'Pasaporte' }, category: 'places', type: 'word', tags: ['travel'] },
     { id: 'trav-2', papiamento: 'Maleta', meanings: { en: 'Suitcase', nl: 'Koffer', es: 'Maleta' }, category: 'places', type: 'word', tags: ['travel'] },
     { id: 'trav-3', papiamento: 'Avion', meanings: { en: 'Airplane', nl: 'Vliegtuig', es: 'Avión' }, category: 'places', type: 'word', tags: ['travel'] },
     { id: 'trav-4', papiamento: 'Boto', meanings: { en: 'Boat', nl: 'Boot', es: 'Barco' }, category: 'places', type: 'word', tags: ['travel'] },
-    { id: 'trav-5', papiamento: 'Kaartchi', meanings: { en: 'Ticket', nl: 'Kaartje', es: 'Boleto' }, category: 'places', type: 'word', tags: ['travel'] },
+    { id: 'trav-5', papiamento: 'Karchi', meanings: { en: 'Ticket', nl: 'Kaartje', es: 'Boleto' }, category: 'places', type: 'word', tags: ['travel'] },
     { id: 'trav-6', papiamento: 'Taksi', meanings: { en: 'Taxi', nl: 'Taxi', es: 'Taxi' }, category: 'places', type: 'word', tags: ['travel'] },
     { id: 'trav-7', papiamento: 'Bus', meanings: { en: 'Bus', nl: 'Bus', es: 'Autobús' }, category: 'places', type: 'word', tags: ['travel'] },
     { id: 'trav-8', papiamento: 'Yabi', meanings: { en: 'Key', nl: 'Sleutel', es: 'Llave' }, category: 'places', type: 'word', tags: ['travel'] },
@@ -538,12 +538,12 @@ export const vocabulary: VocabEntry[] = [
     { id: 'food-ing-7', papiamento: 'Webu', meanings: { en: 'Egg', nl: 'Ei', es: 'Huevo' }, category: 'food', type: 'word' },
     { id: 'food-ing-8', papiamento: 'Carne', meanings: { en: 'Meat', nl: 'Vlees', es: 'Carne' }, category: 'food', type: 'word' },
     { id: 'food-ing-9', papiamento: 'Fruta', meanings: { en: 'Fruit', nl: 'Fruit', es: 'Fruta' }, category: 'food', type: 'word' },
-    { id: 'food-ing-10', papiamento: 'Berdura', meanings: { en: 'Vegetables', nl: 'Groenten', es: 'Verduras' }, category: 'food', type: 'word' },
+    { id: 'food-ing-10', papiamento: 'Bèrdura', meanings: { en: 'Vegetables', nl: 'Groenten', es: 'Verduras' }, category: 'food', type: 'word' },
 
     // --- FRUITS & VEGGIES ---
     { id: 'food-fv-1', papiamento: 'Apel', meanings: { en: 'Apple', nl: 'Appel', es: 'Manzana' }, category: 'food', type: 'word' },
     { id: 'food-fv-2', papiamento: 'Bakoba', meanings: { en: 'Banana', nl: 'Banaan', es: 'Banana' }, category: 'food', type: 'word' },
-    { id: 'food-fv-3', papiamento: 'Lamun', meanings: { en: 'Lemon/Lime', nl: 'Citroen', es: 'Limón' }, category: 'food', type: 'word' },
+    { id: 'food-fv-3', papiamento: 'Lamunchi', meanings: { en: 'Lemon/Lime', nl: 'Citroen', es: 'Limón' }, category: 'food', type: 'word' },
     { id: 'food-fv-4', papiamento: 'Tomati', meanings: { en: 'Tomato', nl: 'Tomaat', es: 'Tomate' }, category: 'food', type: 'word' },
     { id: 'food-fv-5', papiamento: 'Siboyo', meanings: { en: 'Onion', nl: 'Ui', es: 'Cebolla' }, category: 'food', type: 'word' },
     { id: 'food-fv-6', papiamento: 'Batata', meanings: { en: 'Potato', nl: 'Aardappel', es: 'Papa' }, category: 'food', type: 'word' },
@@ -562,17 +562,17 @@ export const vocabulary: VocabEntry[] = [
     { id: 'sent-cit-2', papiamento: 'Nos ta kana den {parke}', meanings: { en: 'We walk in the park', nl: 'Wij lopen in het park', es: 'Caminamos en el parque' }, category: 'places', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-cit-3', papiamento: 'E {warda di polis} ta leu', meanings: { en: 'The police station is far', nl: 'Het politiebureau is ver', es: 'La estación de policía está lejos' }, category: 'places', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-cit-4', papiamento: 'Nan ta bai {misa} diadomingo', meanings: { en: 'They go to church on Sunday', nl: 'Ze gaan zondag naar de kerk', es: 'Van a la iglesia el domingo' }, category: 'places', type: 'sentence', tags: ['cloze'] },
-    { id: 'sent-cit-5', papiamento: 'Nos ta wak pelikula na {sinema}', meanings: { en: 'We watch movies at the cinema', nl: 'We kijken films in de bioscoop', es: 'Vemos películas en el cine' }, category: 'places', type: 'sentence', tags: ['cloze'] },
+    { id: 'sent-cit-5', papiamento: 'Nos ta wak pelíkula na {sinema}', meanings: { en: 'We watch movies at the cinema', nl: 'We kijken films in de bioscoop', es: 'Vemos películas en el cine' }, category: 'places', type: 'sentence', tags: ['cloze'] },
 
     // Travel
-    { id: 'sent-trv-1', papiamento: 'Bo tin bo {paspoort}?', meanings: { en: 'Do you have your passport?', nl: 'Heb je je paspoort?', es: '¿Tienes tu pasaporte?' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
+    { id: 'sent-trv-1', papiamento: 'Bo tin bo {pasport}?', meanings: { en: 'Do you have your passport?', nl: 'Heb je je paspoort?', es: '¿Tienes tu pasaporte?' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
     { id: 'sent-trv-2', papiamento: 'Mi {maleta} ta pisa', meanings: { en: 'My suitcase is heavy', nl: 'Mijn koffer is zwaar', es: 'Mi maleta es pesada' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
     { id: 'sent-trv-3', papiamento: 'E {avion} ta grandi', meanings: { en: 'The airplane is big', nl: 'Het vliegtuig is groot', es: 'El avión es grande' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
-    { id: 'sent-trv-4', papiamento: 'Mi tin mi {tike} di avion', meanings: { en: 'I have my plane ticket', nl: 'Ik heb mijn vliegticket', es: 'Tengo mi boleto de avión' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
+    { id: 'sent-trv-4', papiamento: 'Mi tin mi {karchi} di avion', meanings: { en: 'I have my plane ticket', nl: 'Ik heb mijn vliegticket', es: 'Tengo mi boleto de avión' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
     { id: 'sent-trv-5', papiamento: 'E {boto} ta riba awa', meanings: { en: 'The boat is on the water', nl: 'De boot is op het water', es: 'El barco está en el agua' }, category: 'places', type: 'sentence', tags: ['travel', 'cloze'] },
 
     // Food
-    { id: 'sent-food-1', papiamento: 'Bo kier {suku} den bo kòfi?', meanings: { en: 'Do you want sugar in your coffee?', nl: 'Wil je suiker in je koffie?', es: '¿Quieres azúcar en tu café?' }, category: 'food', type: 'sentence', tags: ['cloze'] },
+    { id: 'sent-food-1', papiamento: 'Bo kièr {suku} den bo kòfi?', meanings: { en: 'Do you want sugar in your coffee?', nl: 'Wil je suiker in je koffie?', es: '¿Quieres azúcar en tu café?' }, category: 'food', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-food-2', papiamento: 'E sopi falta {salu}', meanings: { en: 'The soup lacks salt', nl: 'De soep mist zout', es: 'A la sopa le falta sal' }, category: 'food', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-food-3', papiamento: 'Pone {manteka} riba e pan', meanings: { en: 'Put butter on the bread', nl: 'Doe boter op het brood', es: 'Pon mantequilla en el pan' }, category: 'food', type: 'sentence', tags: ['cloze'] },
     { id: 'sent-food-4', papiamento: 'Mi gusta kome {keshi}', meanings: { en: 'I like eating cheese', nl: 'Ik eet graag kaas', es: 'Me gusta comer queso' }, category: 'food', type: 'sentence', tags: ['cloze'] },
@@ -623,18 +623,18 @@ export const vocabulary: VocabEntry[] = [
 
     // --- HOUSE: ROOMS & FURNITURE ---
     { id: 'hous-rm-1', papiamento: 'Sala', meanings: { en: 'Living Room', nl: 'Woonkamer', es: 'Sala' }, category: 'house', type: 'word', tags: ['rooms'] },
-    { id: 'hous-rm-2', papiamento: 'Sofa', meanings: { en: 'Sofa/Couch', nl: 'Bank', es: 'Sofá' }, category: 'house', type: 'word', tags: ['furniture'] },
+    { id: 'hous-rm-2', papiamento: 'Sofá', meanings: { en: 'Sofa/Couch', nl: 'Bank', es: 'Sofá' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-3', papiamento: 'Mesa', meanings: { en: 'Table', nl: 'Tafel', es: 'Mesa' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-4', papiamento: 'Stul', meanings: { en: 'Chair', nl: 'Stoel', es: 'Silla' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-5', papiamento: 'Televishon', meanings: { en: 'Television', nl: 'Televisie', es: 'Televisión' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-6', papiamento: 'Kama', meanings: { en: 'Bed', nl: 'Bed', es: 'Cama' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-7', papiamento: 'Kashi', meanings: { en: 'Cupboard/Closet', nl: 'Kast', es: 'Armario' }, category: 'house', type: 'word', tags: ['furniture'] },
-    { id: 'hous-rm-8', papiamento: 'Fornu', meanings: { en: 'Stove/Oven', nl: 'Fornuis', es: 'Estufa' }, category: 'house', type: 'word', tags: ['furniture'] },
+    { id: 'hous-rm-8', papiamento: 'Fòrnu', meanings: { en: 'Stove/Oven', nl: 'Fornuis', es: 'Estufa' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-9', papiamento: 'Yèski', meanings: { en: 'Fridge', nl: 'Koelkast', es: 'Nevera' }, category: 'house', type: 'word', tags: ['furniture'] },
     { id: 'hous-rm-10', papiamento: 'W.C.', meanings: { en: 'Toilet', nl: 'W.C.', es: 'Baño' }, category: 'house', type: 'word', tags: ['rooms'] },
 
     // House Sentences
-    { id: 'sent-hous-1', papiamento: 'E {sofa} ta nobo', meanings: { en: 'The sofa is new', nl: 'De bank is nieuw', es: 'El sofá es nuevo' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
+    { id: 'sent-hous-1', papiamento: 'E {sofá} ta nobo', meanings: { en: 'The sofa is new', nl: 'De bank is nieuw', es: 'El sofá es nuevo' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
     { id: 'sent-hous-2', papiamento: 'Pone e pan riba {mesa}', meanings: { en: 'Put the bread on the table', nl: 'Leg het brood op tafel', es: 'Pon el pan en la mesa' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
     { id: 'sent-hous-3', papiamento: 'Mi ta wak {televishon}', meanings: { en: 'I am watching television', nl: 'Ik kijk televisie', es: 'Estoy viendo televisión' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
     { id: 'sent-hous-4', papiamento: 'E {kama} ta grandi', meanings: { en: 'The bed is big', nl: 'Het bed is groot', es: 'La cama es grande' }, category: 'house', type: 'sentence', tags: ['cloze', 'furniture'] },
@@ -643,7 +643,7 @@ export const vocabulary: VocabEntry[] = [
     { id: 'nat-env-1', papiamento: 'Laman', meanings: { en: 'Beach/Sea', nl: 'Strand/Zee', es: 'Playa/Mar' }, category: 'nature', type: 'word', tags: ['environment'] },
     { id: 'nat-env-2', papiamento: 'Santu', meanings: { en: 'Sand', nl: 'Zand', es: 'Arena' }, category: 'nature', type: 'word', tags: ['environment'] },
     { id: 'nat-env-3', papiamento: 'Baranka', meanings: { en: 'Rock', nl: 'Rots', es: 'Roca' }, category: 'nature', type: 'word', tags: ['environment'] },
-    { id: 'nat-env-4', papiamento: 'Hofi', meanings: { en: 'Garden', nl: 'Tuin', es: 'Jardín' }, category: 'nature', type: 'word', tags: ['environment'] },
+    { id: 'nat-env-4', papiamento: 'Hòfi', meanings: { en: 'Garden', nl: 'Tuin', es: 'Jardín' }, category: 'nature', type: 'word', tags: ['environment'] },
     { id: 'nat-env-5', papiamento: 'Flor', meanings: { en: 'Flower', nl: 'Bloem', es: 'Flor' }, category: 'nature', type: 'word', tags: ['environment'] },
     { id: 'nat-env-6', papiamento: 'Luna', meanings: { en: 'Moon', nl: 'Maan', es: 'Luna' }, category: 'nature', type: 'word', tags: ['environment'] },
     { id: 'nat-env-7', papiamento: 'Strea', meanings: { en: 'Star', nl: 'Ster', es: 'Estrella' }, category: 'nature', type: 'word', tags: ['environment'] },
@@ -684,7 +684,7 @@ export const vocabulary: VocabEntry[] = [
     },
     { id: 'trans-4', papiamento: 'Taksi', meanings: { en: 'Taxi', nl: 'Taxi', es: 'Taxi' }, category: 'places', type: 'word', tags: ['transport'] },
     { id: 'trans-5', papiamento: 'Baiskel', meanings: { en: 'Bicycle', nl: 'Fiets', es: 'Bicicleta' }, category: 'places', type: 'word', tags: ['transport'] },
-    { id: 'trans-6', papiamento: 'Brommer', meanings: { en: 'Moped/Scooter', nl: 'Brommer', es: 'Ciclomotor' }, category: 'places', type: 'word', tags: ['transport'] },
+    { id: 'trans-6', papiamento: 'Bròmer', meanings: { en: 'Moped/Scooter', nl: 'Brommer', es: 'Ciclomotor' }, category: 'places', type: 'word', tags: ['transport'] },
     { id: 'trans-7', papiamento: 'Wiel', meanings: { en: 'Wheel', nl: 'Wiel', es: 'Rueda' }, category: 'places', type: 'word', tags: ['transport'] },
 
     // Transport Sentences
@@ -694,7 +694,7 @@ export const vocabulary: VocabEntry[] = [
 
     // --- UNIT 5 EXPANSION: PUBLIC SERVICES ---
     { id: 'pub-1', papiamento: 'Warda di Polis', meanings: { en: 'Police Station', nl: 'Politiebureau', es: 'Estación de Policía' }, category: 'places', type: 'word', tags: ['city'] },
-    { id: 'pub-2', papiamento: 'Kantoor di koreo', meanings: { en: 'Post Office', nl: 'Postkantoor', es: 'Oficina de Correos' }, category: 'places', type: 'word', tags: ['city'] },
+    { id: 'pub-2', papiamento: 'Kantor di koreo', meanings: { en: 'Post Office', nl: 'Postkantoor', es: 'Oficina de Correos' }, category: 'places', type: 'word', tags: ['city'] },
     { id: 'pub-3', papiamento: 'Banko', meanings: { en: 'Bank', nl: 'Bank', es: 'Banco' }, category: 'places', type: 'word', tags: ['city'] },
     { id: 'pub-4', papiamento: 'Misa', meanings: { en: 'Church', nl: 'Kerk', es: 'Iglesia' }, category: 'places', type: 'word', tags: ['city'] },
     { id: 'pub-5', papiamento: 'Biblioteka', meanings: { en: 'Library', nl: 'Bibliotheek', es: 'Biblioteca' }, category: 'places', type: 'word', tags: ['city'] },
@@ -708,9 +708,9 @@ export const vocabulary: VocabEntry[] = [
     // --- UNIT 9: BUSINESS (C1) ---
     { id: 'bus-1', papiamento: 'Invershon', meanings: { en: 'Investment', nl: 'Investering', es: 'Inversión' }, category: 'work', type: 'word', tags: ['business'] },
     { id: 'bus-2', papiamento: 'Presupuesto', meanings: { en: 'Budget', nl: 'Begroting', es: 'Presupuesto' }, category: 'work', type: 'word', tags: ['business'] },
-    { id: 'bus-3', papiamento: 'Negoshashon', meanings: { en: 'Negotiation', nl: 'Onderhandeling', es: 'Negociación' }, category: 'work', type: 'word', tags: ['business'] },
+    { id: 'bus-3', papiamento: 'Negosiashon', meanings: { en: 'Negotiation', nl: 'Onderhandeling', es: 'Negociación' }, category: 'work', type: 'word', tags: ['business'] },
     { id: 'bus-4', papiamento: 'Ganashi', meanings: { en: 'Profit', nl: 'Winst', es: 'Ganancia' }, category: 'work', type: 'word', tags: ['business'] },
-    { id: 'bus-5', papiamento: 'Perdida', meanings: { en: 'Loss', nl: 'Verlies', es: 'Pérdida' }, category: 'work', type: 'word', tags: ['business'] },
+    { id: 'bus-5', papiamento: 'Pèrdida', meanings: { en: 'Loss', nl: 'Verlies', es: 'Pérdida' }, category: 'work', type: 'word', tags: ['business'] },
     { id: 'bus-6', papiamento: 'Maneho', meanings: { en: 'Management/Policy', nl: 'Beleid/Management', es: 'Gestión/Política' }, category: 'work', type: 'word', tags: ['business'] },
     { id: 'bus-7', papiamento: 'Kontrato', meanings: { en: 'Contract', nl: 'Contract', es: 'Contrato' }, category: 'work', type: 'word', tags: ['business'] },
 
@@ -728,14 +728,14 @@ export const vocabulary: VocabEntry[] = [
 
     // --- UNIT 9: ACADEMIC (C1) ---
     { id: 'acad-1', papiamento: 'Teoria', meanings: { en: 'Theory', nl: 'Theorie', es: 'Teoría' }, category: 'work', type: 'word', tags: ['academic'] },
-    { id: 'acad-2', papiamento: 'Hipotesis', meanings: { en: 'Hypothesis', nl: 'Hypothese', es: 'Hipótesis' }, category: 'work', type: 'word', tags: ['academic'] },
-    { id: 'acad-3', papiamento: 'Analisis', meanings: { en: 'Analysis', nl: 'Analyse', es: 'Análisis' }, category: 'work', type: 'word', tags: ['academic'] },
-    { id: 'acad-4', papiamento: 'Konklusion', meanings: { en: 'Conclusion', nl: 'Conclusie', es: 'Conclusión' }, category: 'work', type: 'word', tags: ['academic'] },
+    { id: 'acad-2', papiamento: 'Hipótesis', meanings: { en: 'Hypothesis', nl: 'Hypothese', es: 'Hipótesis' }, category: 'work', type: 'word', tags: ['academic'] },
+    { id: 'acad-3', papiamento: 'Análisis', meanings: { en: 'Analysis', nl: 'Analyse', es: 'Análisis' }, category: 'work', type: 'word', tags: ['academic'] },
+    { id: 'acad-4', papiamento: 'Konklushon', meanings: { en: 'Conclusion', nl: 'Conclusie', es: 'Conclusión' }, category: 'work', type: 'word', tags: ['academic'] },
     { id: 'acad-5', papiamento: 'Investigashon', meanings: { en: 'Research', nl: 'Onderzoek', es: 'Investigación' }, category: 'work', type: 'word', tags: ['academic'] },
     { id: 'acad-6', papiamento: 'Argumento', meanings: { en: 'Argument', nl: 'Argument', es: 'Argumento' }, category: 'work', type: 'word', tags: ['academic'] },
 
     // Academic Sentences
-    { id: 'sent-acad-1', papiamento: 'E {analisis} ta mustra', meanings: { en: 'The analysis shows', nl: 'De analyse toont', es: 'El análisis muestra' }, category: 'work', type: 'sentence', tags: ['cloze', 'academic'] },
+    { id: 'sent-acad-1', papiamento: 'E {análisis} ta mustra', meanings: { en: 'The analysis shows', nl: 'De analyse toont', es: 'El análisis muestra' }, category: 'work', type: 'sentence', tags: ['cloze', 'academic'] },
     { id: 'sent-acad-2', papiamento: 'Segun mi {opinion}', meanings: { en: 'In my opinion', nl: 'Naar mijn mening', es: 'En mi opinión' }, category: 'work', type: 'phrase', tags: ['academic'] },
-    { id: 'sent-acad-3', papiamento: 'Kiko ta bo {konklusion}?', meanings: { en: 'What is your conclusion?', nl: 'Wat is jouw conclusie?', es: '¿Cuál es tu conclusión?' }, category: 'work', type: 'sentence', tags: ['cloze', 'academic'] }
+    { id: 'sent-acad-3', papiamento: 'Kiko ta bo {konklushon}?', meanings: { en: 'What is your conclusion?', nl: 'Wat is jouw conclusie?', es: '¿Cuál es tu conclusión?' }, category: 'work', type: 'sentence', tags: ['cloze', 'academic'] }
 ];

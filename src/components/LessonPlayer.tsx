@@ -287,7 +287,10 @@ export const LessonPlayer: React.FC = () => {
                     {reviewing && (
                         <p className="text-brand-teal font-bold uppercase tracking-wide text-sm mb-3">{copy.reviewBanner}</p>
                     )}
-                    {currentQuestion.type === 'true-false' && currentQuestion.emoji && (
+                    {currentQuestion.type === 'true-false' && currentQuestion.image && (
+                        <img src={currentQuestion.image} alt="" className="w-40 h-40 md:w-52 md:h-52 object-cover rounded-3xl mx-auto mb-4 border border-white/10" data-testid="exercise-image" />
+                    )}
+                    {currentQuestion.type === 'true-false' && !currentQuestion.image && currentQuestion.emoji && (
                         <div className="text-7xl md:text-8xl mb-4" data-testid="exercise-emoji">{currentQuestion.emoji}</div>
                     )}
                     <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 leading-relaxed" data-testid="question-prompt">
@@ -429,6 +432,58 @@ export const LessonPlayer: React.FC = () => {
                                     {opt}
                                 </button>
                             ))}
+                        </div>
+                    )}
+
+                    {currentQuestion.type === 'tap-picture' && currentQuestion.pictures && (
+                        <div className="grid grid-cols-2 gap-3 md:gap-4" data-testid="picture-grid">
+                            {currentQuestion.pictures.map((tile) => (
+                                <button
+                                    key={tile.src}
+                                    type="button"
+                                    onClick={() => !isCorrect && setSelectedOption(tile.src)}
+                                    className={`rounded-2xl border-2 overflow-hidden text-left bg-slate-800 ${
+                                        selectedOption === tile.src
+                                            ? isCorrect === null
+                                                ? 'border-brand-teal'
+                                                : isCorrect
+                                                    ? 'border-green-500'
+                                                    : 'border-red-500'
+                                            : 'border-slate-700'
+                                    }`}
+                                >
+                                    <img src={tile.src} alt={tile.label ?? ''} className="w-full aspect-square object-cover" />
+                                    {tile.label && <span className="block px-3 py-2 text-sm md:text-base font-bold text-slate-200">{tile.label}</span>}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+
+                    {currentQuestion.type === 'picture-word' && (
+                        <div data-testid="picture-word">
+                            {currentQuestion.image && (
+                                <img src={currentQuestion.image} alt="" className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-3xl mx-auto mb-6 border border-white/10" data-testid="exercise-image" />
+                            )}
+                            <div className="grid gap-3 md:gap-4">
+                                {getLocalizedOptions().map((opt, idx) => (
+                                    <button
+                                        key={`${opt}-${idx}`}
+                                        type="button"
+                                        onClick={() => !isCorrect && setSelectedOption(opt)}
+                                        className={`p-4 md:p-6 border-2 rounded-2xl text-left font-bold text-lg md:text-2xl ${
+                                            selectedOption === opt
+                                                ? isCorrect === null
+                                                    ? 'border-brand-teal bg-brand-teal/20 text-brand-teal'
+                                                    : isCorrect
+                                                        ? 'border-green-500 bg-green-500/20 text-green-400'
+                                                        : 'border-red-500 bg-red-500/20 text-red-400'
+                                                : 'border-slate-700 bg-slate-800 text-slate-300'
+                                        }`}
+                                    >
+                                        {opt}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     )}
 

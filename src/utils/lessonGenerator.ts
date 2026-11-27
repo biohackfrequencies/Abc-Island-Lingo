@@ -1,4 +1,5 @@
 import { conversations, type Conversation } from '../data/conversations';
+import { pictureFor } from '../data/pictures';
 import { vocabulary, type VocabEntry } from '../data/vocabulary';
 import type { Language, Lesson, LessonConfig, MatchPair, Question } from '../types';
 import { vocabEmoji } from './emoji';
@@ -174,7 +175,7 @@ function generateOrder(id: string, vocab: VocabEntry, lang: Language, rng: () =>
 function generateCloze(id: string, vocab: VocabEntry, lang: Language, pool: VocabEntry[], rng: () => number): Question {
     const { hidden, display } = blankOf(vocab);
     const fromLesson = getDistractors(vocab, 6, pool, rng).map(clozeToken);
-    const grammar = ['ta', 'tin', 'bai', 'kier', 'por', 'a', 'lo'];
+    const grammar = ['ta', 'tin', 'bai', 'kièr', 'por', 'a', 'lo'];
     const extras = shuffle([...fromLesson, ...grammar], rng).filter((word) => word.length < 20 && !word.includes(' '));
     const prompts: Record<Language, string> = {
         en: `Fill in the missing word: "${vocab.meanings.en}"`,
@@ -204,14 +205,65 @@ function generateTrueFalse(id: string, vocab: VocabEntry, lang: Language, pool: 
         nl: `Betekent "${displayPap(vocab)}" "${shown}"?`,
         es: `¿"${displayPap(vocab)}" significa "${shown}"?`,
     };
+    const photo = pictureFor(vocab.id);
     return {
         id,
         type: 'true-false',
         prompt: prompts[lang],
-        emoji: vocabEmoji[vocab.id],
+        image: photo?.src,
+        emoji: photo ? undefined : vocabEmoji[vocab.id],
         options: shuffle([TRUE_FALSE[lang].yes, TRUE_FALSE[lang].no], rng),
         correctAnswer: answer,
         explanation: vocab.meanings[lang],
+    };
+}
+
+function picturedEntries(excludeId: string): VocabEntry[] {
+    return vocabulary.filter((entry) => entry.id !== excludeId && pictureFor(entry.id));
+}
+
+function generateTapPicture(id: string, vocab: VocabEntry, lang: Language, rng: () => number, showLabels: boolean): Question | null {
+    const correct = pictureFor(vocab.id);
+    if (!correct) return null;
+    const distractors = shuffle(picturedEntries(vocab.id), rng).slice(0, 3);
+    if (distractors.length < 3) return null;
+    const tiles = shuffle([vocab, ...distractors], rng);
+    const prompts: Record<Language, string> = {
+        en: `Tap the picture of "${displayPap(vocab)}"`,
+        nl: `Tik de afbeelding van "${displayPap(vocab)}"`,
+        es: `Toca la imagen de "${displayPap(vocab)}"`,
+    };
+    return {
+        id,
+        type: 'tap-picture',
+        prompt: prompts[lang],
+        pictures: tiles.map((entry) => ({
+            src: pictureFor(entry.id)?.src ?? '',
+            label: showLabels ? entry.meanings[lang] : undefined,
+        })),
+        options: tiles.map((entry) => pictureFor(entry.id)?.src ?? ''),
+        correctAnswer: correct.src,
+    };
+}
+
+function generatePictureWord(id: string, vocab: VocabEntry, lang: Language, rng: () => number): Question | null {
+    const correct = pictureFor(vocab.id);
+    if (!correct) return null;
+    const distractors = shuffle(picturedEntries(vocab.id), rng).slice(0, 3);
+    if (distractors.length < 3) return null;
+    const answer = displayPap(vocab);
+    const prompts: Record<Language, string> = {
+        en: 'Which Papiamentu word matches the picture?',
+        nl: 'Welk Papiaments woord hoort bij de afbeelding?',
+        es: '¿Qué palabra en papiamentu corresponde a la imagen?',
+    };
+    return {
+        id,
+        type: 'picture-word',
+        prompt: prompts[lang],
+        image: correct.src,
+        options: shuffle([answer, ...distractors.map(displayPap)], rng),
+        correctAnswer: answer,
     };
 }
 
@@ -264,6 +316,7 @@ function buildQuestion(
     lang: Language,
     pool: VocabEntry[],
     lessonId: string,
+    showLabels: boolean,
 ): Question | null {
     const rng = rngFor(`${lessonId}:${lang}:${vocab.id}:${kind}`);
     const id = `q-${vocab.id}-${kind}`;
@@ -276,6 +329,14 @@ function buildQuestion(
     }
     if (kind === 'cloze') return tagQuestion(generateCloze(id, vocab, lang, pool, rng), vocab.id);
     if (kind === 'true-false') return tagQuestion(generateTrueFalse(id, vocab, lang, pool, rng), vocab.id);
+    if (kind === 'tap-picture') {
+        const built = generateTapPicture(id, vocab, lang, rng, showLabels);
+        return built ? tagQuestion(built, vocab.id) : null;
+    }
+    if (kind === 'picture-word') {
+        const built = generatePictureWord(id, vocab, lang, rng);
+        return built ? tagQuestion(built, vocab.id) : null;
+    }
     return null;
 }
 
@@ -441,7 +502,7 @@ export const generateLesson = (config: LessonConfig, userLang: Language = 'en'):
     const lists = lessonVocab.map((entry, index) => {
         const kinds = kindsFor(entry, index, lessonSalt, review);
         return kinds
-            .map((kind) => buildQuestion(kind, entry, userLang, lessonVocab, config.id))
+            .map((kind) => buildQuestion(kind, entry, userLang, lessonVocab, config.id, config.level === 'A1'))
             .filter((question): question is Question => question !== null);
     }).filter((list) => list.length > 0);
 
@@ -539,6 +600,10 @@ export function questionForPractice(
                     return generateMultipleChoice(id, vocab, lang, pool, rng);
                 case 'true-false':
                     return generateTrueFalse(id, vocab, lang, pool, rng);
+                case 'tap-picture':
+                    return generateTapPicture(id, vocab, lang, rng, Boolean(mistake.question.pictures?.some((tile) => tile.label)));
+                case 'picture-word':
+                    return generatePictureWord(id, vocab, lang, rng);
                 default:
                     return null;
             }

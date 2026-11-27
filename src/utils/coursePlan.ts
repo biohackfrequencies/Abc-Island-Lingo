@@ -1,4 +1,5 @@
 import { conversations, type Conversation } from '../data/conversations';
+import { pictureFor } from '../data/pictures';
 import { vocabulary, type VocabEntry } from '../data/vocabulary';
 import type { Language, LessonConfig } from '../types';
 
@@ -10,7 +11,9 @@ export type ExerciseKind =
     | 'order'
     | 'cloze'
     | 'match'
-    | 'dialogue';
+    | 'dialogue'
+    | 'tap-picture'
+    | 'picture-word';
 
 /** A lesson should feel like a short session, not a 90-question drill. */
 export const LESSON_MAX = 15;
@@ -23,10 +26,18 @@ export function isProduction(kind: ExerciseKind): boolean {
     return kind === 'spelling' || kind === 'order' || kind === 'cloze';
 }
 
+function pictureKind(id: string): ExerciseKind | null {
+    if (!pictureFor(id)) return null;
+    const salt = [...id].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+    return salt % 2 === 0 ? 'tap-picture' : 'picture-word';
+}
+
 /** Exercise types for one vocabulary item. Counts are at least the v1.0.2 exposure. */
 export function kindsForItem(entry: VocabEntry): ExerciseKind[] {
     const multi = displayPap(entry).includes(' ');
     const hasBlank = entry.papiamento.includes('{');
+    const pictured = entry.type === 'word' ? pictureKind(entry.id) : null;
+    const lead = pictured ? [pictured] : [];
     if (entry.type === 'sentence') {
         return hasBlank
             ? ['cloze', 'translate', 'true-false']
@@ -35,7 +46,7 @@ export function kindsForItem(entry: VocabEntry): ExerciseKind[] {
     if (entry.type === 'phrase' && multi) {
         return ['order', 'cloze', 'translate'];
     }
-    return ['multiple-choice', 'translate', 'true-false', 'spelling'];
+    return [...lead, 'multiple-choice', 'translate', 'true-false', 'spelling'];
 }
 
 export function canMatch(entry: VocabEntry): boolean {

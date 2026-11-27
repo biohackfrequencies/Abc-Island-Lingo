@@ -30,7 +30,7 @@ export interface MatchPair {
 
 export interface Question {
     id: string;
-    type: 'translate' | 'match' | 'multiple-choice' | 'order' | 'cloze' | 'spelling' | 'dialogue' | 'true-false';
+    type: 'translate' | 'match' | 'multiple-choice' | 'order' | 'cloze' | 'spelling' | 'dialogue' | 'true-false' | 'tap-picture' | 'picture-word';
     prompt: LocalizedContent;
     pronunciation?: string; // e.g., "Bon dee-a"
     options?: string[] | Record<Language, string[]>; // Context-aware options
@@ -38,8 +38,10 @@ export interface Question {
     explanation?: LocalizedContent; // Explanation shown after answer
     audio?: string; // Path to audio file
     image?: string; // URL to image
-    /** Big pictogram for true/false when the meaning has an obvious emoji. */
+    /** Big pictogram for true/false when no photograph or drawing is available. */
     emoji?: string;
+    /** Picture choices for tap-the-picture. `options` repeats the image paths. */
+    pictures?: { src: string; label?: string }[];
     /** Correct pairs for a matching question. `options` is the shuffled meaning column. */
     pairs?: MatchPair[];
     dialogueLines?: DialogueLine[]; // For dialogue questions

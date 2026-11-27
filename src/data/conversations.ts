@@ -27,7 +27,7 @@ export const conversations: Conversation[] = [
         lines: [
             { speaker: 'A', text: 'Bon tardi. Bo tin apel?', translation: 'Good afternoon. Do you have apples?' },
             { speaker: 'B', text: 'Si, nos tin apel kòrá i bèrdè.', translation: 'Yes, we have red and green apples.' },
-            { speaker: 'A', text: 'Mi kier sinku apel kòrá por fabor.', translation: 'I want five red apples please.', isInteractive: true },
+            { speaker: 'A', text: 'Mi kièr sinku apel kòrá por fabor.', translation: 'I want five red apples please.', isInteractive: true },
             { speaker: 'B', text: 'Ata nan aki.', translation: 'Here they are.' }
         ]
     },
@@ -36,10 +36,10 @@ export const conversations: Conversation[] = [
         category: 'restaurant',
         tags: ['food', 'restaurant'],
         lines: [
-            { speaker: 'A', text: 'Bon nochi. Mi por haña e menu?', translation: 'Good evening. Can I have the menu?' },
-            { speaker: 'B', text: 'Sigur, ata e menu aki.', translation: 'Sure, here is the menu.' },
-            { speaker: 'A', text: 'Danki. Bo tin sopi di piska?', translation: 'Thanks. Do you have fish soup?', isInteractive: true },
-            { speaker: 'B', text: 'Si, e sopi ta dushi awe.', translation: 'Yes, the soup is delicious today.' }
+            { speaker: 'A', text: 'Bon nochi. Mi por haña e menú?', translation: 'Good evening. Can I have the menú?' },
+            { speaker: 'B', text: 'Sigur, ata e menú aki.', translation: 'Sure, here is the menú.' },
+            { speaker: 'A', text: 'Danki. Bo tin sòpi di piska?', translation: 'Thanks. Do you have fish soup?', isInteractive: true },
+            { speaker: 'B', text: 'Si, e sòpi ta dushi awe.', translation: 'Yes, the soup is delicious today.' }
         ]
     },
     {
@@ -70,9 +70,9 @@ export const conversations: Conversation[] = [
         tags: ['work', 'office'],
         lines: [
             { speaker: 'A', text: 'Bon bini na nos oficina.', translation: 'Welcome to our office.' },
-            { speaker: 'B', text: 'Masha danki. Unda mi luga ta?', translation: 'Thank you very much. Where is my place/desk?' },
-            { speaker: 'A', text: 'Bo luga ta banda di e bentana.', translation: 'Your place is next to the window.', isInteractive: true },
-            { speaker: 'B', text: 'Fantastiko. Mi gusta lus.', translation: 'Fantastic. I like light.' }
+            { speaker: 'B', text: 'Masha danki. Unda mi lugá ta?', translation: 'Thank you very much. Where is my place/desk?' },
+            { speaker: 'A', text: 'Bo lugá ta banda di e bentana.', translation: 'Your place is next to the window.', isInteractive: true },
+            { speaker: 'B', text: 'Fantástiko. Mi gusta lus.', translation: 'Fantastic. I like light.' }
         ]
     },
     {
@@ -80,9 +80,9 @@ export const conversations: Conversation[] = [
         category: 'health',
         tags: ['health', 'doctor'],
         lines: [
-            { speaker: 'A', text: 'Bon dia dokter.', translation: 'Good morning doctor.' },
+            { speaker: 'A', text: 'Bon dia dòkter.', translation: 'Good morning doctor.' },
             { speaker: 'B', text: 'Bon dia. Kiko ta e problema?', translation: 'Good morning. What is the problem?' },
-            { speaker: 'A', text: 'Mi tin dolor di kabes.', translation: 'I have a headache.', isInteractive: true },
+            { speaker: 'A', text: 'Mi tin doló di kabes.', translation: 'I have a headache.', isInteractive: true },
             { speaker: 'B', text: 'Tuma e remedi aki dos biaha pa dia.', translation: 'Take this medicine twice a day.' }
         ]
     },
@@ -95,7 +95,7 @@ export const conversations: Conversation[] = [
             { speaker: 'A', text: 'Kiko bo ta hasi?', translation: 'What are you doing?' },
             { speaker: 'B', text: 'Mi ta kushina awo.', translation: 'I am cooking right now.' },
             { speaker: 'A', text: 'Kiko bo ta traha?', translation: 'What are you making?', isInteractive: true },
-            { speaker: 'B', text: 'Mi ta traha sopi.', translation: 'I am making soup.' }
+            { speaker: 'B', text: 'Mi ta traha sòpi.', translation: 'I am making soup.' }
         ]
     },
     {
@@ -116,8 +116,8 @@ export const conversations: Conversation[] = [
         lines: [
             { speaker: 'A', text: 'Kiko nos lo hasi mañan?', translation: 'What will we do tomorrow?' },
             { speaker: 'B', text: 'Nos lo bai sinema.', translation: 'We will go to the cinema.' },
-            { speaker: 'A', text: 'Ki pelikula nos lo wak?', translation: 'What movie will we watch?', isInteractive: true },
-            { speaker: 'B', text: 'Nos lo wak e pelikula nobo.', translation: 'We will watch the new movie.' }
+            { speaker: 'A', text: 'Ki pelíkula nos lo wak?', translation: 'What movie will we watch?', isInteractive: true },
+            { speaker: 'B', text: 'Nos lo wak e pelíkula nobo.', translation: 'We will watch the new movie.' }
         ]
     },
     // --- EXAM / MIXED TENSE CONVERSATIONS ---
@@ -168,7 +168,7 @@ export const conversations: Conversation[] = [
         lines: [
             { speaker: 'A', text: 'Bo ta liber awe nochi?', translation: 'Are you free tonight?' },
             { speaker: 'B', text: 'Si, mi no ta traha. Dikon?', translation: 'Yes, I am not working. Why?' },
-            { speaker: 'A', text: 'Ban kome algu na e restaurant nobo.', translation: 'Let\'s eat something at the new restaurant.', isInteractive: true },
+            { speaker: 'A', text: 'Ban kome algu na e restorant nobo.', translation: 'Let\'s eat something at the new restaurant.', isInteractive: true },
             { speaker: 'B', text: 'Bon idea! Ki ora?', translation: 'Good idea! What time?' },
             { speaker: 'A', text: 'Ocho or.', translation: 'Eight o\'clock.' }
         ]

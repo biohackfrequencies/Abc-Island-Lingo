@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { baselinePractice } from '../data/baselinePractice.ts';
 import { lessons } from '../data/lessons.ts';
+import { pictures } from '../data/pictures.ts';
 import { vocabulary } from '../data/vocabulary.ts';
 import { isLessonLocked } from '../lib/progress.ts';
 import type { Language, Question } from '../types/index.ts';
@@ -194,4 +195,51 @@ test('long lessons were split, copies were replaced, and unused words got a home
         const locked = isLessonLocked(lesson.unit, false);
         assert.equal(locked, lesson.unit > 2);
     }
+});
+
+test('official Curaçao and Bonaire spellings replace clear errors', () => {
+    const pap = (id: string) => vocabulary.find((entry) => entry.id === id)?.papiamento;
+    assert.equal(pap('num-1'), 'Unu');
+    assert.equal(pap('num-7'), 'Shete');
+    assert.equal(pap('num-15'), 'Diessinku');
+    assert.equal(pap('food-6'), 'Galiña');
+    assert.equal(pap('trav-5'), 'Karchi');
+    assert.equal(pap('emo-4'), 'Kansá');
+    assert.equal(pap('shop-3'), 'Karu');
+    assert.equal(pap('abs-5'), 'Kere');
+    assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('flamingo')));
+    assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('siete')));
+    assert.ok(!vocabulary.some((entry) => entry.papiamento.toLowerCase().includes('tike')));
+});
+
+test('picture exercises use the corrected words and appear in every unit', () => {
+    assert.ok(Object.keys(pictures).length >= 120, `only ${Object.keys(pictures).length} pictures`);
+    const seen = new Map<number, Set<string>>();
+    let tap = 0;
+    let fromPicture = 0;
+    for (const { lesson, questions } of english) {
+        const types = seen.get(lesson.unit) ?? new Set<string>();
+        for (const question of questions) {
+            if (question.type === 'tap-picture') {
+                tap += 1;
+                types.add(question.type);
+                assert.equal(question.pictures?.length, 4);
+                assert.ok(question.pictures?.some((tile) => tile.src === question.correctAnswer));
+            }
+            if (question.type === 'picture-word') {
+                fromPicture += 1;
+                types.add(question.type);
+                assert.ok(question.image);
+            }
+            if (question.type === 'true-false' && question.sourceId && pictures[question.sourceId]) {
+                assert.equal(question.image, pictures[question.sourceId].src);
+                assert.equal(question.emoji, undefined);
+            }
+        }
+        seen.set(lesson.unit, types);
+    }
+    for (let unit = 1; unit <= 9; unit++) {
+        assert.ok((seen.get(unit)?.size ?? 0) > 0, `unit ${unit} has no picture exercise`);
+    }
+    assert.ok(tap > 0 && fromPicture > 0);
 });
